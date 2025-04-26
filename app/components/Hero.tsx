@@ -89,7 +89,7 @@ const HeroSection = () => {
         </p>
         
         <p className='text-sm leading-[24px] text-gray-800'>
-          When I'm not working on these, I'm building Solgates and Tukai - passion projects that keep me innovating.
+          When I'm not working on these, I'm building <span className='text-blue-700'>Solgates</span> and <span className='text-blue-700'> Tukai</span> - passion projects that keep me innovating.
         </p>
       </div>
     </div>
