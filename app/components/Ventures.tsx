@@ -9,7 +9,7 @@ export default function IMSGlobalExperience() {
 
   const exp = {
     images: [
-      '/ims1.png', // Example image paths, replace with your actual images
+      '/IMS1.png', // Example image paths, replace with your actual images
       '/ims2.png',
       '/ims3.png',
     ],
