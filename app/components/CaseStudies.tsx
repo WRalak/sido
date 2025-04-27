@@ -201,13 +201,13 @@ const CaseStudies: React.FC = () => {
   };
 
   return (
-    <div className="py-16 px-4 md:px-8  max-w-7xl mx-auto">
-      <h2 className="text-sm font-bold lg:px-44 mb-10 ">Case Studies</h2>
+    <div className="py-4 px-4 md:px-8 bg-gray-50 max-w-8xl mx-auto">
+      <h2 className="text-lg text-gray-800  font-bold lg:px-44 mb- ">Case Studies</h2>
 <div className="flex gap-2">
   {caseStudies.map((caseStudy) => (
     <div 
       key={caseStudy.id} 
-      className="flex items-center bg-white cursor-pointer overflow-hidden w-full"
+      className="flex items-center  cursor-pointer overflow-hidden w-full"
       onClick={() => openCaseStudy(caseStudy)}
     >
       <div className="flex-shrink-0">

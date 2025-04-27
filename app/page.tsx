@@ -4,6 +4,7 @@ import Logo from './components/Logo'
 import CaseStudies from './components/CaseStudies'
 import Experiences from './components/Experiences'
 
+
 const home = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const home = () => {
       <CaseStudies/>
       <Experiences/>
       <Logo/>
+      
       
     </div>
   )
