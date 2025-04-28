@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <div className="w-full lg:px-44 xl:px-44 flex flex-col lg:flex-row relative">
+    <div className="w-full lg:px-48  flex flex-col lg:flex-row relative">
       {/* Container to restrict gradient within paddings */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         {/* Gradient Background with blur effect for fading */}

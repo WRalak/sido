@@ -20,7 +20,7 @@ export default function IMSGlobalExperience() {
   };
 
   return (
-    <div className="flex flex-col gap-8 p-6 md:p-12">
+    <div className="flex flex-col gap-8 p-6 md:p-12  w-[585px] ml-40">
       {/* Logo, Company Name, and Year in a single line */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -67,10 +67,10 @@ export default function IMSGlobalExperience() {
 
       {/* Text Content Below the Image Carousel */}
       <div className="space-y-4">
-        <p className="text-gray-500 text-xs ">Role: <span className="font-normal text-gray-800">Senior Product Designer</span></p>
-        <p>As a Senior Product Designer contracted through Andela, I was tasked with designing a mobile wallet aimed at streamlining fare payments and digitizing South Africa’s public transport system.</p>
+        <p className="text-gray-500 text-sm ">Role: <span className="font-normal text-gray-800">Senior Product Designer</span></p>
+        <p className='text-gray-800 text-sm '>As a Senior Product Designer contracted through Andela, I was tasked with designing a <br /> mobile wallet aimed at streamlining fare payments and digitizing South Africa’s public <br /> transport system.</p>
         <div className="space-y-2">
-          <p className="text-gray-800 font-semibold">Project Overview:</p>
+          <p className="text-gray-800 text-sm font-semibold">Project Overview:</p>
           <p className="text-gray-600 text-sm">
             The goal was to create a seamless payment experience for commuters while improving transparency and efficiency for taxi operators. Key features included:
           </p>

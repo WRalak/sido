@@ -5,14 +5,14 @@ import Image from 'next/image';
 
 export default function GoldmanSachsExperience() {
   return (
-    <div className="flex flex-col md:flex-row items-start gap-6 p-6 md:p-12">
+    <div className="flex flex-col md:flex-row items-start lg:px-44 gap-6 p-6 md:p-12">
       {/* Logo */}
       <div className="flex-shrink-0">
         <Image
           src="/image 18.png"
           alt="Goldman Sachs Logo"
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           className="object-contain"
         />
       </div>

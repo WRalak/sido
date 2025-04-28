@@ -18,7 +18,7 @@ export default function BRCKExperience() {
   };
 
   return (
-    <div className="flex flex-col gap-6 p-6 md:p-10">
+    <div className="flex flex-col gap-6 p-6 md:p-10 w-[695px] ml-40">
       {/* Logo, Company Name, and Year */}
       <div className="flex items-center justify-between w-full gap-4">
         <div className="flex items-center gap-2">
@@ -48,10 +48,8 @@ export default function BRCKExperience() {
         </p>
 
         <p className="text-gray-800 text-sm">
-         <span className='text-gray-500 text-sm'> Task:</span> Designing Digital Experiences Across Mobile, Web, and Internal Systems.
+         <span className='text-gray-500 text-sm'>Task:</span> Designing Digital Experiences Across Mobile, Web, and Internal Systems.
         </p>
-
-       
       </div>
 
       {/* Image Slider with BLUE background */}
@@ -82,7 +80,7 @@ export default function BRCKExperience() {
       {/* Paragraph under images */}
       <div className="w-full mx-auto">
         <p className="text-gray-800 text-sm">
-          I collaborated with researchers, designers, and front-end developers, reporting to the Creative <br /> Director, to design mobile apps, internal systems, websites, and brand collateral. Beyond <br />design, I tested implementations and worked closely with developers to ensure a polished final <br />product.
+          I collaborated with researchers, designers, and front-end developers, reporting to the Creative <br /> Director, to design mobile apps, internal systems, websites, and brand collateral. Beyond <br /> design, I tested implementations and worked closely with developers to ensure a polished final <br /> product.
         </p>
       </div>
     </div>

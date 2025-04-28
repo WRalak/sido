@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function NedbankExperience() {
   return (
-    <div className="flex flex-col md:flex-row items-start gap-4 p-6 md:p-12">
+    <div className="flex flex-col md:flex-row items-start gap-4 px-4 md:px-8 lg:px-40  w-full">
       {/* Logo */}
       <div className="flex-shrink-0">
         <Image
