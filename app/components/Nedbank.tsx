@@ -1,60 +1,76 @@
-// components/NedbankExperience.tsx
 'use client';
 
 import Image from 'next/image';
 
 export default function NedbankExperience() {
   return (
-    <div className="flex flex-col md:flex-row items-start gap-4 px-4 md:px-8 lg:px-40  w-full">
-      {/* Logo */}
-      <div className="flex-shrink-0">
-        <Image
-          src="/nedd.png"
-          alt="NedBank Logo"
-          width={50}
-          height={50}
-          className="object-contain  "
-        />
-      </div>
-
-      {/* Text Content */}
-      <div className="space-y-4 ">
-        <div className='flex items-center gap-2 justify-between'>
-          <h2 className="text-gray-800 text-sm font-bold flex gap-2 items-center">NedBank - Domestic Transactions 
+    <div className="flex flex-col ml-40 w-[620px] p-6 md:p-12">
+      <div className="flex flex-col space-y-4 mx-auto">
+        
+        {/* Header: Logo, Name, Dot, and Dates */}
+        <div className="flex items-center justify-between w-full gap-4 mb-4">
+          <div className="flex items-center gap-2">
+            <Image
+              src="/nedd.png"
+              alt="NedBank Logo"
+              width={30}  // Matched size to other logos
+              height={30}
+              className="object-contain"
+            />
+            <h2 className="text-gray-800 text-sm font-bold">NedBank - Domestic Transactions</h2>
             <img 
-  src="/dot.png" 
-  alt="dot" 
-  className="w-4 h-4 rounded-full object-cover" 
-/>
-</h2>
-          <p className="text-gray-800 font-bold text-sm">2023 - Present</p>
+              src="/dot.png" 
+              alt="dot" 
+              className="w-4 h-4 rounded-full object-cover" 
+            />
+          </div>
+          <p className="text-gray-800 font-bold text-sm ml-4">2023 - Present</p>
         </div>
 
-        <div>
-          <p className="text-gray-500 text-xs ">Role: <span className="font-normal text-gray-800">Senior Product Designer</span></p>
-        </div>
-
-        <div className="space-y-2">
-          
-          <p className="text-gray-800 text-sm">
-               <span className='text-gray-400'>Task:</span> Working with the Domestic Transactions team, focusing on Payments, Transfers, and <br /> Collections, improving how people and businesses move money.
+        {/* Role and Description */}
+        <div className="space-y-4">
+          <p className="text-gray-400 text-sm">
+            Role: <span className="font-normal text-gray-800">Senior Product Designer</span>
           </p>
+
           <p className="text-gray-800 text-sm">
-            Working on the design and optimization of Payments, Transfers, and Collections experiences. <br />  My work focuses on creating intuitive, efficient, and scalable transaction workflows that <br /> enhance both customer and internal banking operations.
+            <span className="text-gray-400 text-sm">Task:</span> Working with the Domestic Transactions team, focusing on <strong>Payments, Transfers, and  Collections,</strong> improving how people and businesses move money.
           </p>
-        </div>
 
-        <div className="space-y-1 font-normal">
-          <p className="text-gray-800 text-sm">Key Contributions</p>
-          <ul className="list-disc list-inside text-gray-800 text-sm space-y-1">
-            <li>Designing and refining payment and transfer workflows to improve efficiency and reduce <br /> user friction.</li>
-            <li>Developing intuitive solutions for collections processes, ensuring accuracy and seamless <br /> usability.</li>
-            <li>Collaborating closely with stakeholders to align transaction systems with business goals <br /> and user needs.</li>
-          </ul>
-        </div>
+          <p className="text-gray-800 text-sm">
+            Working on the design and optimization of Payments, Transfers, and Collections  experiences. <br /> My work focuses on creating intuitive, efficient, and scalable transaction workflows that  enhance both customer and internal banking operations.
+          </p>
 
-        <div>
-         
+          {/* Responsibilities */}
+          <div>
+            <strong className="text-gray-800 text-sm">Key Contributions</strong>
+            <div className="space-y-4">
+  <ul className="list-none space-y-3">
+    <li className="flex items-start">
+      <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-1 flex-shrink-0"></span>
+      <p className="text-gray-800 text-sm">
+        Designing and refining <strong>payment and transfer workflows</strong> to improve efficiency and reduce user friction.
+      </p>
+    </li>
+    <li className="flex items-start">
+      <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-1 flex-shrink-0"></span>
+      <p className="text-gray-800 text-sm">
+        Developing intuitive solutions for <strong>collections processes,</strong> ensuring accuracy and seamless usability.
+      </p>
+    </li>
+    <li className="flex items-start">
+      <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-1 flex-shrink-0"></span>
+      <p className="text-gray-800 text-sm">
+        Collaborating closely with stakeholders to align transaction systems with business goals and user needs.
+      </p>
+    </li>
+  </ul>
+  
+  <p className="text-gray-800 text-sm">
+    Through user-centered design, I am enhancing Nedbank's transaction services, ensuring a more seamless, efficient, and engaging banking experience.
+  </p>
+</div>
+          </div>
         </div>
       </div>
     </div>
