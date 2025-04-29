@@ -10,7 +10,7 @@ import Yiello from './Yiello'
 
 const Experiences = () => {
   return (
-    <div className=' hidden md:flex flex-col '>
+    <div className=' hidden sm:block '>
       <Nedbank/>
       <Gold/>
       <Ventures/>

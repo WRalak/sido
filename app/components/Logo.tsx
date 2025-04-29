@@ -22,7 +22,7 @@ const LogoSection = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="hidden md:block w-full py-8 lg:py-12 px-4 lg:pl-16 bg-white overflow-hidden">
+    <section className="hidden sm:block w-full py-8 lg:py-12 px-4 lg:pl-16 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="lg:ml-20 mb-6 lg:mb-8">
           <h2 className="font-satoshi font-bold text-sm lg:text-sm mb-2">Logos do tell tales</h2>

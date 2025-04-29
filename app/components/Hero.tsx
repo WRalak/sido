@@ -99,25 +99,25 @@ const HeroSection = () => {
   <div className='mt-4 text-sm leading-[20px] text-gray-800'> 
     <p className=" ">
        
-       I'm a  <span className='text-black'>Product Designer</span> specializing in mobile, desktop, and web applications, with a <br /> strong focus on  <span>usability, simplicity, and seamless user experiences.</span> <br /> Throughout my career, I've had the opportunity to work with amazing companies,<br /> shaping products that make a real impact:
+       I'm a  <strong className='text-black'>Product Designer</strong> specializing in mobile, desktop, and web applications, with a <br /> strong focus on  <strong>usability, simplicity, and seamless user experiences.</strong> <br /> Throughout my career, I've had the opportunity to work with amazing companies,<br /> shaping products that make a real impact:
        <br />
-       • At<span className="font-medium mt-4"> Cytonn</span>, I helped investors track their investments with ease.
+       • At<strong className="text-black"> Cytonn</strong>, I helped investors <strong>track their investments</strong> with ease.
        <br />
-       • At<span className="font-medium"> BRCK</span>, I contributed to connecting people to free WiFi, expanding digital access.
+       • At<strong className=" text-black"> BRCK</strong>, I contributed to <strong>connecting people to free WiFi</strong>, expanding digital access.
        <br />
-       • At <span className="font-medium"> LYNK</span>, I worked on bridging blue-collar workers with potential employers, <br /> empowering livelihoods.
+       • At <strong className=" text-black "> LYNK</strong>, I worked on <strong>bridging blue-collar workers with potential employers,</strong> <br /> empowering livelihoods.
        <br />
-       Beyond Kenya, I've designed for global markets:
+      <p className='mt-2'> Beyond Kenya, I've designed for global markets:</p>
        <br />
-       • <span className="font-medium">In South Africa</span>, I helped IMS Global Ventures streamline mobile wallet payments <br /> for taxi fares.
+       • <strong className=" text-black">In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> streamline <strong>mobile wallet payments</strong> <br /> for taxi fares.
        <br />
-       • <span className="font-medium">At Goldman Sachs (Conflicts Resolution Group – New York)</span>, I helped bankers and <br /> deal clearers navigate conflicts in high-stakes deals.
+       • <strong className=" text-black">At Goldman Sachs </strong> (Conflicts Resolution Group – New York), I helped bankers and <br /> deal clearers navigate conflicts in high-stakes deals.
        <br />
-       • <span className="font-medium">At Nedbank (South Africa)</span>, I'm working with the Domestic Transactions <br />team, focusing on Payments, Transfers, and Collections, improving how people <br /> and businesses move money.
+       • Currently, at <strong className=" text-black"> Nedbank (South Africa)</strong>, I'm working with the Domestic Transactions <br />team, focusing on <strong> Payments, Transfers, and Collections,</strong> improving how people <br /> and businesses move money.
      </p> </div>
       
         
-     <p className="text-gray-800 mt-1 text-sm">
+     <p className="text-gray-800  mt-1 text-sm">
       When I’m not working on these, I’m building{' '}
       <Link href="https://solgates.com" target="_blank" className="text-blue-500 ">
         Solgates
