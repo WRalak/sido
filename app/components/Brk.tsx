@@ -18,7 +18,7 @@ export default function BRCKExperience() {
   };
 
   return (
-    <div className="flex flex-col gap-6 p-6 md:p-10 w-[695px] ml-40">
+    <div className="flex flex-col gap-6 p-6 md:p-10 w-[660px] md:px-12 lg:ml-40">
       {/* Logo, Company Name, and Year */}
       <div className="flex items-center justify-between w-full gap-4">
         <div className="flex items-center gap-2">
@@ -29,7 +29,7 @@ export default function BRCKExperience() {
             height={30}
             className="object-contain"
           />
-          <h2 className="text-sm font-bold text-gray-800 flex items-center gap-2">
+          <h2 className="text-[13px] font-bold text-gray-800 flex items-center gap-2">
             BRCK
             <img
               src="/dot.png"
@@ -38,17 +38,17 @@ export default function BRCKExperience() {
             />
           </h2>
         </div>
-        <p className="text-gray-800 font-bold text-sm">Mar 2018 - Oct 2020</p>
+        <p className="text-gray-800 font-bold text-[13px]">Mar 2018 - Oct 2020</p>
       </div>
 
       {/* Dates and Role */}
       <div className="space-y-2">
-        <p className="text-gray-600 text-sm"> 
+        <p className="text-gray-600 text-[13px]"> 
           Role: <span className="font-normal text-sm">UI/UX Designer</span>
         </p>
 
         <p className="text-gray-800 text-sm">
-         <span className='text-gray-500 text-sm'>Task:</span> Designing Digital Experiences Across Mobile, Web, and Internal Systems.
+         <span className='text-gray-500 text-[13px]'>Task:</span> Designing Digital Experiences Across Mobile, Web, and Internal Systems.
         </p>
       </div>
 
@@ -79,7 +79,7 @@ export default function BRCKExperience() {
 
       {/* Paragraph under images */}
       <div className="w-full mx-auto">
-        <p className="text-gray-800 text-sm">
+        <p className="text-gray-800 text-[13px]">
           I collaborated with researchers, designers, and front-end developers, reporting to the Creative <br /> Director, to design mobile apps, internal systems, websites, and brand collateral. Beyond <br /> design, I tested implementations and worked closely with developers to ensure a polished final <br /> product.
         </p>
       </div>

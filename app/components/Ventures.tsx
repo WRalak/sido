@@ -20,7 +20,7 @@ export default function IMSGlobalExperience() {
   };
 
   return (
-    <div className="flex flex-col gap-8 p-6 md:p-12  w-[585px] ml-40">
+    <div className="flex flex-col gap-8 p-6 md:p-12  w-[660px] md:px-12 lg:ml-40">
       {/* Logo, Company Name, and Year in a single line */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -31,7 +31,7 @@ export default function IMSGlobalExperience() {
             height={50}
             className="object-contain"
           />
-          <h2 className="text-gray-800 text-sm font-bold flex gap-1.5">IMS Global Ventures          
+          <h2 className="text-gray-800 text-[13px] font-bold flex gap-1.5">IMS Global Ventures          
             <img 
               src="/dot.png" 
               alt="dot" 
@@ -39,7 +39,7 @@ export default function IMSGlobalExperience() {
             />
           </h2>
         </div>
-        <p className="text-gray-800 font-bold text-sm">Oct 2020 - Jun 2021</p>
+        <p className="text-gray-800 font-bold text-[13px]">Oct 2020 - Jun 2021</p>
       </div>
 
       {/* Image Slider with ">" icon only for navigation */}
@@ -67,15 +67,15 @@ export default function IMSGlobalExperience() {
 
       {/* Text Content Below the Image Carousel */}
       <div className="space-y-4">
-        <p className="text-gray-500 text-sm ">Role: <span className="font-normal text-gray-800">Senior Product Designer</span></p>
-        <p className='text-gray-800 text-sm '>As a Senior Product Designer contracted through Andela, I was tasked with designing a <br /> mobile wallet aimed at streamlining fare payments and digitizing South Africa’s public <br /> transport system.</p>
+        <p className="text-gray-500 text-[13px]">Role: <span className="font-normal text-gray-800">Senior Product Designer</span></p>
+        <p className='text-gray-800 text-[13px] '>As a Senior Product Designer contracted through Andela, I was tasked with designing a <br /> mobile wallet aimed at streamlining fare payments and digitizing South Africa’s public <br /> transport system.</p>
         <div className="space-y-2">
-          <p className="text-gray-800 text-sm font-semibold">Project Overview:</p>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-800 text-[13px] font-semibold">Project Overview:</p>
+          <p className="text-gray-600 text-[13px]">
             The goal was to create a seamless payment experience for commuters while improving transparency and efficiency for taxi operators. Key features included:
           </p>
 
-          <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+          <ul className="list-disc list-inside text-gray-600 text-[13px] space-y-1">
             <li>Mobile Wallet - Enabling users to easily pay for fares and other bills.</li>
             <li>Taxi Tracking System - Digitizing public transport by monitoring taxis, their saccos, owners, and conductors.</li>
             <li>Tap-to-Pay System - Using an installed device in taxis, allowing commuters to tap their phones at the start and end of a journey for automatic fare deduction based on distance traveled.</li>
@@ -85,7 +85,7 @@ export default function IMSGlobalExperience() {
         <div>
           <div className="space-y-2">
             <p className="text-gray-800 font-semibold">My Approach:</p>
-            <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+            <ul className="list-disc list-inside text-gray-800 text-[13px] space-y-1">
               <li>Conducted desk research and user interviews to understand pain points and behavior.</li>
               <li>Created User Stories and structured the Information Architecture for an intuitive experience.</li>
               <li>Designed a seamless interface for both commuters and transport operators.</li>
@@ -95,13 +95,13 @@ export default function IMSGlobalExperience() {
 
         <div className="space-y-2">
           <p className="text-gray-800 font-semibold">Deliverables:</p>
-          <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+          <ul className="list-disc list-inside text-gray-800 text-sm space-y-1">
             <li>Mobile App - Enabling easy fare payments and tracking.</li>
             <li>Admin Dashboard - Providing taxi operators and regulators with real-time insights.</li>
             <li>Website - Designed for both desktop and responsive mobile experiences.</li>
           </ul>
 
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-800 text-[13px]">
             This project not only improved convenience for commuters but also introduced transparency and efficiency to South Africa’s public transport system.
           </p>
         </div>
