@@ -17,7 +17,7 @@ export default function GoldmanSachsExperience() {
               height={30}
               className="object-contain"
             />
-            <h2 className="text-gray-800 text-[14px] font-bold">Yielloh</h2>
+            <h2 className="text-gray-800 text-[14px] font-extrabold">Yielloh</h2>
             <img 
               src="/dot.png" 
               alt="dot" 
@@ -28,7 +28,7 @@ export default function GoldmanSachsExperience() {
         </div>
 
         {/* Role and Description */}
-        <div className="space-y-4">
+        <div className="space-y-2">
           <p className="text-gray-500 text-[13px]">
             Role: <span className="font-medium text-gray-800">Designer</span>
           </p>

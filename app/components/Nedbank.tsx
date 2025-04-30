@@ -4,20 +4,20 @@ import Image from 'next/image';
 
 export default function NedbankExperience() {
   return (
-    <div className="flex flex-col md:px-12 lg:ml-52 w-[660px] p-6 md:p-12">
+    <div className="flex flex-col md:px-12 lg:ml-52 w-[660px] py-6 md:p-12">
       <div className="flex flex-col space-y- mx-auto">
         
         {/* Header: Logo, Name, Dot, and Dates */}
-        <div className="flex items-center justify-between w-full gap-4 mb-2">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between w-full gap-2 mb-2">
+          <div className="flex items-center gap-1">
             <Image
               src="/nedd.png"
               alt="NedBank Logo"
-              width={30}  // Matched size to other logos
-              height={30}
+              width={50}  // Matched size to other logos
+              height={50}
               className="object-contain"
             />
-            <h2 className="text-gray-800 text-[14px] font-bold">NedBank - Domestic Transactions</h2>
+            <h2 className="text-gray-800 text-[14px] font-extrabold">NedBank - Domestic Transactions</h2>
             <img 
               src="/dot.png" 
               alt="dot" 
@@ -29,7 +29,7 @@ export default function NedbankExperience() {
 
         {/* Role and Description */}
         <div className="space-y-4">
-          <p className="text-gray-500 text-[13px]">
+          <p className="text-gray-500 font-medium text-[13px]">
             Role: <span className="font-medium text-gray-800">Senior Product Designer</span>
           </p>
 
@@ -43,31 +43,32 @@ export default function NedbankExperience() {
 
           {/* Responsibilities */}
           <div>
-            <strong className="text-gray-800 font-medium text-[13px]">Key Contributions</strong>
-            <div className="space-y-2">
-  <ul className="list-none space-y-2">
-    <li className="flex items-start">
-      <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-1 flex-shrink-0"></span>
-      <p className="text-gray-800 text-[13px] font-medium">
-        Designing and refining <strong>payment and transfer workflows</strong> to improve efficiency and reduce user friction.
-      </p>
-    </li>
-    <li className="flex items-start">
-      <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-1 flex-shrink-0"></span>
-      <p className="text-gray-800 font-medium text-[13px]">
-        Developing intuitive solutions for <strong>collections processes,</strong> ensuring accuracy and seamless usability.
-      </p>
-    </li>
-    <li className="flex items-start">
-      <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-1 flex-shrink-0"></span>
-      <p className="text-gray-800 font-medium text-[13px]">
-        Collaborating closely with stakeholders to align transaction systems with business goals and user needs.
-      </p>
-    </li>
-  </ul>
+            <strong className="text-gray-800 font-bold mb-3.5 text-[13px]">Key Contributions</strong>
+            <div className="space-y-2 ml-2 mt-1.5">
+            <ul className="list-none ">
+  <li className="flex items-baseline">
+    <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-[6px] flex-shrink-0"></span>
+    <p className="text-gray-800 text-[13px] font-medium">
+      Designing and refining <strong>payment and transfer workflows</strong> to improve efficiency and reduce user friction.
+    </p>
+  </li>
+  <li className="flex items-baseline">
+    <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-[6px] flex-shrink-0"></span>
+    <p className="text-gray-800 font-medium text-[13px]">
+      Developing intuitive solutions for <strong>collections processes,</strong> ensuring accuracy and seamless usability.
+    </p>
+  </li>
+  <li className="flex items-baseline">
+    <span className="w-1.5 h-1.5 rounded-full bg-gray-800 mr-2.5 mt-[6px] flex-shrink-0"></span>
+    <p className="text-gray-800 font-medium text-[13px]">
+      Collaborating closely with stakeholders to align transaction systems with business <br /> goals and user needs.
+    </p>
+  </li>
+</ul>
+
   
   <p className="text-gray-800 text-[13px] font-medium">
-    Through user-centered design, I am enhancing Nedbank's transaction services, ensuring a more seamless, efficient, and engaging banking experience.
+    Through user-centered design, I am enhancing Nedbank's transaction services, ensuring a <br />  more seamless, efficient, and engaging banking experience.
   </p>
 </div>
           </div>

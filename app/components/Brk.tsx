@@ -29,7 +29,7 @@ export default function BRCKExperience() {
             height={30}
             className="object-contain"
           />
-          <h2 className="font-satoshi font-bold text-[14px] leading-[16px] tracking-normal flex items-center gap-2">
+          <h2 className=" font-extrabold text-[14px] leading-[16px] tracking-normal flex items-center gap-2">
             BRCK
             <img
               src="/dot.png"
@@ -38,7 +38,7 @@ export default function BRCKExperience() {
             />
           </h2>
         </div>
-        <p className="text-gray-800 font-bold text-[14px]">Mar 2018 - Oct 2020</p>
+        <p className="text-gray-800 font-bold text-[14px]">March 2018 - October 2020</p>
       </div>
 
       {/* Dates and Role */}

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function GoldmanSachsExperience() {
   return (
-    <div className="flex flex-col  w-[660px] md:px-12 lg:ml-52 p-6 md:p-4">
+    <div className="flex flex-col py-1.5  w-[660px] md:px-12 lg:ml-52 p-6 md:p-4">
       <div className="flex flex-col space-y-4">
         {/* Header: Logo, Name, Dot, and Dates */}
         <div className="flex items-center justify-between w-full gap-4 mb-4">
@@ -16,7 +16,7 @@ export default function GoldmanSachsExperience() {
               height={30}
               className="object-contain"
             />
-            <h2 className="text-gray-800 text-[14px] font-bold">Goldman Sachs - Conflicts Resolutions Group (CRG)</h2>
+            <h2 className="text-gray-800 text-[14px] font-extrabold">Goldman Sachs - Conflicts Resolutions Group (CRG)</h2>
             <img
               src="/dot.png"
               alt="dot"
@@ -76,7 +76,7 @@ export default function GoldmanSachsExperience() {
             enabling Goldman Sachs' deal teams to operate with greater confidence and efficiency.
           </p>
 
-          <p className="text-gray-500 font-medium text-[13px]">
+          <p className="text-gray-400 font-medium text-[13px]">
             Note: No designs can be shared due to NDA.
           </p>
         </div>

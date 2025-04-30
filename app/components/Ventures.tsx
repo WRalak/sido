@@ -20,7 +20,7 @@ export default function IMSGlobalExperience() {
   };
 
   return (
-    <div className="flex flex-col gap-8 p-6 md:p-12  w-[660px] md:px-12 lg:ml-54">
+    <div className="flex flex-col gap-5 p-6 md:p-12  w-[660px] md:px-12 lg:ml-54">
       {/* Logo, Company Name, and Year in a single line */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -31,7 +31,7 @@ export default function IMSGlobalExperience() {
             height={70}
             className="object-contain bg-gray-100"
           />
-          <h2 className="text-gray-800 text-[14px] font-bold flex gap-1.5">IMS Global Ventures          
+          <h2 className="text-gray-800 text-[14px] font-extrabold flex gap-1.5">IMS Global Ventures          
             <img 
               src="/dot.png" 
               alt="dot" 

@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react'
 
 const Footer = () => { 
     return (
-      <footer className=" hidden md:flex w-full border-gray-300 py-20 px-6 md:px-24 lg:px-44 flex-col sm:flex-row justify-between items-center text-[13px] text-gray-800 bg-white ">
+      <footer className=" hidden md:flex w-full border-gray-300 py-20 px-3 md:px-24 lg:px-44  flex-col sm:flex-row justify-between items-center text-[13px] text-gray-800 bg-white ">
         <div className="flex flex-col sm:flex-row text-[13px] font-medium sm:items-center gap-1 sm:gap-1">
           <span>+254 716 909 815</span>
           <span className="text-blue-500 text-[8px]">|</span>
@@ -40,7 +41,15 @@ const Footer = () => {
         </div>
   
         <div className="mt-2 sm:mt-0  text-center sm:text-right">
-          <p className='text-[13px] font-medium'>Developed by: <span className='text-orange-600 underline'>Wallace Ralak</span></p>
+        <p className="text-[13px] font-medium">
+  Developed by:{' '}
+  <Link
+    href="mailto:wallaceralak@gmail.com"
+    className="text-orange-600 border-b border-orange-600"
+  >
+    Wallace Ralak
+  </Link>
+</p>
         </div>
       </footer>
     );

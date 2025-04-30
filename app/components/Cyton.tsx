@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function CytonnExperience() {
   return (
-    <div className="flex flex-col md:px-12 lg:ml-54 w-[660px] p-6 md:p-12">
+    <div className="flex flex-col md:px-12 lg:ml-54 xl:ml-60 w-[660px] p-6 md:p-12">
       <div className="flex flex-col space-y-4 mx-auto">
 
         {/* Header: Logo, Name, Dot, and Dates */}
@@ -17,7 +17,7 @@ export default function CytonnExperience() {
               height={30}
               className="object-contain"
             />
-            <h2 className="text-gray-800 text-[14px] font-bold">Cytonn Investments</h2>
+            <h2 className="text-gray-800 text-[14px] font-extrabold">Cytonn Investments</h2>
             <img 
               src="/dot.png" 
               alt="dot" 
