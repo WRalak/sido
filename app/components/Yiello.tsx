@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function GoldmanSachsExperience() {
   return (
-    <div className="flex flex-col md:px-12 lg:ml-52 xl:ml-60 w-[660px] p-6 md:p-4">
-      <div className="flex flex-col space-y-2  mx-auto">
+    <div className="flex flex-col md:px-12 lg:ml-52 xl:ml-56 w-[660px] p-6 md:p-4">
+      <div className="flex flex-col space-y-1  mx-auto">
         
         {/* Header: Logo, Name, Dot, and Dates */}
         <div className="flex items-center justify-between w-full gap-4 mb-4">
@@ -28,7 +28,7 @@ export default function GoldmanSachsExperience() {
         </div>
 
         {/* Role and Description */}
-        <div className="space-y-2">
+        <div className="space-y-1">
           <p className="text-gray-500 text-[13px]">
             Role: <span className="font-medium text-gray-800">Designer</span>
           </p>

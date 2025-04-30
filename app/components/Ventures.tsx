@@ -66,7 +66,7 @@ export default function IMSGlobalExperience() {
       </div>
 
       {/* Text Content Below the Image Carousel */}
-      <div className="space-y-4">
+      <div className="space-y-2">
         <p className="text-gray-500 font-medium text-[13px]">Role: <span className="font-medium text-gray-800">Senior Product Designer</span></p>
         <p className='text-gray-800 font-medium text-[13px] '>As a Senior Product Designer contracted through <strong>Andela,</strong> I was tasked with designing a <br /> <strong>mobile wallet</strong> aimed at streamlining fare payments and digitizing South Africa’s public <br /> transport system.</p>
         <div className="space-y-2">
@@ -76,7 +76,7 @@ export default function IMSGlobalExperience() {
           </p>
 
           <ul className="list-disc list-inside font-medium text-gray-800 text-[13px] space-y-1">
-          <ul className="list-disc list-outside pl-5 space-y-1 text-gray-800 text-sm">
+          <ul className="list-disc list-outside pl-5 space-y-1 text-gray-800 text-[13px] font-medium">
   <li><strong>Mobile Wallet</strong> - Enabling users to easily pay for fares and other bills.</li>
   <li><strong>Taxi Tracking System</strong> - Digitizing public transport by monitoring taxis, their saccos, owners, and conductors.</li>
   <li><strong>Tap-to-Pay System</strong> - Using an installed device in taxis, allowing commuters to tap their phones at the start and end of a journey for automatic fare deduction based on distance traveled.</li>
@@ -87,9 +87,9 @@ export default function IMSGlobalExperience() {
         </div>
 
         <div>
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <p className="text-gray-800 text-[14px] font-semibold">My Approach:</p>
-            <ul className="list-disc font-medium list-inside text-gray-800 text-[13px] space-y-1">
+            <ul className="list-disc font-medium list-inside text-gray-800 text-[13px] ">
               <li>Conducted <strong>desk research</strong> and <strong>user interviews</strong> to understand pain points and behavior.</li>
               <li>Created <strong>User Stories</strong> and structured the <strong>Information Architecture</strong> for an intuitive experience.</li>
               <li>Designed a seamless interface for both commuters and transport operators.</li>
@@ -97,10 +97,10 @@ export default function IMSGlobalExperience() {
           </div>
         </div>
 
-        <div className="space-y-2">
-          <p className="text-gray-800 font-semibold text-[14px]">Deliverables:</p>
+        <div className="space-y-1">
+          <p className="text-gray-800 font-semibold text-[14px]">Deliverables</p>
           <p className='text-gray-800 font-medium text-[13px]'>The final solution included:</p>
-          <ul className="list-disc list-inside font-medium text-gray-800 text-sm space-y-1">
+          <ul className="list-disc list-inside font-medium text-gray-800 text-[13px] ">
             <li><strong>Mobile App </strong>- Enabling easy fare payments and tracking.</li>
             <li><strong>Admin Dashboard</strong> - Providing taxi operators and regulators with real-time insights.</li>
             <li><strong>Website</strong> - Designed for both desktop and responsive mobile experiences.</li>
