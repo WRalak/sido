@@ -1,12 +1,16 @@
-  import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-
-
-
+// Load Satoshi from CDN (FontShare)
+const satoshi = {
+  variable: '--font-satoshi',
+  style: 'normal',
+  weight: ['400', '500', '700', '900'],
+  className: 'font-sans',
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,12 +34,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${satoshi.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
-      <Navbar />
+        <Navbar />
         {children}
-          <Footer/>
+        <Footer/>
       </body>
     </html>
   );

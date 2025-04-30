@@ -202,7 +202,7 @@ const CaseStudies: React.FC = () => {
 
   return (
     <div className="py-4 px-4 md:px-8 bg-gray-50 max-w-8xl mx-auto">
-      <h2 className="text-lg text-gray-800  font-bold lg:px-44 mb- ">Case Studies</h2>
+      <h2 className="text-[18px] text-gray-800  font-bold lg:px-44 mb- ">Case Studies</h2>
 <div className="flex gap-2">
   {caseStudies.map((caseStudy) => (
     <div 

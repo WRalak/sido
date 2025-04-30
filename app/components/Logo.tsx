@@ -22,11 +22,11 @@ const LogoSection = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="hidden sm:block w-full  md:px-12 lg:px-28 px-4  overflow-hidden">
+    <section className="hidden sm:block w-full py-3   md:px-12 lg:px-44 px-4  overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="lg:ml-20 mb-6 lg:mb-8">
-          <h2 className="font-satoshi font-bold text-sm lg:text-sm mb-2">Logos do tell tales</h2>
-          <p className="font-satoshi text-gray-600 text-xs lg:text-sm">
+          <h2 className="font-satoshi font-bold text-[13px] lg:text-[13px] mb-2">Logos do tell tales</h2>
+          <p className="font-medium text-gray-800 text-[13px] lg:text-[13px] mb-4">
             Below are some places I have been fortunate enough to work at, either on a full-time or contract basis.
           </p>
         </div>
