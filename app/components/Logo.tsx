@@ -43,8 +43,8 @@ const LogoSection = () => {
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={40}
-                  height={40}
+                  width={61}
+                  height={32}
                   className="object-contain h-full w-full"
                   quality={100}
                 />

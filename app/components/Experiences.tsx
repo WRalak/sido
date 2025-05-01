@@ -10,7 +10,7 @@ import Yiello from './Yiello'
 
 const Experiences = () => {
   return (
-    <div className=' hidden sm:block '>
+    <div className=' hidden sm:block lg:px- '>
       <Nedbank/>
       <Gold/>
       <Ventures/>

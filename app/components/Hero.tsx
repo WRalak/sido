@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <div className="w-full py-4 lg:px-44 xl:px-56 flex flex-col lg:flex-row relative">
+    <div className="w-full py-4 lg:px-40 xl:px-56 flex flex-col lg:flex-row relative">
       {/* Container to restrict gradient within paddings */}
       <div className="absolute inset-0 overflow-hidden -z-10">
   {/* Desktop Gradient (right side, blurred) */}
@@ -96,8 +96,8 @@ const HeroSection = () => {
       </div>
 
       {/* Left Section - Bottom on mobile, aligned top on lg */}
-      <div className="flex-1 px-6 lg:w-[510px] py-4 lg:py-8 lg:pr-8 order-first lg:order-first">
-        <p className="font-satoshi font-black text-[23px] leading-[30px] tracking-normal text-base text-gray-800">
+      <div className="flex-1 px-6 lg:w-[520px] py-4 lg:py-8 lg:pr-8 order-first lg:order-first">
+        <p className=" font-black text-[23px] leading-[30px] tracking-normal text-base text-gray-800">
           I'm a Kenyan Product Designer with a <br />
           passion for minimalism and impactful <br /> aesthetics.
           I'm currently a Senior Product <br /> Designer

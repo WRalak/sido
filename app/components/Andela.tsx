@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function GoldmanSachsExperience() {
   return (
-    <div className="flex flex-col py-1 md:px-12 lg:ml-52 xl:ml-56 w-[660px] p-6 md:p-12">
-      <div className="flex flex-col space-y-6 mx-auto">
+    <div className="flex flex-col py-1 md:px-12 lg:ml-52 xl:ml-56 w-[660px] p-3 md:p-12">
+      <div className="flex flex-col space-y-3 mx-auto">
         
         {/* Header: Logo, Name, Dot, and Dates */}
         <div className="flex items-center justify-between w-full gap-4 mb-4">
