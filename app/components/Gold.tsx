@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function GoldmanSachsExperience() {
   return (
-    <div className="flex flex-col py-1.5  w-[660px] md:px-12 lg:ml-52 p-6 md:p-4">
-      <div className="flex flex-col space-y-4">
+    <div className="flex py-1.5 w-[660px]  md:px-12  p-6 md:p-4">
+      <div className="flex flex-col space-y-4 flex-grow">
         {/* Header: Logo, Name, Dot, and Dates */}
         <div className="flex items-center justify-between w-full gap-4 mb-4">
           <div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ export default function GoldmanSachsExperience() {
               className="w-4 h-4 rounded-full object-cover"
             />
           </div>
-          <p className=" font-bold text-[14px] leading-[16px] tracking-normal">2021 - Jan, 2025</p>
+          <p className="font-bold text-[14px] leading-[16px] tracking-normal">2021 - Jan, 2025</p>
         </div>
 
         {/* Role and Description */}
@@ -46,19 +46,19 @@ export default function GoldmanSachsExperience() {
             <p className="text-gray-800 text-[13px] mt-2 font-medium">Project Overview:</p>
             <p className='text-gray-800 font-medium text-[13px] mt-1.5'>  CARS was primarily used by:</p>
             <ul className="list-disc pl-5 font-medium space-y-1 mt-2">
-  <li className="text-gray-800 font-medium text-[13px]">
-    <strong>Bankers</strong> – Responsible for sourcing new deals and initiating them in the system as <br /> "Checks."
-  </li>
-  <li className="text-gray-800 font-medium text-[13px]">
-    <strong>Clearers</strong> – Tasked with reviewing and approving these Checks to ensure compliance with <br /> regulatory and internal conflict policies.
-  </li>
+              <li className="text-gray-800 font-medium text-[13px]">
+                <strong>Bankers</strong> – Responsible for sourcing new deals and initiating them in the system as <br /> "Checks."
+              </li>
+              <li className="text-gray-800 font-medium text-[13px]">
+                <strong>Clearers</strong> – Tasked with reviewing and approving these Checks to ensure compliance with <br /> regulatory and internal conflict policies.
+              </li>
             </ul>
           </div>
 
           {/* My Role & Impact */}
           <div>
             <p className="text-gray-800 text-[14px] font-bold">My Role & Impact:</p>
-            <ul className="list-disc pl-5  mt-2">
+            <ul className="list-disc pl-5 mt-2">
               <li className="text-gray-800 font-medium text-[13px]">
                 Conducted user research to understand pain points for both <strong>Bankers and Clearers,</strong><br /> improving their workflow efficiency
               </li>
@@ -81,6 +81,7 @@ export default function GoldmanSachsExperience() {
           </p>
         </div>
       </div>
+     
     </div>
   );
 }

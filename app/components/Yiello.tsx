@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function GoldmanSachsExperience() {
   return (
-    <div className="flex flex-col md:px-12 lg:ml-52 xl:ml-56 w-[660px] p-6 md:p-4">
+    <div className="flex flex-col md:px-12  w-[660px] p-6 md:p-4">
       <div className="flex flex-col space-y-1  mx-auto">
         
         {/* Header: Logo, Name, Dot, and Dates */}

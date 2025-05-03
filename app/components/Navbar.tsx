@@ -4,7 +4,7 @@ import { GoArrowUpRight } from 'react-icons/go';
 
 export default function Header() {
   return (
-    <header className="  px-4 py-6 md:px-8 lg:px-48 xl:px-60  flex justify-between items-center">
+    <header className="  px-4 py-6 md:px-8 lg:px-48 xl:px-66  flex justify-between items-center">
       {/* Left side - Name */}
       <div className=" text-[20px] leading-[16px] font-black text-center">
         <span className="text-orange-600">George</span>

@@ -23,37 +23,38 @@ export default function TukaiShowcase() {
     <div className="max-w-[735px] mx-auto p-4 sm:p-6 bg-white font-sans">
       {/* Header with Logo */}
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6 sm:mb-8">
-        <header className="flex flex-col sm:flex-row items-start gap-4 flex-1 min-w-0">
-          <div className="flex-shrink-0 mx-auto sm:mx-0">
-            <img 
-              src="/IG Post 2.png" 
-              alt="tukai" 
-              className="w-16 h-16 sm:w-[75px] sm:h-[75px] object-contain"
-            />
-          </div>
-          <div className="text-center sm:text-left">
-            <h1 className="text-lg sm:text-xl font-bold text-gray-800">
-              Tukai transforms how people explore the outdoors, plan adventures, and build communities.
-            </h1>
-            <p className="text-blue-600 text-xs sm:text-sm mt-1 cursor-pointer underline inline-block">
-              www.tukai.co
-            </p>
-            <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 mt-2 text-xs sm:text-sm text-gray-600">
-              {[
-                { icon: "/suit.png", label: "Co-founder" },
-                { icon: "/search.png", label: "UX Research" },
-                { icon: "/calendar.png", label: "Project Management" },
-                { icon: "/compass.png", label: "Design" },
-                { icon: "/check.png", label: "Testing" }
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-center">
-                  <img src={item.icon} alt={item.label} className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
-                  <span className="font-medium">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </header>
+
+      <header className="flex flex-col sm:flex-row items-start sm:items-center gap-4 flex-1 min-w-0">
+  <div className="flex-shrink-0 mx-auto sm:mx-0">
+    <img 
+      src="/IG Post 2.png" 
+      alt="tukai" 
+      className="w-16 h-16 sm:w-[75px] sm:h-[75px] object-contain"
+    />
+  </div>
+  <div className="text-center sm:text-left flex-1 min-w-0">
+    <h1 className="text-lg sm:text-xl font-bold text-gray-800">
+      Tukai transforms how people explore the outdoors, plan adventures, and build communities.
+    </h1>
+    <p className="text-blue-600 text-xs sm:text-sm mt-1 cursor-pointer underline inline-block">
+      www.tukai.co
+    </p>
+    <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 mt-2 text-xs sm:text-sm text-gray-600">
+      {[
+        { icon: "/suit.png", label: "Co-founder" },
+        { icon: "/search.png", label: "UX Research" },
+        { icon: "/calendar.png", label: "Project Management" },
+        { icon: "/compass.png", label: "Design" },
+        { icon: "/check.png", label: "Testing" }
+      ].map((item, idx) => (
+        <div key={idx} className="flex items-center">
+          <img src={item.icon} alt={item.label} className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+          <span className="font-medium">{item.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</header>
       </div>
 
       {/* Image Carousel */}

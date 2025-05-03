@@ -20,33 +20,43 @@ export default function GapstackShowcase() {
   return (
     <div className="max-w-[735px] mx-auto p-4 sm:p-6 bg-white ">
       {/* Header with Logo */}
-      <header className="flex items-start gap-4 sm:gap-6 mb-6">
-  {/* Logo - Always on left */}
-  <div className="flex-shrink-0">
+  
+      <header className="flex flex-col sm:flex-row items-center sm:items-start gap-4 w-full">
+  {/* Logo on the far left */}
+  <div className="flex-shrink-0 self-start">
     <img 
-      src="New Logo.png" 
-      alt="Gapstack Logo" 
-      className="w-[75px] h-[75px] object-contain"
+      src="/IG Post 2.png" 
+      alt="tukai" 
+      className="w-16 h-16 sm:w-[75px] sm:h-[75px] object-contain"
     />
   </div>
 
-  {/* Text content - Always to the right of logo */}
-  <div className="flex-1">
-    <h1 className="text-[20px] font-bold text-gray-800 leading-tight">
-      Gapstack is a supply chain & trade financing platform <br /> 
-      built for banks & financial institutions.
+  {/* Text content aligned properly next to logo */}
+  <div className="flex-1 text-center sm:text-left">
+    <h1 className="text-[20px] sm:text-xl font-bold text-gray-800">
+      Tukai transforms how people explore the outdoors, plan adventures, and build communities.
     </h1>
-    <p className="text-blue-600 text-[13px] underline mt-1 sm:mt-2">
-      <a 
-        href="https://www.gapstack.com" 
-        className="hover:underline hover:text-blue-700 transition-colors flex items-center"
-      >
-       
-        www.gapstack.com
-      </a>
+    <p className="text-blue-600 text-xs sm:text-sm cursor-pointer underline inline-block">
+      www.tukai.co
     </p>
+
+    <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 mt-2 text-xs sm:text-sm text-gray-600">
+      {[
+        { icon: "/suit.png", label: "Co-founder" },
+        { icon: "/search.png", label: "UX Research" },
+        { icon: "/calendar.png", label: "Project Management" },
+        { icon: "/compass.png", label: "Design" },
+        { icon: "/check.png", label: "Testing" }
+      ].map((item, idx) => (
+        <div key={idx} className="flex items-center">
+          <img src={item.icon} alt={item.label} className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+          <span className="font-medium text-xs">{item.label}</span>
+        </div>
+      ))}
+    </div>
   </div>
 </header>
+
 
       {/* Services */}
       <div className="flex flex-row flex-wrap gap-3 sm:gap-4 mb-6">
@@ -72,7 +82,7 @@ export default function GapstackShowcase() {
       {/* Image Carousel */}
       <div className="relative mb-8 group">
         <div 
-          className="w-full aspect-video sm:h-[400px] overflow-hidden rounded-xl  bg-sky-900 cursor-pointer border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+          className="w-full aspect-video sm:h-[400px] overflow-hidden rounded-xl  bg-sky-900 cursor-pointer "
           onClick={() => setIsModalOpen(true)}
         >
           <img 
@@ -108,7 +118,8 @@ export default function GapstackShowcase() {
             />
           ))}
         </div>
-      </div>
+      </div> 
+
 
       {/* Full Image Modal */}
       {isModalOpen && (

@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { MdKeyboardArrowRight } from 'react-icons/md';
+import { MdKeyboardArrowRight, MdClose } from 'react-icons/md';
 
 export default function IMSGlobalExperience() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   const exp = {
     images: [
@@ -19,8 +20,16 @@ export default function IMSGlobalExperience() {
     setCurrentSlide((prev) => (prev + 1) % totalImages); // Loop through images
   };
 
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className="flex flex-col gap-5 p-6 md:p-12  w-[660px] md:px-12 lg:ml-54">
+    <div className="flex flex-col gap-5 p-6 md:p-12 w-[660px] md:px-12">
       {/* Logo, Company Name, and Year in a single line */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -39,13 +48,16 @@ export default function IMSGlobalExperience() {
             />
           </h2>
         </div>
-        <p className="text-gray-800  font-bold text-[14px] leading-[16px] tracking-normal">Oct 2020 - Jun 2021</p>
+        <p className="text-gray-800 font-bold text-[14px] leading-[16px] tracking-normal">Oct 2020 - Jun 2021</p>
       </div>
 
       {/* Image Slider with ">" icon only for navigation */}
       <div className="w-full max-w-3xl mx-auto mb-1 relative">
-        {/* Image Display with Green Background */}
-        <div className="relative mt-2 w-full bg-blue-900 p-4 rounded-lg">
+        {/* Image Display with Blue Background - Now Clickable */}
+        <div 
+          className="relative mt-2 w-full bg-sky-900 p-4 rounded-lg cursor-pointer"
+          onClick={openModal}
+        >
           <Image
             src={exp.images[currentSlide]} // Display current image based on state
             alt="Experience Image"
@@ -57,7 +69,10 @@ export default function IMSGlobalExperience() {
 
           {/* Next Button */}
           <button
-            onClick={() => nextImage(exp.images.length)} // Go to next image
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent modal from opening when clicking next button
+              nextImage(exp.images.length);
+            }}
             className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow"
           >
             <span className="text-3xl"><MdKeyboardArrowRight /></span> {/* Right Arrow Icon */}
@@ -68,21 +83,17 @@ export default function IMSGlobalExperience() {
       {/* Text Content Below the Image Carousel */}
       <div className="space-y-2">
         <p className="text-gray-500 font-medium text-[13px]">Role: <span className="font-medium text-gray-800">Senior Product Designer</span></p>
-        <p className='text-gray-800 font-medium text-[13px] '>As a Senior Product Designer contracted through <strong>Andela,</strong> I was tasked with designing a <br /> <strong>mobile wallet</strong> aimed at streamlining fare payments and digitizing South Africa’s public <br /> transport system.</p>
+        <p className='text-gray-800 font-medium text-[13px] '>As a Senior Product Designer contracted through <strong>Andela,</strong> I was tasked with designing a <br /> <strong>mobile wallet</strong> aimed at streamlining fare payments and digitizing South Africa's public <br /> transport system.</p>
         <div className="space-y-2">
           <p className="text-gray-800 text-[13px] font-semibold">Project Overview</p>
           <p className="text-gray-800 font-medium text-[13px]">
             The goal was to create a <strong>seamless payment experience</strong> for commuters while improving transparency and efficiency for taxi operators. Key features included:
           </p>
 
-          <ul className="list-disc list-inside font-medium text-gray-800 text-[13px] space-y-1">
           <ul className="list-disc list-outside pl-5 space-y-1 text-gray-800 text-[13px] font-medium">
-  <li><strong>Mobile Wallet</strong> - Enabling users to easily pay for fares and other bills.</li>
-  <li><strong>Taxi Tracking System</strong> - Digitizing public transport by monitoring taxis, their saccos, owners, and conductors.</li>
-  <li><strong>Tap-to-Pay System</strong> - Using an installed device in taxis, allowing commuters to tap their phones at the start and end of a journey for automatic fare deduction based on distance traveled.</li>
-</ul>
-
-
+            <li><strong>Mobile Wallet</strong> - Enabling users to easily pay for fares and other bills.</li>
+            <li><strong>Taxi Tracking System</strong> - Digitizing public transport by monitoring taxis, their saccos, owners, and conductors.</li>
+            <li><strong>Tap-to-Pay System</strong> - Using an installed device in taxis, allowing commuters to tap their phones at the start and end of a journey for automatic fare deduction based on distance traveled.</li>
           </ul>
         </div>
 
@@ -107,10 +118,56 @@ export default function IMSGlobalExperience() {
           </ul>
 
           <p className="text-gray-800 font-medium text-[13px]">
-            This project not only improved convenience for commuters but also introduced transparency and efficiency to South Africa’s public transport system.
+            This project not only improved convenience for commuters but also introduced transparency and efficiency to South Africa's public transport system.
           </p>
         </div>
       </div>
+
+      {/* Modal for Full-Screen Image View */}
+      {showModal && (
+        <div 
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={closeModal}
+        >
+          <div 
+            className="relative w-full max-w-2xl mx-auto h-auto max-h-[80vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button - positioned above the image */}
+            <button 
+              onClick={closeModal}
+              className="absolute -top-12 right-0 bg-white rounded-full p-2 z-10 shadow-lg"
+              aria-label="Close modal"
+            >
+              <MdClose className="text-black text-2xl" />
+            </button>
+            
+            {/* Properly sized image */}
+            <div className="w-full h-full overflow-hidden">
+              <Image
+                src={exp.images[currentSlide]}
+                alt="Experience Image"
+                width={800}
+                height={450}
+                layout="responsive"
+                className="rounded-lg object-contain"
+              />
+            </div>
+            
+            {/* Next button in modal */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage(exp.images.length);
+              }}
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg"
+              aria-label="Next image"
+            >
+              <MdKeyboardArrowRight className="text-black text-3xl" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

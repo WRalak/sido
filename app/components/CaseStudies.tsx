@@ -104,7 +104,7 @@ const CaseStudies: React.FC = () => {
 
   return (
     <div className="py-4 px-4 md:px-8 bg-gray-50 max-w-8xl mx-auto">
-      <h2 className="text-[18px] text-gray-800 font-extrabold lg:px-44 mb-4">Case Studies</h2>
+      <h2 className="text-[18px]  xl:px-56 text-gray-800 font-extrabold lg:px-44 mb-4">Case Studies</h2>
       <div
         ref={containerRef}
         className="flex overflow-x-auto pb-4 -mx-4 px-4 scroll-smooth"

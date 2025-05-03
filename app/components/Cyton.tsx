@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function CytonnExperience() {
   return (
-    <div className="flex flex-col md:px-12 lg:ml-52 xl:ml-56 w-[660px] p-3 md:p-6">
+    <div className="flex flex-col md:px-12  w-[660px] p-3 md:p-6">
       <div className="flex flex-col space-y-4 mx-auto">
 
         {/* Header: Logo, Name, Dot, and Dates */}
