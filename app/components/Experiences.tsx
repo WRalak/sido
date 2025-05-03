@@ -7,6 +7,7 @@ import Andela from './Andela'
 import Brk from './Brk'
 import Cyton from './Cyton'
 import Yiello from './Yiello'
+import Tales from './Tales'
 
 const Experiences = () => {
   return (
@@ -18,6 +19,7 @@ const Experiences = () => {
       <Brk/>
       <Cyton/>
       <Yiello/>
+      <Tales/>
     </div>
   )
 }
