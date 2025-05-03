@@ -28,7 +28,7 @@ const caseStudies: CaseStudy[] = [
     title: 'Solgates Case Study',
     company: 'Solgates',
     slug: 'solgates',
-    description: 'A Second-Hand Clothing Marketplace...',
+    description: 'A Second-Hand \n Clothing Marketplace...',
     image: '/solgates.jpg'
   },
   {
@@ -36,7 +36,7 @@ const caseStudies: CaseStudy[] = [
     title: 'Peach Cars Case Study',
     company: 'Peach Cars',
     slug: 'peach', // 👈 This is your clean route
-    description: 'Peach Cars is a rising startup aiming...',
+    description: 'Peach Cars is a \n rising startup aiming...',
     image: '/peacch.png'
   },
   {
@@ -44,11 +44,10 @@ const caseStudies: CaseStudy[] = [
     title: 'Tukai Case Study',
     company: 'Tukai',
     slug: 'tukai',
-    description: 'Tukai transforms how people explore...',
+    description: 'Tukai transforms \n how people explore...',
     image: '/tukai.jpg'
   },
 ];
-
 
 const CaseStudies: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -103,11 +102,11 @@ const CaseStudies: React.FC = () => {
   };
 
   return (
-    <div className="py-4 px-4 md:px-8 bg-gray-50 max-w-8xl mx-auto">
-      <h2 className="text-[18px]  xl:px-56 text-gray-800 font-extrabold lg:px-44 mb-4">Case Studies</h2>
+    <div className="py-4 px-4 md:px-8 bg-gray-50  max-w-8xl mx-auto">
+      <h2 className="text-[18px]  xl:px-56 text-gray-800 font-extrabold lg:px-32 mb-4">Case Studies</h2>
       <div
         ref={containerRef}
-        className="flex overflow-x-auto pb-4 -mx-4 px-4 scroll-smooth"
+        className="flex overflow-x-auto pb-4 -mx-4 px-4 scroll-smooth xl:px-32"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -121,7 +120,7 @@ const CaseStudies: React.FC = () => {
           // Wrapping the card in a Link component
           <div
             key={caseStudy.id}
-            className="flex items-center  px-4 cursor-pointer overflow-hidden flex-shrink-0 w-[85%] sm:w-[45%] md:w-[48%] lg:w-[30%]"
+            className="flex items-center  px-1 cursor-pointer overflow-hidden flex-shrink-0 w-[85%] sm:w-[45%] md:w-[48%] lg:w-[30%]"
             onClick={(e) => {
               // Only navigate if it's a click, not a drag
               if (isDragging && !isClickNotDrag()) {
@@ -143,7 +142,7 @@ const CaseStudies: React.FC = () => {
               </div>
 
               <div className="flex flex-col justify-between flex-grow p-3 overflow-hidden">
-                <p className="text-gray-800 text-[14px] font-extrabold mb-1 line-clamp-2">
+                <p className="text-gray-800 text-[14px] font-extrabold mb-1 line-clamp-2 whitespace-pre-line">
                   {caseStudy.description}
                 </p>
                 <div className="flex items-center text-orange-600 font-medium text-[13px]">

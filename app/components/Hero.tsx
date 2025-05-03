@@ -10,7 +10,7 @@ const HeroSection = () => {
   const [showFullText, setShowFullText] = useState(false);
 
   return (
-    <div className="w-full py-4 lg:px-32 xl:px-62 flex flex-col lg:flex-row relative">
+    <div className="w-full py-4 lg:px-32 xl:px-60 flex flex-col lg:flex-row relative">
       {/* Background Gradient */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div

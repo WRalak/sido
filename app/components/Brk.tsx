@@ -12,6 +12,7 @@ export default function BRCKExperience() {
     "/brkw.png",
     "/br.jpg",
     "/brkk.jpg",
+    '/brk2.png'
   ];
   
   const nextImage = (totalImages: number) => {
@@ -61,33 +62,43 @@ export default function BRCKExperience() {
       </div>
       
       {/* Image Slider Section with visible background */}
-       <div className="w-full max-w-3xl mx-auto mb-1 relative">
-              {/* Image Display with Blue Background - Now Clickable */}
-              <div 
-                className="relative mt-2 w-full bg-sky-900 p-4 rounded-lg cursor-pointer"
-                onClick={openModal}
-              >
-                <Image
-                  src={expImages[currentSlide]} // Display current image based on state
-                  alt="Experience Image"
-                  layout="responsive" // Ensures image takes full width of the container
-                  width={800} // Adjusted width
-                  height={675} // Adjusted height based on aspect ratio
-                  className="rounded-lg object-cover w-full h-auto"
-                />
-      
-                {/* Next Button */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation(); // Prevent modal from opening when clicking next button
-                    nextImage(expImages.length);
-                  }}
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow"
-                >
-                  <span className="text-3xl"><MdKeyboardArrowRight /></span> {/* Right Arrow Icon */}
-                </button>
-              </div>
-            </div>
+      <div className="w-full max-w-3xl mx-auto mb-1 relative">
+  {/* Image Display with Blue Background - Now Clickable */}
+  <div className="w-full max-w-3xl mx-auto mb-1 relative">
+  {/* Container with bg only on top and sides */}
+  <div 
+    className="relative mt-4 w-full bg-sky-900 px-4 pt-4 rounded-t-lg cursor-pointer" // Removed pb-4 (bottom padding)
+    onClick={openModal}
+  >
+    {/* Image container with overflow hidden to show only top half */}
+    <div className="relative w-full overflow-hidden rounded-md" style={{ height: "337.5px" }}> {/* Half of 675px */}
+      <Image
+        src={expImages[currentSlide]}
+        alt="Experience Image"
+        layout="responsive"
+        width={800}
+        height={675}
+        className="object-cover w-full"
+        style={{ position: "absolute", top: 0, left: 0 }}
+      />
+    </div>
+
+    {/* Next Button */}
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        nextImage(expImages.length);
+      }}
+      className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow"
+    >
+      <span className="text-3xl"><MdKeyboardArrowRight /></span>
+    </button>
+  </div>
+  
+  {/* Bottom padding area without background */}
+  <div className="bg-transparent  "></div>
+</div>
+</div>
       
       <div className="w-full mx-auto">
         <p className="text-gray-800 font-medium text-[13px] leading-5 tracking-normal mt-2">
