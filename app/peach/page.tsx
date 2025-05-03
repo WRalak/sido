@@ -1,154 +1,180 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
-import { ChevronRight, ChevronLeft, Globe, Users, BarChart3, ClipboardCheck } from 'lucide-react';
+import { ChevronRight, ChevronLeft, X } from 'lucide-react';
 
 export default function PeachCarsShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const images = [
-    {
-      src: "/peach0.jpg",
-      alt: "Peach Cars Homepage"
-    },
-    {
-      src: "/peach2.jpg",
-      alt: "Car Listing Page"
-    },
-    {
-      src: "/peach3.jpg",
-      alt: "Seller Dashboard"
-    },
-    {
-      src: "/peach4.jpg",
-      alt: "Seller Dashboard"
-    },
-   
+    { src: "/peach0.jpg", alt: "Peach Cars Homepage" },
+    { src: "/peach2.jpg", alt: "Car Listing Page" },
+    { src: "/peach3.jpg", alt: "Seller Dashboard" },
+    { src: "/peach4.jpg", alt: "Seller Dashboard" },
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const goToSlide = (idx: number) => setCurrentSlide(idx);
 
   return (
-    <div className="max-w-[735px]  mx-auto p-6 bg-white font-sans">
+    <div className="max-w-[735px] mx-auto p-4 md:p-6 bg-white font-sans">
       {/* Header with Logo */}
-      <header className="flex flex-wrap items-start gap-4 mb-6">
-  {/* Logo */}
-  <div className="flex-shrink-0">
-    <div className="bg-red-50 rounded-md flex items-center justify-center p-1 w-[75px] h-[75px]">
-      <img src="Group.png" alt="Peach Cars Logo" height={75} width={75} />
-    </div>
-  </div>
+      <header className="flex flex-col sm:flex-row items-start gap-4 mb-6">
+        <div className="flex-shrink-0 mx-auto sm:mx-0">
+          <div className="bg-red-50 rounded-md flex items-center justify-center p-1 w-16 h-16 sm:w-[75px] sm:h-[75px]">
+            <img 
+              src="Group.png" 
+              alt="Peach Cars Logo" 
+              className="h-full w-auto object-contain"
+            />
+          </div>
+        </div>
 
-  {/* Text Content */}
-  <div className="flex-1 min-w-[250px]">
-    <h1 className="text-[20px] font-bold text-gray-800">
-      <span style={{ color: 'rgba(237, 57, 119, 1)' }} className="mr-1">
-        Peach Cars
-      </span>
-      is a rising startup aiming to transform the <br />
-      used car buying experience in Kenya by providing a <br />
-      transparent, user-friendly online marketplace.
-    </h1>
+        <div className="flex-1 min-w-0 text-center sm:text-left">
+          <h1 className="text-lg sm:text-xl font-bold text-gray-800">
+            <span className="text-[#ed3977]">Peach Cars</span> is a rising startup aiming to transform the{' '}
+            <span className="hidden sm:inline"><br /></span>
+            used car buying experience in Kenya by providing a{' '}
+            <span className="hidden sm:inline"><br /></span>
+            transparent, user-friendly online marketplace.
+          </h1>
 
-    <p className="text-blue-600 text-[13px] mt-1 underline cursor-pointer">
-      www.peachcars.co.ke
-    </p>
+          <p className="text-blue-600 text-[13px] sm:text-sm mt-1 underline inline-block cursor-pointer">
+            www.peachcars.co.ke
+          </p>
 
-    <div className="flex flex-wrap space-x-6 text-[13px] mt-2">
-      <div className="flex items-center text-gray-600">
-        <img src="search.png" alt="UX Research" className="mr-1" />
-        <span className="font-medium">UX Research</span>
-      </div>
-      <div className="flex items-center text-gray-600">
-        <img src="compass.png" alt="Design" className="mr-1" />
-        <span className="font-medium">Design</span>
-      </div>
-      <div className="flex items-center text-gray-600">
-        <img src="check.png" alt="Testing" className="mr-1" />
-        <span className="font-medium">Testing</span>
-      </div>
-    </div>
-  </div>
-</header>
-
-
-      {/* Services */}
-    
+          <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-6 text-xs sm:text-sm mt-2">
+            <div className="flex items-center text-gray-600">
+              <img src="search.png" alt="UX Research" className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+              <span className="font-medium">UX Research</span>
+            </div>
+            <div className="flex items-center text-gray-600">
+              <img src="compass.png" alt="Design" className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+              <span className="font-medium">Design</span>
+            </div>
+            <div className="flex items-center text-gray-600">
+              <img src="check.png" alt="Testing" className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+              <span className="font-medium">Testing</span>
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* Image Carousel */}
-      <div className="flex justify-center">
-      <div className="relative" style={{ width: '510px', height: '280px' }}>
-        {/* Image container that extends below the red frame */}
-        <div className="absolute" style={{ top: '26px', left: '31px', width: '448px', height: '258px' }}>
-          <img
-            src={images[currentSlide].src}
-            alt={images[currentSlide].alt}
-            className="w-full h-full object-cover rounded-md"
-          />
-        </div>
-        
-        {/* Red frame - only top, left and right */}
-        <div 
-          className="absolute top-0 left-0 w-full bg-[rgba(38,110,165,1)] rounded-md"
-          style={{ height: '26px' }}
-        />
-        <div 
-          className="absolute top-0 left-0 h-full bg-[rgba(38,110,165,1)]"
-          style={{ width: '31px' }}
-        />
-        <div 
-          className="absolute top-0 right-0 h-full bg-[rgba(38,110,165,1)]"
-          style={{ width: '31px' }}
-        />
-        
-        {/* Navigation buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-8 top-32 bg-white/80 rounded-full p-2 hover:bg-white z-10"
-        >
-          <ChevronLeft size={24} />
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-8 top-32 bg-white/80 rounded-full p-2 hover:bg-white z-10"
-        >
-          <ChevronRight size={24} />
-        </button>
-        
-        {/* Pagination dots */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-          {images.map((_, idx) => (
-            <span
-              key={idx}
-              className={`block w-2 h-2 rounded-full ${currentSlide === idx ? 'bg-pink-600' : 'bg-red-100'}`}
+      <div className="flex justify-center mb-8">
+        <div className="relative w-full max-w-[510px] aspect-[510/280]">
+          {/* Clickable image container */}
+          <div 
+            className="absolute cursor-pointer inset-0"
+            style={{ 
+              top: '9%', 
+              left: '6%', 
+              width: '88%', 
+              height: '92%' 
+            }}
+            onClick={() => setIsModalOpen(true)}
+          >
+            <img
+              src={images[currentSlide].src}
+              alt={images[currentSlide].alt}
+              className="w-full h-full object-cover rounded-md"
+              style={{ objectPosition: 'top center' }}
             />
-          ))}
+          </div>
+          
+          {/* Responsive red frame */}
+          <div className="absolute top-0 left-0 w-full bg-[rgba(38,110,165,1)] rounded-t-md h-[9%]" />
+          <div className="absolute top-0 left-0 h-full bg-[rgba(38,110,165,1)] w-[6%]" />
+          <div className="absolute top-0 right-0 h-full bg-[rgba(38,110,165,1)] w-[6%]" />
+          
+          {/* Navigation buttons */}
+          <button
+            onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white z-10"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+          </button>
+          
+          <button
+            onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white z-10"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
+          </button>
+          
+          {/* Pagination dots */}
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1 sm:space-x-2 z-10">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
+                className={`block w-2 h-2 rounded-full transition-colors ${currentSlide === idx ? 'bg-pink-600' : 'bg-red-100'}`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Full Image Modal */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div className="relative w-full max-w-4xl h-full max-h-[90vh]">
+            <img 
+              src={images[currentSlide].src} 
+              alt={images[currentSlide].alt}
+              className="w-full h-full object-contain"
+            />
+            
+            <button 
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/50 text-white rounded-full p-1 sm:p-2"
+              onClick={(e) => { e.stopPropagation(); setIsModalOpen(false); }}
+              aria-label="Close modal"
+            >
+              <X className="w-4 h-4 sm:w-6 sm:h-6" />
+            </button>
+
+            {/* Navigation in modal */}
+            <button
+              onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-1 sm:p-2"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+            </button>
+            
+            <button
+              onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white rounded-full p-1 sm:p-2"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Content */}
-      <div className="prose max-w-none mt-8 px-4 ">
-      
-        <p className="list-disc text-[13px] font-medium pl-5 mb-6 space-y-1">
-          <>   <span className="font-bold text-[14px] mb-4">TL;DR:</span>I led the design and testing for Peach Cars, creating a user-friendly marketplace that <br /> simplifies buying and selling used cars in Kenya.</>
-          <>By focusing on trust, intuitive search, and a <br /> seamless listing process, we improved user engagement, increased listings, and boosted business <br /> growth.</>
+      <div className="prose max-w-none mt-6 sm:mt-8 px-2 sm:px-4">
+        <p className="text-sm sm:text-[13px] font-medium mb-4 sm:mb-6">
+          <span className="font-bold text-sm sm:text-[14px]">TL;DR:</span> I led the design and testing for Peach Cars, creating a user-friendly marketplace that simplifies buying and selling used cars in Kenya. By focusing on trust, intuitive search, and a seamless listing process, we improved user engagement, increased listings, and boosted business growth.
         </p>
 
-        <h2 className="font-bold text-[20px] text-gray-700 mt-8 mb-4">Peach Cars Website – UX Case Study</h2>
+        <h2 className="font-bold text-lg sm:text-xl text-gray-700 mt-6 sm:mt-8 mb-3 sm:mb-4">Peach Cars Website – UX Case Study</h2>
         
-        <h3 className="font-bold text-gray-700 text-[14px] mb-2">Introduction</h3>
-        <p className="mb-4 font-medium text-[13px] text-gray-700">
+        <h3 className="font-bold text-sm sm:text-[14px] text-gray-700 mb-2">Introduction</h3>
+        <p className="mb-4 text-sm sm:text-[13px] text-gray-700 font-medium">
           Peach Cars is a Kenyan online marketplace that simplifies buying and selling used cars. My role as the UX/UI Designer involved leading research, design, and testing to create a user-friendly and trustworthy platform.
         </p>
         
+          
         <h3 className="font-bold text-[13px] text-gray-700 mt-2 mb-2">My Role & Process</h3>
         <p className="mb-2 text-[13px] text-gray-700 font-medium ">
           I handled user research, wireframing, prototyping, usability testing, and visual design using Figma. <br /> The goal was to improve trust, simplify search, and streamline the listing process for sellers.
@@ -201,6 +227,7 @@ export default function PeachCarsShowcase() {
         <p className="mb-4 text-[13px] text-gray-700 font-medium">
           This project reinforced the power of user-centered design and iterative <br /> testing in solving real-world pain points. By focusing on trust and simplicity, <br /> Peach Cars became a more accessible and effective car marketplace.
         </p>
+      
       </div>
     </div>
   );
