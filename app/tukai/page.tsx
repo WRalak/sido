@@ -35,7 +35,7 @@ export default function TukaiShowcase() {
             <h1 className="text-lg sm:text-xl font-bold text-gray-800">
               Tukai transforms how people explore the outdoors, plan adventures, and build communities.
             </h1>
-            <p className="text-blue-600 text-xs sm:text-sm mt-1 underline inline-block">
+            <p className="text-blue-600 text-xs sm:text-sm mt-1 cursor-pointer underline inline-block">
               www.tukai.co
             </p>
             <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 mt-2 text-xs sm:text-sm text-gray-600">
@@ -57,47 +57,57 @@ export default function TukaiShowcase() {
       </div>
 
       {/* Image Carousel */}
-      <div className="relative mb-6 sm:mb-8">
-        <div 
-          className="w-full aspect-[16/9] sm:h-[280px] flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-b from-[#007A87] to-[#007A87] cursor-pointer"
-          onClick={() => setIsModalOpen(true)}
-        >
-          <img
-            src={images[currentSlide].src}
-            alt={images[currentSlide].alt}
-            className="h-full w-auto object-contain"
-          />
-        </div>
-        
-        {/* Navigation buttons */}
-        <button
-          onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
-        </button>
-
-        <button
-          onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
-        </button>
-
-        {/* Pagination dots */}
-        <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2">
-          {images.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-              className={`w-2 h-2 rounded-full transition-colors ${currentSlide === idx ? 'bg-green-600' : 'bg-gray-300'}`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
-        </div>
+       {/* Image Carousel */}
+<div className="relative mb-6 sm:mb-8 overflow-hidden rounded-lg">
+  {/* Slides Container */}
+  <div
+    className="flex transition-transform duration-300 ease-in-out"
+    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+  >
+    {images.map((img, idx) => (
+      <div 
+        key={idx}
+        className="flex-shrink-0 w-full aspect-[16/9] sm:h-[280px] flex items-center justify-center bg-gradient-to-b from-[#007A87] to-[#007A87] cursor-pointer"
+        onClick={() => setIsModalOpen(true)}
+      >
+        <img
+          src={img.src}
+          alt={img.alt}
+          className="h-full w-auto object-contain"
+        />
       </div>
+    ))}
+  </div>
+  
+  {/* Navigation buttons */}
+  <button
+    onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+    className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white"
+    aria-label="Previous slide"
+  >
+    <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+  </button>
+
+  <button
+    onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+    className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white"
+    aria-label="Next slide"
+  >
+    <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
+  </button>
+
+  {/* Pagination dots */}
+  <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2">
+    {images.map((_, idx) => (
+      <button
+        key={idx}
+        onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
+        className={`w-2 h-2 rounded-full transition-colors ${currentSlide === idx ? 'bg-green-600' : 'bg-gray-300'}`}
+        aria-label={`Go to slide ${idx + 1}`}
+      />
+    ))}
+  </div>
+</div>
 
       {/* Full Image Modal */}
       {isModalOpen && (
