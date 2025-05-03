@@ -10,7 +10,7 @@ const HeroSection = () => {
   const [showFullText, setShowFullText] = useState(false);
 
   return (
-    <div className="w-full py-4 lg:px-44 xl:px-60 flex flex-col lg:flex-row relative">
+    <div className="w-full py-4 lg:px-32 xl:px-62 flex flex-col lg:flex-row relative">
       {/* Background Gradient */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div
@@ -104,7 +104,7 @@ const HeroSection = () => {
             <div className="flex items-start">
               <span className="mr-2 text-lg leading-snug">•</span>
               <p className="font-medium">
-                At <strong>LYNK</strong>, I worked on <strong>bridging blue-collar workers with potential employers</strong>, empowering livelihoods.
+                At <strong>LYNK</strong>, I worked on <strong>bridging blue-collar workers with potential employers</strong>,<br /> empowering livelihoods.
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ const HeroSection = () => {
             <span className="mr-2 text-lg leading-snug">•</span>
             <span>
               <strong>In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> streamline
-              <strong> mobile wallet payments</strong> for taxi fares.
+              <strong> mobile wallet payments</strong> <br /> for taxi fares.
             </span>
           </p>
 
@@ -159,7 +159,7 @@ const HeroSection = () => {
               <Link href="https://tukai.com" target="_blank" className="text-blue-700 border-b border-blue-600">
                 Tukai
               </Link>{' '}
-              – passion projects that keep me innovating.
+              – passion projects <br /> that keep me innovating.
             </p>
           </div>
         </div>
