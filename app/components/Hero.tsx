@@ -5,6 +5,7 @@ import { GoArrowUpRight } from 'react-icons/go';
 import { MdOutlinePhone } from 'react-icons/md';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RxArrowTopRight } from 'react-icons/rx';
 
 const HeroSection = () => {
   const [showFullText, setShowFullText] = useState(false);
@@ -63,7 +64,7 @@ const HeroSection = () => {
       target="_blank" 
       rel="noopener noreferrer"
     >
-      <GoArrowUpRight className="mr-1 text-gray-600" size={14} />
+      <RxArrowTopRight className="mr-1 text-gray-600" size={16} />
       <span className="text-blue-600 font-medium border-b border-blue-600">{item.label}</span>
     </a>
   ))}
@@ -94,21 +95,21 @@ const HeroSection = () => {
             <br />
             shaping products that make a real impact:
           </p>
-          <div className="mt-2 ml-2 space-y-2">
+          <div className="mt-2 ml-2 ">
             <div className="flex items-start">
-              <span className="mr-2 text-lg leading-snug">•</span>
+              <span className="mr-2 text-md leading-snug">•</span>
               <p className="font-medium">
                 At <strong>Cytonn</strong>, I helped investors <strong>track their investments</strong> with ease.
               </p>
             </div>
             <div className="flex items-start">
-              <span className="mr-2 text-lg leading-snug">•</span>
+              <span className="mr-2 text-md leading-snug">•</span>
               <p className="font-medium">
                 At <strong>BRCK</strong>, I contributed to <strong>connecting people to free WiFi</strong>, expanding digital access.
               </p>
             </div>
             <div className="flex items-start">
-              <span className="mr-2 text-lg leading-snug">•</span>
+              <span className="mr-2 text-md leading-snug">•</span>
               <p className="font-medium">
                 At <strong>LYNK</strong>, I worked on <strong>bridging blue-collar workers with potential employers</strong>,<br /> empowering livelihoods.
               </p>
@@ -117,20 +118,19 @@ const HeroSection = () => {
 
           <p className="mt-2 font-medium">Beyond Kenya, I've designed for global markets:</p>
 
-          <p className="flex mb-1 ml-1">
-            <span className="mr-2 text-lg leading-snug">•</span>
-            <span>
-              <strong>In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> streamline
-              <strong> mobile wallet payments</strong> <br /> for taxi fares.
-            </span>
-          </p>
+         <p className="flex items-start mb-1">
+ 
+  <span>
+    <strong> <span className=" mt-[px] text-md flex-shrink-0">•</span> In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> streamline <strong>mobile wallet payments</strong> <br /> for taxi fares.
+  </span>
+</p>
 
           {/* Mobile "See more" toggle */}
           <div className="sm:hidden">
             {!showFullText && (
               <button
                 onClick={() => setShowFullText(true)}
-                className="text-orange-600 mt-2 text-[13px] font-medium"
+                className="text-orange-600 mt- text-[13px] font-medium"
               >
                 See more...
               </button>
@@ -140,16 +140,16 @@ const HeroSection = () => {
           {/* Extended Text */}
           <div className={showFullText ? 'block' : 'hidden sm:block'}>
             <p className="flex mb-1 ml-1 font-medium">
-              <span className="mr-2 text-lg leading-snug">•</span>
+          
               <span>
-                <strong>At Goldman Sachs</strong> (Conflicts Resolution Group – New York), I helped bankers and <br />
+                <strong> <span className="mr-2 mt-[px] text-md flex-shrink-0">•</span>At Goldman Sachs</strong> (Conflicts Resolution Group – New York), I helped bankers and <br />
                 deal clearers navigate conflicts in high-stakes deals.
               </span>
             </p>
 
             <p className="ml-1 font-medium">
-              <span className="mr-2 text-lg leading-snug">•</span>
-              <span>
+               <span className="mr-2 mt-[3px] text-md flex-shrink-0">•</span>
+              <span> 
                 Currently, at <strong>Nedbank (South Africa)</strong>, I'm working with the Domestic Transactions <br />
                 team, focusing on <strong>Payments, Transfers, and Collections</strong>, improving how people <br />
                 and businesses move money.
@@ -162,7 +162,7 @@ const HeroSection = () => {
                 Solgates
               </Link>{' '}
               and{' '}
-              <Link href="https://tukai.com" target="_blank" className="text-blue-700 border-b border-blue-600">
+              <Link href="https://tukai.com" target="_blank" className="text-blue-700 border-b  border-blue-600">
                 Tukai
               </Link>{' '}
               – passion projects <br /> that keep me innovating.

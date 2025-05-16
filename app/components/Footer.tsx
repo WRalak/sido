@@ -13,7 +13,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/george-s-ralak"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-b border-gray-800 hover:text-blue-600 transition-colors"
+          className="border-b border-gray-800  transition-colors"
         >
           LinkedIn
         </a>
@@ -22,7 +22,7 @@ const Footer = () => {
           href="https://www.behance.net/georgeralak"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-b border-gray-800 hover:text-blue-600 transition-colors"
+          className="border-b border-gray-800  transition-colors"
         >
           Behance
         </a>
@@ -31,7 +31,7 @@ const Footer = () => {
           href="https://dribbble.com/sid_ralak"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-b border-gray-800 hover:text-blue-600 transition-colors"
+          className="border-b border-gray-800  transition-colors"
         >
           Dribbble
         </a>
