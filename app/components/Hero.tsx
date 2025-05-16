@@ -49,19 +49,25 @@ const HeroSection = () => {
           Creator, Minimalist & Entrepreneur
         </h6>
         <div className="w-full">
-          <div className="flex flex-row flex-wrap gap-x-4 gap-y-2 lg:flex-col lg:gap-y-3 lg:items-start">
-            {[
-              { label: 'Read CV', url: '#' },
-              { label: 'Send Email', url: '#' },
-              { label: 'LinkedIn', url: '#' },
-              { label: 'Behance', url: '#' },
-            ].map((item, index) => (
-              <a key={index} href={item.url} className="flex items-center text-[13px] font-medium group">
-                <GoArrowUpRight className="mr-1 text-gray-600" size={14} />
-                <span className="text-blue-600 font-medium border-b border-blue-600">{item.label}</span>
-              </a>
-            ))}
-          </div>
+            <div className="flex flex-row flex-wrap gap-x-4 gap-y-2 lg:flex-col lg:gap-y-3 lg:items-start">
+  {[
+    { label: 'Read CV', url: 'https://read.cv/sidralak' },
+    { label: 'Send Email', url: 'mailto:georgeralak@gmail.com' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/george-s-ralak-28051552/' },
+    { label: 'Behance', url: 'https://www.behance.net/georgeralak' },
+  ].map((item, index) => (
+    <a 
+      key={index} 
+      href={item.url} 
+      className="flex items-center text-[13px] font-medium group"
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <GoArrowUpRight className="mr-1 text-gray-600" size={14} />
+      <span className="text-blue-600 font-medium border-b border-blue-600">{item.label}</span>
+    </a>
+  ))}
+</div>
           <div className="flex items-center whitespace-nowrap font-light text-sm mt-3 text-gray-900">
             <MdOutlinePhone className="mr-2" size={16} />
             <span className="font-medium">+254 716 909 815</span>
@@ -71,7 +77,7 @@ const HeroSection = () => {
 
       {/* Left Panel */}
       <div className="flex-1 lg:max-w-[700px] xl:max-w-[800px] py-4 lg:py-8 lg:pr-8 order-first lg:order-first">
-        <p className="font-black text-[23px] leading-[30px] tracking-normal text-base text-gray-800">
+        <p className="font-black text-[24px] leading-[32px] tracking-normal  text-base text-gray-800">
           I'm a Kenyan Product Designer with a <br />
           passion for minimalism and impactful <br /> aesthetics. I'm currently a Senior Product <br /> Designer at{' '}
           <span className="text-green-800">NedBank</span>, previously at <br />
