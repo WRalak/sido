@@ -22,7 +22,7 @@ const LogoSection = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="hidden sm:block w-full    md:px-12  px-4  overflow-hidden">
+    <section className="hidden sm:block w-full      px-4  overflow-hidden">
       <div className="max-w-6xl mx-auto">
       
 

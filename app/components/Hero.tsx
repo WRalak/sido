@@ -10,7 +10,7 @@ const HeroSection = () => {
   const [showFullText, setShowFullText] = useState(false);
 
   return (
-    <div className="w-full py-4 lg:px-32 xl:px-60 flex flex-col lg:flex-row relative">
+    <div className="w-full  mx-auto py-4 px-6 sm:px-12 lg:px-16 xl:px-68 2xl:px-72 flex flex-col lg:flex-row relative   max-w-screen-2xl">
       {/* Background Gradient */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div
@@ -41,7 +41,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right Panel */}
-      <div className="w-full lg:w-[180px] xl:w-[200px] flex flex-col px-6 pt-8 pb-4 sm:px-12 lg:px-0 lg:py-8 lg:items-start lg:sticky lg:top-0 order-first lg:order-last">
+      <div className="w-full lg:w-[180px] xl:w-[200px] flex flex-col pt-8 pb-4 lg:py-8 lg:items-start lg:sticky lg:top-0 order-first lg:order-last">
         <div className="w-[90px] h-[90px] rounded-full mb-4 overflow-hidden relative">
           <Image src="/sid.jpg" alt="Profile" fill className="object-cover" priority sizes="90px" />
         </div>
@@ -70,7 +70,7 @@ const HeroSection = () => {
       </div>
 
       {/* Left Panel */}
-      <div className="flex-1 px-6 lg:w-[520px] py-4 lg:py-8 lg:pr-8 order-first lg:order-first">
+      <div className="flex-1 lg:max-w-[700px] xl:max-w-[800px] py-4 lg:py-8 lg:pr-8 order-first lg:order-first">
         <p className="font-black text-[23px] leading-[30px] tracking-normal text-base text-gray-800">
           I'm a Kenyan Product Designer with a <br />
           passion for minimalism and impactful <br /> aesthetics. I'm currently a Senior Product <br /> Designer at{' '}
