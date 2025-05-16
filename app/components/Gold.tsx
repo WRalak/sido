@@ -2,9 +2,29 @@
 
 import Image from 'next/image';
 
+// Client component for the gradient background
+function GradientBackground() {
+  return (
+    <div
+      className="absolute hidden lg:block"
+      style={{
+        background: 'linear-gradient(45deg, rgba(253, 224, 71, 0.15), rgba(250, 204, 21, 0.12), rgba(245, 158, 11, 0.1))',
+        width: '400px',
+        height: '400px',
+        left: '70%',
+        top: '0px',
+        filter: 'blur(80px)',
+        borderRadius: '100%',
+      }}
+    />
+  );
+}
+
 export default function GoldmanSachsExperience() {
   return (
-    <div className="flex py-1.5 w-[660px]  md:px-12  p-6 md:p-4">
+    <div className="flex py-1.5 w-[660px] md:px-12 p-6 md:p-4 relative">
+      <GradientBackground />
+      
       <div className="flex flex-col space-y-4 flex-grow">
         {/* Header: Logo, Name, Dot, and Dates */}
         <div className="flex items-center justify-between w-full gap-4 mb-4">
@@ -81,7 +101,6 @@ export default function GoldmanSachsExperience() {
           </p>
         </div>
       </div>
-     
     </div>
   );
 }

@@ -5,10 +5,10 @@ export default function Header() {
   return (
     <header className="px-4 py-6 md:px-8 lg:px-16 xl:px-68 2xl:px-72 max-w-screen-2xl mx-auto flex justify-between items-center ">
       {/* Left side - Name */}
-      <div className="text-[20px] leading-[16px] font-black text-center 2xl:text-[30px]">
-        <span className="text-orange-600">George</span>
-        <span className="text-gray-800">Ralak</span>
-      </div>
+       <div className="font-inter font-black text-[18px] leading-[16px] tracking-[0%] text-center 2xl:text-[20px]">
+  <span className="text-orange-600">George</span>
+  <span className="text-gray-800">Ralak</span>
+</div>
 
       {/* Right side - Work together CTA */}
          <Link 

@@ -19,9 +19,9 @@ const HeroSection = () => {
           style={{
             background: 'linear-gradient(45deg, rgba(253, 224, 71, 0.15), rgba(250, 204, 21, 0.12), rgba(245, 158, 11, 0.1))',
             width: '400px',
-            height: '300px',
-            right: '15%',
-            top: '50px',
+            height: '400px',
+            right: '30%',
+            top: '0px',
             filter: 'blur(80px)',
             borderRadius: '100%',
           }}
@@ -30,8 +30,8 @@ const HeroSection = () => {
           className="absolute lg:hidden"
           style={{
             background: 'linear-gradient(180deg, rgba(253, 224, 71, 0.12), rgba(250, 204, 21, 0.1), rgba(245, 158, 11, 0.08))',
-            width: '250px',
-            height: '250px',
+            width: '350px',
+            height: '350px',
             top: '0',
             left: '50%',
             transform: 'translateX(-50%)',
