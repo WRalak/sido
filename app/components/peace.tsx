@@ -20,30 +20,30 @@ export default function PeachCarsShowcase() {
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="max-w-[735px] mx-auto p-4 md:p-6 bg-white font-sans relative">
+    <div className="max-w-[800px] mx-auto p-4 md:p-6 bg-white font-sans relative">
       {/* Small Summary Section (Always visible) */}
-                     <div 
-  className="flex items-center gap-4 mb-6 p-4 cursor-pointer"
-  onClick={() => setShowDetailedSection(true)}
->
-  <div className="flex-shrink-0">
-    <img 
-      src="/peacch.png" 
-      alt="Gapstack Preview" 
-      className="w-[135px] h-[70px] object-cover rounded"
-    />
-  </div>
+      <div 
+        className="flex items-center gap-4 mb-6 p-4 cursor-pointer"
+        onClick={() => setShowDetailedSection(true)}
+      >
+        <div className="flex-shrink-0">
+          <img 
+            src="/peacch.png" 
+            alt="Gapstack Preview" 
+            className="w-[135px] h-[70px] object-cover rounded-[6px]"
+          />
+        </div>
 
-  <div className="flex flex-col justify-center overflow-hidden">
-    <p className="text-[14px] font-bold text-gray-800  whitespace-nowrap max-w-[180px]">
-    Peach Cars is a <br />rising startup aim...
-    </p>
-        <p className="text-[13px] font-medium mt-2 text-orange-600 flex items-center gap-1">
-        Peach Cars
-        <HiArrowUpRight className="text-[13px] hover:text-blue-800" />
-      </p>
-  </div>
-</div>
+        <div className="flex flex-col justify-center overflow-hidden">
+          <p className="text-[14px] font-bold text-gray-800 whitespace-nowrap max-w-[180px]">
+            Peach Cars is a <br />rising startup aim...
+          </p>
+          <p className="text-[13px] font-medium mt-2 text-orange-600 flex items-center gap-1">
+            Peach Cars
+            <HiArrowUpRight className="text-[13px] hover:text-blue-800" />
+          </p>
+        </div>
+      </div>
 
       {/* Modal Backdrop */}
       {showDetailedSection && (
@@ -56,7 +56,7 @@ export default function PeachCarsShowcase() {
       {/* Detailed Section Modal */}
       <div className={`
         fixed bottom-0 left-1/2 transform -translate-x-1/2
-        w-full max-w-[735px] bg-white z-50 rounded-t-2xl shadow-xl
+        w-full max-w-[800px] bg-white z-50 rounded-t-2xl shadow-xl
         transition-all duration-300 ease-in-out
         ${showDetailedSection ? 'translate-y-0' : 'translate-y-full'}
       `}
@@ -65,8 +65,6 @@ export default function PeachCarsShowcase() {
         overflow: 'hidden'
       }}>
         <div className="p-4 md:p-6 overflow-y-auto" style={{ maxHeight: '90vh' }}>
-          {/* Close button removed */}
-
           {/* Header with Logo */}
           <header className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <div className="flex-shrink-0 mx-auto sm:mx-0">
@@ -74,7 +72,7 @@ export default function PeachCarsShowcase() {
                 <img 
                   src="Group.png" 
                   alt="Peach Cars Logo" 
-                  className="h-full w-auto object-contain"
+                  className="h-full w-auto object-contain rounded-[6px]"
                 />
               </div>
             </div>
@@ -94,15 +92,15 @@ export default function PeachCarsShowcase() {
 
               <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-6 text-xs sm:text-sm mt-2">
                 <div className="flex items-center text-gray-600">
-                  <img src="search.png" alt="UX Research" className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                  <img src="search.png" alt="UX Research" className="w-3 h-3 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
                   <span className="font-medium">UX Research</span>
                 </div>
                 <div className="flex items-center text-gray-600">
-                  <img src="compass.png" alt="Design" className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                  <img src="compass.png" alt="Design" className="w-3 h-3 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
                   <span className="font-medium">Design</span>
                 </div>
                 <div className="flex items-center text-gray-600">
-                  <img src="check.png" alt="Testing" className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                  <img src="check.png" alt="Testing" className="w-3 h-3 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
                   <span className="font-medium">Testing</span>
                 </div>
               </div>
@@ -125,15 +123,15 @@ export default function PeachCarsShowcase() {
                 <img
                   src={images[currentSlide].src}
                   alt={images[currentSlide].alt}
-                  className="w-full h-full object-cover rounded-md"
+                  className="w-full h-full object-cover rounded-[8px]"
                   style={{ objectPosition: 'top center' }}
                 />
               </div>
               
               {/* Responsive red frame */}
-              <div className="absolute top-0 left-0 w-full bg-[rgba(38,110,165,1)] rounded-t-md h-[9%]" />
-              <div className="absolute top-0 left-0 h-full bg-[rgba(38,110,165,1)] w-[6%]" />
-              <div className="absolute top-0 right-0 h-full bg-[rgba(38,110,165,1)] w-[6%]" />
+              <div className="absolute top-0 left-0 w-full bg-[rgba(38,110,165,1)] rounded-[6px] h-[9%]" />
+              <div className="absolute top-0 left-0 h-full bg-[rgba(38,110,165,1)] w-[6%] rounded-l-[6px]" />
+              <div className="absolute top-0 right-0 h-full bg-[rgba(38,110,165,1)] w-[6%] rounded-r-[6px]" />
               
               {/* Navigation buttons */}
               <button
@@ -179,9 +177,8 @@ export default function PeachCarsShowcase() {
               Peach Cars is a Kenyan online marketplace that simplifies buying and selling used cars. My role as <br /> the UX/UI Designer involved leading research, design, and testing to create a user-friendly and <br /> trustworthy platform.
             </p>
             
-              
             <h3 className="font-bold text-[13px] text-gray-700 mt-2 mb-2">My Role & Process</h3>
-            <p className="mb-2 text-[13px] text-gray-700 font-medium ">
+            <p className="mb-2 text-[13px] text-gray-700 font-medium">
               I handled user research, wireframing, prototyping, usability testing, and visual design using Figma. <br /> The goal was to improve trust, simplify search, and streamline the listing process for sellers.
             </p>
 

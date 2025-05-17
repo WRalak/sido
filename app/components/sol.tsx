@@ -64,7 +64,7 @@ export default function SolgatesShowcase() {
           <img 
             src="/solgates.jpg" 
             alt="Solgates Preview" 
-            className="w-[100px] md:w-[135px] h-[60px] md:h-[70px] object-cover rounded"
+            className="w-[100px] md:w-[135px] h-[70px] md:h-[70px] object-cover rounded"
           />
         </div>
 
@@ -101,11 +101,11 @@ export default function SolgatesShowcase() {
         <div className="p-3 md:p-6">
           {/* Header with Logo */}
           <header className="flex flex-col sm:flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
-            <div className="h-16 w-16 sm:h-20 sm:w-20 md:h-28 md:w-28 rounded overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
+            <div className=" self-start rounded overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
               <img 
                 src="Layer 2.png" 
                 alt="Solgates logo" 
-                className="object-contain max-h-full max-w-full" 
+                  className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] object-cover rounded" 
                 loading="lazy"
               />
             </div>

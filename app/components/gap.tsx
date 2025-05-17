@@ -19,31 +19,30 @@ export default function GapstackShowcase() {
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-white relative">
+    <div className="w-full max-w-[800px] mx-auto p-3 md:p-6 bg-white relative">
       {/* Small Summary Section (Always visible) */}
-     <div 
-  className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
-  onClick={() => setShowDetailedSection(true)}
->
-  <div className="flex-shrink-0">
-    <img 
-      src="/Gapstack.jpg" 
-      alt="Gapstack Preview" 
-      className="w-[100px] md:w-[135px] h-[60px] md:h-[70px] object-cover rounded"
-    />
-  </div>
+      <div 
+        className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+        onClick={() => setShowDetailedSection(true)}
+      >
+        <div className="flex-shrink-0">
+          <img 
+            src="/Gapstack.jpg" 
+            alt="Gapstack Preview" 
+            className="w-[100px] md:w-[135px] h-[60px] md:h-[70px] object-cover rounded-[8px]"
+          />
+        </div>
 
-  <div className="flex flex-col justify-center leading-snug">
-    <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800">
-      Supply Chain & <br /> Trade Financing Platform
-    </p>
-    <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
-      Gapstack
-      <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
-    </p>
-  </div>
-</div>
-
+        <div className="flex flex-col justify-center leading-snug">
+          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800">
+            Supply Chain & <br /> Trade Financing Platform
+          </p>
+          <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
+            Gapstack
+            <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
+          </p>
+        </div>
+      </div>
 
       {/* Modal Backdrop */}
       {showDetailedSection && (
@@ -56,7 +55,7 @@ export default function GapstackShowcase() {
       {/* Detailed Section Modal */}
       <div className={`
         fixed bottom-0 left-1/2 transform -translate-x-1/2
-        w-full max-w-[735px] bg-white z-50 rounded-t-2xl shadow-xl
+        w-full max-w-[800px] bg-white z-50 rounded-t-2xl shadow-xl
         transition-all duration-300 ease-in-out overflow-y-auto
         ${showDetailedSection ? 'translate-y-0' : 'translate-y-full'}
       `}
@@ -69,7 +68,7 @@ export default function GapstackShowcase() {
               <img 
                 src="/Gapstack.jpg" 
                 alt="Gapstack logo" 
-                className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] object-cover rounded"
+                className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] object-cover rounded-[8px]"
               />
             </div>
 
@@ -90,7 +89,7 @@ export default function GapstackShowcase() {
                   { icon: "/check.png", label: "User Testing" }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center">
-                    <img src={item.icon} alt={item.label} className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                    <img src={item.icon} alt={item.label} className="w-3 h-3 sm:w-4 sm:h-4 mr-1 rounded-[8px]" />
                     <span className="font-medium text-xs">{item.label}</span>
                   </div>
                 ))}
@@ -98,19 +97,54 @@ export default function GapstackShowcase() {
             </div>
           </header>
 
-          {/* Image Carousel */}
+          {/* Image Carousel with 36px background on 3 sides and 8px radius */}
           <div className="relative mt-4 md:mt-8 group">
-            <div className="w-full aspect-video sm:h-[300px] md:h-[400px] overflow-hidden rounded-xl bg-sky-900">
+            {/* Background frame for top, right, and left */}
+            <div className="absolute inset-0 bg-sky-900 z-0 rounded-t-[8px]" 
+                 style={{
+                   top: 0,
+                   left: 0,
+                   right: 0,
+                   bottom: 'auto',
+                   height: '36px'
+                 }} />
+            <div className="absolute inset-0 bg-sky-900 z-0 rounded-l-[8px]" 
+                 style={{
+                   top: 0,
+                   left: 0,
+                   bottom: 0,
+                   right: 'auto',
+                   width: '36px'
+                 }} />
+            <div className="absolute inset-0 bg-sky-900 z-0 rounded-r-[8px]" 
+                 style={{
+                   top: 0,
+                   right: 0,
+                   bottom: 0,
+                   left: 'auto',
+                   width: '36px'
+                 }} />
+            
+            {/* Image container */}
+            <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
               <img 
                 src={images[currentSlide].src} 
                 alt={images[currentSlide].alt}
-                className="w-full h-full object-contain p-2 md:p-4"
+                className="w-full h-full object-cover rounded-[8px]"
+                style={{ 
+                  objectPosition: 'center top',
+                  marginTop: '36px',
+                  marginLeft: '36px',
+                  marginRight: '36px',
+                  width: 'calc(100% - 72px)',
+                  height: 'calc(100% - 36px)'
+                }}
               />
             </div>
             
             <button 
               onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-              className="absolute left-1 sm:left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute left-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity z-20"
               aria-label="Previous slide"
             >
               <ChevronLeft size={16} className="text-blue-600" />
@@ -118,13 +152,13 @@ export default function GapstackShowcase() {
             
             <button 
               onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-              className="absolute right-1 sm:right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute right-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity z-20"
               aria-label="Next slide"
             >
               <ChevronRight size={16} className="text-blue-600" />
             </button>
             
-            <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-white/80 px-2 py-1 rounded-full">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-white/80 px-2 py-1 rounded-full z-20">
               {images.map((_, idx) => (
                 <button
                   key={idx}
@@ -134,7 +168,7 @@ export default function GapstackShowcase() {
                 />
               ))}
             </div>
-          </div> 
+          </div>
 
           {/* Content */}
           <div className="text-gray-700 font-[Satoshi] leading-relaxed mt-4">
