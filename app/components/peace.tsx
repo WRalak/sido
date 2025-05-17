@@ -175,15 +175,15 @@ export default function PeachCarsShowcase() {
 
           {/* Content */}
           <div className="prose max-w-none mt-6 sm:mt-8 px-2 sm:px-4">
-            <p className="text-sm sm:text-[13px] font-medium mb-4 sm:mb-6">
-              <span className="font-bold text-sm sm:text-[14px]">TL;DR:</span> I led the design and testing for Peach Cars, creating a user-friendly marketplace that simplifies buying and selling used cars in Kenya. By focusing on trust, intuitive search, and a seamless listing process, we improved user engagement, increased listings, and boosted business growth.
+            <p className="text-[13px] sm:text-[13px] font-medium mb-4 sm:mb-6">
+              <span className="font-bold text-sm sm:text-[14px]">TL;DR:</span> I led the design and testing for Peach Cars, creating a user-friendly marketplace that <br /> simplifies buying and selling used cars in Kenya. By focusing on trust, intuitive search, and a <br /> seamless listing process, we improved user engagement, increased listings, and boosted business <br /> growth.
             </p>
 
             <h2 className="font-bold text-lg sm:text-xl text-gray-700 mt-6 sm:mt-8 mb-3 sm:mb-4">Peach Cars Website – UX Case Study</h2>
             
             <h3 className="font-bold text-sm sm:text-[14px] text-gray-700 mb-2">Introduction</h3>
-            <p className="mb-4 text-sm sm:text-[13px] text-gray-700 font-medium">
-              Peach Cars is a Kenyan online marketplace that simplifies buying and selling used cars. My role as the UX/UI Designer involved leading research, design, and testing to create a user-friendly and trustworthy platform.
+            <p className="mb-4 text-[13px] sm:text-[13px] text-gray-700 font-medium">
+              Peach Cars is a Kenyan online marketplace that simplifies buying and selling used cars. My role as <br /> the UX/UI Designer involved leading research, design, and testing to create a user-friendly and <br /> trustworthy platform.
             </p>
             
               

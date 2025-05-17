@@ -79,16 +79,17 @@ export default function GapstackShowcase() {
             {/* Logo on the far left */}
             <div className="flex-shrink-0 self-start">
               <img 
-                src="/IG Post 2.png" 
+                src="/Gapstack.jpg" 
                 alt="tukai" 
-                className="w-16 h-16 sm:w-[75px] sm:h-[75px] object-contain"
+              className="w-[75px] h-[75px] object-cover rounded"
               />
             </div>
 
             {/* Text content aligned properly next to logo */}
             <div className="flex-1 text-center sm:text-left">
-              <h1 className="text-[20px] sm:text-xl font-bold text-gray-800">
-                Gapstack - Supply Chain & Trade Financing Platform
+              <h1 className="text-[20px] sm:text-xl font-extrabold text-gray-800">
+              <span className='' style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack </span>
+    is a supply chain & trade financing platform <br /> built for banks & financial institutions.
               </h1>
               <p className="text-blue-600 text-xs sm:text-sm cursor-pointer underline inline-block">
                 www.gapstack.com
@@ -96,7 +97,7 @@ export default function GapstackShowcase() {
 
               <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 mt-2 text-xs sm:text-sm text-gray-600">
                 {[
-                  { icon: "/suit.png", label: "Senior Designer" },
+                
                   { icon: "/search.png", label: "UX Research" },
                   { icon: "/compass.png", label: "Product Design" },
                   { icon: "/check.png", label: "User Testing" }
@@ -111,28 +112,10 @@ export default function GapstackShowcase() {
           </header>
 
           {/* Services */}
-          <div className="flex flex-row flex-wrap gap-3 sm:gap-4 mb-6">
-            {[
-              { icon: "search.png", label: "UX Research" },
-              { icon: "compass.png", label: "Product Design" }, 
-              { icon: "check.png", label: "User Testing" }
-            ].map((service, index) => (
-              <div 
-                key={index}
-                className="flex items-center text-[13px] font-medium text-gray-600"
-              >
-                <img 
-                  src={service.icon} 
-                  alt={service.label} 
-                  className="w-3 h-3 mr-2 object-contain"
-                />
-                <span>{service.label}</span>
-              </div>
-            ))}
-          </div>
+         
 
           {/* Image Carousel */}
-          <div className="relative mb-8 group">
+          <div className="relative mt-8 group">
             <div className="w-full aspect-video sm:h-[400px] overflow-hidden rounded-xl bg-sky-900">
               <img 
                 src={images[currentSlide].src} 
@@ -171,7 +154,7 @@ export default function GapstackShowcase() {
 
           {/* Content */}
           <div className="text-gray-700 font-[Satoshi] leading-relaxed">
-            <p className="text-[13px] font-medium mb-4">
+            <p className="text-[13px] font-medium mt-4">
               <span className="text-[14px] font-semibold mb-2">
                 TL;DR:
               </span> I designed an intuitive, scalable trade financing platform for banks, improving efficiency in <br /> the process. Conducted research, user testing, and iterative design to streamline workflows and <br /> enhance usability. Delivered a user-centric experience balancing automation, compliance, and <br /> operational needs.
@@ -197,7 +180,7 @@ export default function GapstackShowcase() {
               The Goal
             </p>
             <p className="text-[13px] font-medium ">
-              My objective was to design an intuitive, efficient, and scalable platform that enhances user experience, improves processing speed, and ensures regulatory compliance.
+              My objective was to design an intuitive, efficient, and scalable platform that enhances user <br /> experience, improves processing speed, and ensures regulatory compliance.
             </p>
           </div>
           

@@ -120,7 +120,7 @@ export default function SolgatesShowcase() {
               />
             </div>
             <div className="flex flex-col flex-1 min-w-0">
-              <h1 className="text-[15px] sm:text-[17px] md:text-[19px] font-bold text-gray-800 leading-snug">
+              <h1 className="text-[15px] sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
                 <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform {!isMobile && <br />} built for banks & financial institutions.
               </h1>
               <a 

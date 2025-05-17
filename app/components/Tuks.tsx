@@ -14,6 +14,7 @@ export default function TukaiShowcase() {
     { src: "/tukai3.png", alt: "Trip Planning Dashboard" },
     { src: "/tukai4.png", alt: "Trip Planning Dashboard" },
     { src: "/tukai5.png", alt: "Trip Planning Dashboard" },
+     { src: "/tukai6.png", alt: "Trip Planning Dashboard" },
   ];
 
   const nextSlide = () => setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -77,7 +78,7 @@ export default function TukaiShowcase() {
 
           {/* Header with Logo */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6 sm:mb-8">
-            <header className="flex flex-col sm:flex-row items-start sm:items-center gap-4 flex-1 min-w-0">
+            <header className="flex flex-col mt-5 sm:flex-row items-start sm:items-center gap-4 flex-1 min-w-0">
               <div className="flex-shrink-0 mx-auto sm:mx-0">
                 <img 
                   src="/IG Post 2.png" 
@@ -163,33 +164,33 @@ export default function TukaiShowcase() {
           {/* Content */}
           <div className="prose max-w-none">
             <p className="mb-4 sm:mb-6 text-sm sm:text-[13px] font-medium text-gray-800">
-              Tukai is a platform designed to transform how people explore the outdoors, plan adventures, and build communities. From hiking and camping to bike riding and scenic drives, Tukai offers an effortless way to access adventure spots, parks, mountains, and fun destinations. It also allows users to join like-minded communities based on their interests, making it more than just an activity hub—it's a <strong>social experience</strong>.
+              Tukai is a platform designed to transform how people explore the outdoors, plan adventures, and <br /> build communities. From hiking and camping to bike riding and scenic drives, Tukai offers an <br /> effortless way to access adventure spots, parks, mountains, and fun destinations. It also allows users <br /> to join like-minded communities based on their interests, making it more than just an activity hub— <br />it's a <strong>social experience</strong>.
             </p>
 
             <h2 className="font-bold text-lg sm:text-xl text-gray-700 mt-6 sm:mt-8 mb-3 sm:mb-4">My Role & Contributions</h2>
 
-            <h3 className="font-medium text-sm sm:text-[14px] text-gray-700 mb-2">1. Product Design – Crafting an Engaging and Intuitive Experience</h3>
-            <p className="mb-3 sm:mb-4 text-sm sm:text-[13px] text-gray-800 font-medium">
-              I led the end-to-end design of Tukai, ensuring that users could seamlessly discover activities, organize their experiences, and connect with others. My focus was on:
+            <strong className="font-medium text-sm sm:text-[14px] text-gray-700 mb-3">1. Product Design – Crafting an Engaging and Intuitive Experience</strong>
+            <p className="mt-3 sm:mb-4 text-sm sm:text-[13px] text-gray-800 font-medium">
+              I led the end-to-end design of Tukai, ensuring that users could seamlessly discover activities,<br /> organize their experiences, and connect with others. My focus was on:
             </p>
-            <ul className="list-disc pl-5 mb-4 sm:mb-6 space-y-2 text-sm sm:text-[13px] text-gray-700">
+            <ul className="list-disc pl-5 mb-4 sm:mb-6 space-y-2 font-medium text-[13px] sm:text-[13px] text-gray-700">
               <li>
-                <strong>User-Centered Design:</strong> Conducted in-depth research to understand how users plan outdoor activities and what challenges they face.
+                <strong>User-Centered Design:</strong> Conducted in-depth research to understand how users plan outdoor <br /> activities and what challenges they face.
               </li>
               <li>
-                <strong>Information Architecture:</strong> Created a structured and easy-to-navigate platform that allows users to browse places and join communities effortlessly.
+                <strong>Information Architecture:</strong> Created a structured and easy-to-navigate platform that allows users <br /> to browse places and join communities effortlessly.
               </li>
               <li>
-                <strong>Visual and Interaction Design:</strong> Developed a clean, modern, and inviting interface that enhances engagement and usability across devices.
+                <strong>Visual and Interaction Design:</strong> Developed a clean, modern, and inviting interface that enhances <br /> engagement and usability across devices.
               </li>
               <li>
                 <strong>Design System:</strong> Built a scalable UI/UX design system to maintain consistency and speed up feature rollouts.
               </li>
             </ul>
 
-            <h3 className="font-medium text-sm sm:text-[14px] text-gray-700 mt-6 sm:mt-8">2. Project Management – Driving Execution and Timelines</h3>
+            <h3 className="font-bold text-[14px] sm:text-[14px] text-gray-700 mt-6 sm:mt-8">2. Project Management – Driving Execution and Timelines</h3>
             <p className="text-sm sm:text-[13px] font-medium text-gray-700 mt-2 sm:mt-4">
-              As a co-founder, I managed the roadmap, milestones, and team coordination to keep the project on track. My responsibilities included:
+              As a co-founder, I managed the roadmap, milestones, and team coordination to keep the project <br /> on track. My responsibilities included:
             </p>
             <ul className="list-disc pl-5 mb-4 sm:mb-6 space-y-1 text-sm sm:text-[13px] font-medium text-gray-700">
               <li>Defining short-term sprints and long-term goals to ensure steady feature development</li>
@@ -208,7 +209,7 @@ export default function TukaiShowcase() {
 
             <h2 className="font-bold text-sm sm:text-[14px] text-gray-800 mt-6 sm:mt-8 mb-2 sm:mb-4">Conclusion</h2>
             <p className="mb-4 font-medium text-sm sm:text-[13px] text-gray-700">
-              Tukai represents a holistic approach to outdoor adventure planning, combining discovery tools with community features to create a unique ecosystem. As co-founder and design lead, I helped shape both the product vision and execution, resulting in a platform that makes outdoor exploration more accessible and social. The project reinforced the importance of balancing user needs with technical feasibility and business goals in early-stage startups.
+              Tukai represents a holistic approach to outdoor adventure planning, combining discovery <br /> tools with community features to create a unique ecosystem. As co-founder and design lead,<br /> I helped shape both the product vision and execution, resulting in a platform that <br /> makes outdoor exploration more accessible and social. The project reinforced the importance of balancing <br /> user needs with technical feasibility and business goals in early-stage startups.
             </p>
           </div>
         </div>
