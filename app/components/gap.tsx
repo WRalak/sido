@@ -34,7 +34,7 @@ export default function GapstackShowcase() {
         </div>
 
         <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-xs md:text-[13px] font-extrabold text-gray-800 truncate max-w-full">
+          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800 truncate max-w-full">
             Supply Chain & <br />Trade Financing Platform
           </p>
           <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">

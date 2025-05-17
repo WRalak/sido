@@ -69,7 +69,7 @@ export default function SolgatesShowcase() {
         </div>
 
         <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-xs md:text-[13px] font-extrabold text-gray-800 truncate whitespace-nowrap max-w-full">
+          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800 truncate whitespace-nowrap max-w-full">
             A Second-Hand <br /> Clothing Marketp...
           </p>
           <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
