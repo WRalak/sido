@@ -1,9 +1,7 @@
 'use client';
 
 import { SetStateAction, useState } from 'react';
-import { ChevronRight, ChevronLeft, X } from 'lucide-react';
-import { FiArrowRight } from 'react-icons/fi';
-import { BsArrowUpRight } from 'react-icons/bs';
+import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
 
 export default function GapstackShowcase() {
@@ -21,33 +19,31 @@ export default function GapstackShowcase() {
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="max-w-[735px] mx-auto p-4 sm:p-6 bg-white relative">
+    <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-white relative">
       {/* Small Summary Section (Always visible) */}
-             <div 
-  className="flex items-center gap-4 mb-6 p-4 cursor-pointer"
-  onClick={() => setShowDetailedSection(true)}
->
-  <div className="flex-shrink-0">
-    <img 
-      src="/Gapstack.jpg" 
-      alt="Gapstack Preview" 
-      className="w-[135px] h-[70px] object-cover rounded"
-    />
-  </div>
+      <div 
+        className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+        onClick={() => setShowDetailedSection(true)}
+      >
+        <div className="flex-shrink-0">
+          <img 
+            src="/Gapstack.jpg" 
+            alt="Gapstack Preview" 
+            className="w-[100px] md:w-[135px] h-[60px] md:h-[70px] object-cover rounded"
+          />
+        </div>
 
-  <div className="flex flex-col justify-center overflow-hidden">
-    <p className="text-[13px] font-extrabold text-gray-800 truncate whitespace-nowrap max-w-[180px]">
-      Supply Chain & <br />Trade Financing Platform
-    </p>
-  <p className="text-[13px] font-medium mt-2 text-orange-600 flex items-center gap-1">
-  Gapstack
-  <HiArrowUpRight className="text-[13px] hover:text-blue-800" />
-</p>
-  </div>
-</div>
+        <div className="flex flex-col justify-center overflow-hidden">
+          <p className="text-xs md:text-[13px] font-extrabold text-gray-800 truncate max-w-full">
+            Supply Chain & <br />Trade Financing Platform
+          </p>
+          <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
+            Gapstack
+            <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
+          </p>
+        </div>
+      </div>
 
-
-      
       {/* Modal Backdrop */}
       {showDetailedSection && (
         <div 
@@ -64,40 +60,30 @@ export default function GapstackShowcase() {
         ${showDetailedSection ? 'translate-y-0' : 'translate-y-full'}
       `}
       style={{ maxHeight: '90vh' }}>
-        <div className="p-4 sm:p-6">
-          {/* Close button at top */}
-          <button 
-            onClick={() => setShowDetailedSection(false)}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100"
-            aria-label="Close modal"
-          >
-            <X size={20} className="text-gray-500" />
-          </button>
-
+        <div className="p-3 md:p-6">
           {/* Header with Logo */}
-          <header className="flex flex-col sm:flex-row items-center sm:items-start gap-4 w-full mb-6">
+          <header className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-4 w-full mb-4 md:mb-6">
             {/* Logo on the far left */}
             <div className="flex-shrink-0 self-start">
               <img 
                 src="/Gapstack.jpg" 
-                alt="tukai" 
-              className="w-[75px] h-[75px] object-cover rounded"
+                alt="Gapstack logo" 
+                className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] object-cover rounded"
               />
             </div>
 
             {/* Text content aligned properly next to logo */}
-            <div className="flex-1 text-center sm:text-left">
-              <h1 className="text-[20px] sm:text-xl font-extrabold text-gray-800">
-              <span className='' style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack </span>
-    is a supply chain & trade financing platform <br /> built for banks & financial institutions.
+            <div className="flex-1 text-center sm:text-left mt-2 sm:mt-0">
+              <h1 className="text-base sm:text-lg md:text-xl font-extrabold text-gray-800">
+                <span className="" style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack </span>
+                is a supply chain & trade financing platform <br /> built for banks & financial institutions.
               </h1>
               <p className="text-blue-600 text-xs sm:text-sm cursor-pointer underline inline-block">
                 www.gapstack.com
               </p>
 
-              <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 mt-2 text-xs sm:text-sm text-gray-600">
+              <div className="flex flex-wrap justify-center sm:justify-start gap-2 md:gap-4 mt-2 text-xs sm:text-sm text-gray-600">
                 {[
-                
                   { icon: "/search.png", label: "UX Research" },
                   { icon: "/compass.png", label: "Product Design" },
                   { icon: "/check.png", label: "User Testing" }
@@ -111,41 +97,38 @@ export default function GapstackShowcase() {
             </div>
           </header>
 
-          {/* Services */}
-         
-
           {/* Image Carousel */}
-          <div className="relative mt-8 group">
-            <div className="w-full aspect-video sm:h-[400px] overflow-hidden rounded-xl bg-sky-900">
+          <div className="relative mt-4 md:mt-8 group">
+            <div className="w-full aspect-video sm:h-[300px] md:h-[400px] overflow-hidden rounded-xl bg-sky-900">
               <img 
                 src={images[currentSlide].src} 
                 alt={images[currentSlide].alt}
-                className="w-full h-full object-contain p-4"
+                className="w-full h-full object-contain p-2 md:p-4"
               />
             </div>
             
             <button 
               onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-gray-100 shadow-md opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute left-1 sm:left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity"
               aria-label="Previous slide"
             >
-              <ChevronLeft size={20} className="text-blue-600" />
+              <ChevronLeft size={16} className="text-blue-600" />
             </button>
             
             <button 
               onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-gray-100 shadow-md opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute right-1 sm:right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity"
               aria-label="Next slide"
             >
-              <ChevronRight size={20} className="text-blue-600" />
+              <ChevronRight size={16} className="text-blue-600" />
             </button>
             
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-white/80 px-2 py-1 rounded-full">
+            <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-white/80 px-2 py-1 rounded-full">
               {images.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-                  className={`block w-2 h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-blue-600 w-4' : 'bg-gray-300'}`}
+                  className={`block w-1.5 md:w-2 h-1.5 md:h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-blue-600 w-3 md:w-4' : 'bg-gray-300'}`}
                   aria-label={`View slide ${idx + 1}`}
                 />
               ))}
@@ -153,46 +136,46 @@ export default function GapstackShowcase() {
           </div> 
 
           {/* Content */}
-          <div className="text-gray-700 font-[Satoshi] leading-relaxed">
-            <p className="text-[13px] font-medium mt-4">
-              <span className="text-[14px] font-semibold mb-2">
+          <div className="text-gray-700 font-[Satoshi] leading-relaxed mt-4">
+            <div className="text-xs md:text-[13px] font-medium">
+              <span className="text-sm md:text-[14px] font-semibold mb-2">
                 TL;DR:
               </span> I designed an intuitive, scalable trade financing platform for banks, improving efficiency in <br /> the process. Conducted research, user testing, and iterative design to streamline workflows and <br /> enhance usability. Delivered a user-centric experience balancing automation, compliance, and <br /> operational needs.
-            </p>
+            </div>
 
-            <p className="text-[20px] font-semibold mb-2">
+            <p className="text-lg md:text-[20px] font-semibold mb-2 mt-4">
               Project Overview
             </p>
-            <div className="text-[13px] mb-4">
+            <div className="text-xs md:text-[13px] mb-4">
               <strong>About Gapstack:</strong>
-              <p className='text-[13px] font-medium'> Gapstack is a supply chain and trade financing platform designed to help banks and financial <br />
+              <p className="text-xs md:text-[13px] font-medium"> Gapstack is a supply chain and trade financing platform designed to help banks and financial <br />
               institutions streamline their trade financing processes. The platform aims to reduce manual <br /> inefficiencies, enhance automation, and provide a seamless experience for financial professionals <br /> managing trade finance operations.</p>
             </div>
 
-            <p className="text-[14px] font-semibold mb-2">
+            <p className="text-sm md:text-[14px] font-semibold mb-2">
               The Problem
             </p>
-            <p className="text-[13px] font-medium mb-4">
-              Many banks rely on outdated, manual processes to handle trade financing, leading to inefficiencies,<br /> slow approval processes, and compliance challenges. The lack of an intuitive digital platform <br /> increases operational costs and customer dissatisfaction.
+            <p className="text-xs md:text-[13px] font-medium mb-4">
+              Many banks rely on outdated, manual processes to handle trade financing, leading to inefficiencies, <br /> slow approval processes, and compliance challenges. The lack of an intuitive digital platform <br /> increases operational costs and customer dissatisfaction.
             </p>
 
-            <p className="text-[14px] font-semibold mb-2">
+            <p className="text-sm md:text-[14px] font-semibold mb-2">
               The Goal
             </p>
-            <p className="text-[13px] font-medium ">
+            <p className="text-xs md:text-[13px] font-medium">
               My objective was to design an intuitive, efficient, and scalable platform that enhances user <br /> experience, improves processing speed, and ensures regulatory compliance.
             </p>
           </div>
           
-          <div className="text-gray-700 py-4 font-[Satoshi] leading-relaxed space-y-4">
-            <h2 className="text-[14px] font-semibold">Research & Discovery</h2>
+          <div className="text-gray-700 py-4 font-[Satoshi] leading-relaxed space-y-3 md:space-y-4">
+            <h2 className="text-sm md:text-[14px] font-semibold">Research & Discovery</h2>
 
             <div>
-              <h3 className="text-[14px] font-semibold mb-1">Understanding Users</h3>
-              <p className="text-[13px] font-medium">
+              <h3 className="text-sm md:text-[14px] font-semibold mb-1">Understanding Users</h3>
+              <p className="text-xs md:text-[13px] font-medium">
                 To design a user-centered solution, I conducted extensive research, including:
               </p>
-              <ul className="list-disc list-inside font-medium text-[13px] space-y-1">
+              <ul className="list-disc list-inside font-medium text-xs md:text-[13px] space-y-1">
                 <li>
                   <strong>User Interviews:</strong> Engaged with banking professionals, trade finance specialists, and SME clients <br /> to understand pain points.
                 </li>
@@ -206,9 +189,9 @@ export default function GapstackShowcase() {
             </div>
 
             <div>
-              <h3 className="text-[14px] font-semibold mb-1">Competitive Analysis</h3>
-              <p className="text-[13px] font-medium">Through my study of existing trade finance solutions, I identified key gaps:</p>
-              <ul className="list-disc font-medium list-inside text-[13px] space-y-1">
+              <h3 className="text-sm md:text-[14px] font-semibold mb-1">Competitive Analysis</h3>
+              <p className="text-xs md:text-[13px] font-medium">Through my study of existing trade finance solutions, I identified key gaps:</p>
+              <ul className="list-disc font-medium list-inside text-xs md:text-[13px] space-y-1">
                 <li>Complex interfaces that required extensive training.</li>
                 <li>Lack of automation in approval workflows.</li>
                 <li>Poor data visualization for trade financing requests.</li>
@@ -216,8 +199,8 @@ export default function GapstackShowcase() {
             </div>
 
             <div>
-              <h3 className="text-[14px] font-semibold mb-1">Key Insights</h3>
-              <ul className="list-disc list-inside text-[13px] font-medium">
+              <h3 className="text-sm md:text-[14px] font-semibold mb-1">Key Insights</h3>
+              <ul className="list-disc list-inside text-xs md:text-[13px] font-medium">
                 <li>Users needed a clear dashboard to track trade financing requests.</li>
                 <li>Automation was crucial for speeding up approval processes.</li>
                 <li>Security and compliance were major concerns, requiring a balance between <br /> usability and regulatory needs.</li>

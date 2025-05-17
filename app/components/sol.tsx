@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, SetStateAction } from 'react';
-import { ChevronRight, ChevronLeft, X } from 'lucide-react';
+import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
 
 export default function SolgatesShowcase() {
@@ -54,31 +54,30 @@ export default function SolgatesShowcase() {
   }, [currentSlide, showDetailedSection]);
 
   return (
-    <div className="max-w-[735px] mx-auto p-4 sm:p-6 bg-white relative">
+    <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-white relative">
       {/* Small Summary Section (Always visible) */}
-                     <div 
-  className="flex items-center gap-4 mb-6 p-4 cursor-pointer"
-  onClick={() => setShowDetailedSection(true)}
->
-  <div className="flex-shrink-0">
-    <img 
-      src="/solgates.jpg" 
-      alt="Gapstack Preview" 
-      className="w-[135px] h-[70px] object-cover rounded"
-    />
-  </div>
+      <div 
+        className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+        onClick={() => setShowDetailedSection(true)}
+      >
+        <div className="flex-shrink-0">
+          <img 
+            src="/solgates.jpg" 
+            alt="Solgates Preview" 
+            className="w-[100px] md:w-[135px] h-[60px] md:h-[70px] object-cover rounded"
+          />
+        </div>
 
-  <div className="flex flex-col justify-center overflow-hidden">
-    <p className="text-[13px] font-extrabold text-gray-800 truncate whitespace-nowrap max-w-[180px]">
-     A Second-Hand <br /> Clothing Marketp...
-
-    </p>
-      <p className="text-[13px] font-medium mt-2 text-orange-600 flex items-center gap-1">
-      Solgates
-      <HiArrowUpRight className="text-[13px] hover:text-blue-800" />
-    </p>
-  </div>
-</div>
+        <div className="flex flex-col justify-center overflow-hidden">
+          <p className="text-xs md:text-[13px] font-extrabold text-gray-800 truncate whitespace-nowrap max-w-full">
+            A Second-Hand <br /> Clothing Marketp...
+          </p>
+          <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
+            Solgates
+            <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
+          </p>
+        </div>
+      </div>
       
       {/* Modal Backdrop */}
       {showDetailedSection && (
@@ -99,19 +98,10 @@ export default function SolgatesShowcase() {
         maxHeight: '90vh',
         overflow: 'hidden' // Remove scrollbar
       }}>
-        <div className="p-4 sm:p-6">
-          {/* Close button at top */}
-          <button 
-            onClick={() => setShowDetailedSection(false)}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100"
-            aria-label="Close modal"
-          >
-            <X size={20} className="text-gray-500" />
-          </button>
-
+        <div className="p-3 md:p-6">
           {/* Header with Logo */}
-          <header className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <div className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 rounded overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
+          <header className="flex flex-col sm:flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
+            <div className="h-16 w-16 sm:h-20 sm:w-20 md:h-28 md:w-28 rounded overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
               <img 
                 src="Layer 2.png" 
                 alt="Solgates logo" 
@@ -120,19 +110,19 @@ export default function SolgatesShowcase() {
               />
             </div>
             <div className="flex flex-col flex-1 min-w-0">
-              <h1 className="text-[15px] sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
+              <h1 className="text-sm sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
                 <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform {!isMobile && <br />} built for banks & financial institutions.
               </h1>
               <a 
                 href="https://www.solgates.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-600 mt-1 text-[12px] sm:text-[13px] underline hover:text-blue-800 transition-colors"
+                className="text-blue-600 mt-1 text-[11px] sm:text-[13px] underline hover:text-blue-800 transition-colors"
               >
                 www.solgates.com
               </a>
 
-              <div className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-[11px] sm:text-[12px] md:text-[13px] font-medium text-gray-600 mt-2">
+              <div className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-[10px] sm:text-[12px] md:text-[13px] font-medium text-gray-600 mt-2">
                 <div className="flex items-center gap-1 flex-nowrap">
                   <img src="suit.png" alt="Co-founder icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
                   <span>Co-founder</span>
@@ -154,11 +144,11 @@ export default function SolgatesShowcase() {
           </header>
 
           {/* Image Carousel */}
-          <div className="relative mb-8">
+          <div className="relative mb-4 md:mb-8">
             <div 
               className="w-full mx-auto overflow-hidden rounded-lg bg-gray-100"
               style={{
-                height: isMobile ? '200px' : '280px',
+                height: isMobile ? '180px' : '280px',
                 maxWidth: isMobile ? '100%' : '510px',
                 borderRadius: '6px',
               }}
@@ -174,26 +164,26 @@ export default function SolgatesShowcase() {
             
             <button 
               onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white transition-colors"
+              className="absolute left-1 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white transition-colors"
               aria-label="Previous slide"
             >
-              <ChevronLeft size={isMobile ? 20 : 24} />
+              <ChevronLeft size={isMobile ? 16 : 24} />
             </button>
             
             <button 
               onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white transition-colors"
+              className="absolute right-1 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white transition-colors"
               aria-label="Next slide"
             >
-              <ChevronRight size={isMobile ? 20 : 24} />
+              <ChevronRight size={isMobile ? 16 : 24} />
             </button>
             
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
               {images.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-                  className={`block w-2 h-2 rounded-full transition-colors ${currentSlide === idx ? 'bg-orange-600' : 'bg-gray-300'}`}
+                  className={`block w-1.5 md:w-2 h-1.5 md:h-2 rounded-full transition-colors ${currentSlide === idx ? 'bg-orange-600' : 'bg-gray-300'}`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
               ))}
@@ -202,17 +192,17 @@ export default function SolgatesShowcase() {
 
           {/* Content */}
           <div className="prose max-w-none">
-            <h2 className="font-bold text-gray-700 text-[18px] sm:text-[20px] mt-2 mb-4">Project Overview</h2>
+            <h2 className="font-bold text-gray-700 text-base sm:text-[20px] mt-2 mb-2 md:mb-4">Project Overview</h2>
             
-            <h3 className="text-gray-700 font-medium text-[12px] sm:text-[13px] mb-2">About Solgates</h3>
-            <p className="text-gray-700 text-[12px] sm:text-[13px]">
+            <h3 className="text-gray-700 font-medium text-[11px] sm:text-[13px] mb-1 md:mb-2">About Solgates</h3>
+            <p className="text-gray-700 text-[11px] sm:text-[13px]">
               Solgates is an online marketplace that connects buyers and sellers of second-hand clothing, making {!isMobile && <br />} 
               sustainable fashion more accessible. As a co-founder, I led the design and user experience of {!isMobile && <br />} 
               the platform, ensuring an intuitive and engaging interface for users.
             </p>
             
-            <p className="mb-3 text-gray-700 text-[12px] sm:text-[13px]">My role encompassed:</p>
-            <ul className="text-gray-700 text-[12px] sm:text-[13px] leading-relaxed">
+            <p className="mb-2 md:mb-3 text-gray-700 text-[11px] sm:text-[13px]">My role encompassed:</p>
+            <ul className="text-gray-700 text-[11px] sm:text-[13px] leading-relaxed">
               <li className="flex mb-1">
                 <span className="mr-2">•</span>
                 <span>
@@ -239,7 +229,7 @@ export default function SolgatesShowcase() {
               </li>
             </ul>
 
-            <p className='text-gray-700 text-[12px] sm:text-[13px] mt-4'>
+            <p className='text-gray-700 text-[11px] sm:text-[13px] mt-3 md:mt-4'>
               Solgates empowers individuals to buy and sell second-hand clothing effortlessly while promoting a {!isMobile && <br />} circular economy.
             </p>
           </div>

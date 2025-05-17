@@ -1,7 +1,7 @@
 'use client';
 
 import { SetStateAction, useState } from 'react';
-import { ChevronRight, ChevronLeft, X } from 'lucide-react';
+import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
 
 export default function PeachCarsShowcase() {
@@ -65,14 +65,7 @@ export default function PeachCarsShowcase() {
         overflow: 'hidden'
       }}>
         <div className="p-4 md:p-6 overflow-y-auto" style={{ maxHeight: '90vh' }}>
-          {/* Close button at top */}
-          <button 
-            onClick={() => setShowDetailedSection(false)}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100"
-            aria-label="Close modal"
-          >
-            <X size={20} className="text-gray-500" />
-          </button>
+          {/* Close button removed */}
 
           {/* Header with Logo */}
           <header className="flex flex-col sm:flex-row items-start gap-4 mb-6">
