@@ -85,7 +85,7 @@ const HeroSection = () => {
           <span className="text-blue-500">Goldman Sachs</span>.
         </p>
 
-        <div className="mt-4 text-[13px] leading-[20px] text-gray-800">
+        <div className="mt-4 text-[14px] leading-[21px] text-gray-800">
           <p className="mb-2 font-medium">
             I'm a <strong>Product Designer</strong> specializing in mobile, desktop, and web applications, with a <br />
             strong focus on <strong>usability, simplicity, and seamless user experiences.</strong>
@@ -156,7 +156,7 @@ const HeroSection = () => {
               </span>
             </p>
 
-            <p className="text-gray-800 font-medium mt-3 mr-4 text-[13px] leading-relaxed sm:mr-0 sm:text-[13px]">
+            <p className="text-gray-800 font-medium mt-3 mr-4 text-[14px] leading-relaxed sm:mr-0 sm:text-[14px]">
               When I'm not working on these, I'm building{' '}
               <Link href="https://solgates.com" target="_blank" className="text-blue-700 border-b border-blue-600">
                 Solgates

@@ -21,28 +21,29 @@ export default function GapstackShowcase() {
   return (
     <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-white relative">
       {/* Small Summary Section (Always visible) */}
-      <div 
-        className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
-        onClick={() => setShowDetailedSection(true)}
-      >
-        <div className="flex-shrink-0">
-          <img 
-            src="/Gapstack.jpg" 
-            alt="Gapstack Preview" 
-            className="w-[100px] md:w-[135px] h-[60px] md:h-[70px] object-cover rounded"
-          />
-        </div>
+     <div 
+  className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+  onClick={() => setShowDetailedSection(true)}
+>
+  <div className="flex-shrink-0">
+    <img 
+      src="/Gapstack.jpg" 
+      alt="Gapstack Preview" 
+      className="w-[100px] md:w-[135px] h-[60px] md:h-[70px] object-cover rounded"
+    />
+  </div>
 
-        <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800 truncate max-w-full">
-            Supply Chain & <br />Trade Financing Platform
-          </p>
-          <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
-            Gapstack
-            <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
-          </p>
-        </div>
-      </div>
+  <div className="flex flex-col justify-center leading-snug">
+    <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800">
+      Supply Chain & <br /> Trade Financing Platform
+    </p>
+    <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
+      Gapstack
+      <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
+    </p>
+  </div>
+</div>
+
 
       {/* Modal Backdrop */}
       {showDetailedSection && (

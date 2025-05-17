@@ -12,16 +12,16 @@ const CaseStudies = () => {
           Case Studies
         </h2>
         <div className="flex overflow-x-auto whitespace-nowrap custom-scroll pb-2">
-          <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] px-2">
+          <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px]">
             <Gap />
           </div>
-          <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] px-2">
+          <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] ">
             <Sol />
           </div>
-          <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] px-2">
+          <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] ">
             <Cars />
           </div>
-          <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] px-2">
+          <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] ">
             <Tuks />
           </div>
         </div>

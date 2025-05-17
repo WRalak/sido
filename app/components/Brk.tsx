@@ -39,7 +39,7 @@ export default function BRCKExperience() {
             height={30}
             className="object-contain"
           />
-          <h2 className="font-extrabold text-[14px] leading-4 tracking-normal flex items-center gap-2">
+          <h2 className="font-extrabold text-[15px] leading-4 tracking-normal flex items-center gap-2">
             BRCK
             <img
               src="/dot.png"
@@ -48,16 +48,16 @@ export default function BRCKExperience() {
             />
           </h2>
         </div>
-        <p className="text-gray-800 font-bold text-[13px]">March 2018 - October 2020</p>
+        <p className="text-gray-800 font-bold text-[15px]">March 2018 - October 2020</p>
       </div>
       
       {/* Dates and Role */}
       <div className="space-y-1.5">
-        <p className="text-gray-600 font-medium text-[13px] leading-5 tracking-normal"> 
-          Role: <span className="font-medium text-xs">UI/UX Designer</span>
+        <p className="text-gray-600 font-medium text-[14px] leading-5 tracking-normal"> 
+          Role: <span className="font-medium ">UI/UX Designer</span>
         </p>
-        <p className="text-gray-800 font-medium text-[13px] leading-5 tracking-normal">
-         <span className="text-gray-500 font-medium text-[13px]">Task:</span> Designing Digital Experiences Across Mobile, Web, and Internal Systems.
+        <p className="text-gray-800 font-medium text-[14px] leading-5 tracking-normal">
+         <span className="text-gray-500 font-medium text-[14px]">Task:</span> Designing Digital Experiences Across Mobile, Web, and Internal Systems.
         </p>
       </div>
       
@@ -101,7 +101,7 @@ export default function BRCKExperience() {
 </div>
       
       <div className="w-full mx-auto">
-        <p className="text-gray-800 font-medium text-[13px] leading-5 tracking-normal mt-2">
+        <p className="text-gray-800 font-medium text-[14px] leading-5 tracking-normal mt-2">
           I collaborated with researchers, designers, and front-end developers, reporting to the Creative 
           Director, to design mobile apps, internal systems, websites, and brand collateral. Beyond 
           design, I tested implementations and worked closely with developers to ensure a polished final 
