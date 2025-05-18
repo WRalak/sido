@@ -56,23 +56,33 @@ export default function PeachCarsShowcase() {
       {/* Detailed Section Modal */}
       <div className={`
         fixed bottom-0 left-1/2 transform -translate-x-1/2
-        w-full max-w-[800px] bg-white z-50 rounded-t-2xl shadow-xl
+        w-full max-w-[800px] bg-white z-50 rounded-t-2xl shadow-xl py-6 px-4 sm:py-9 sm:px-6 md:px-12 lg:px-20 lg:py-14
         transition-all duration-300 ease-in-out
         ${showDetailedSection ? 'translate-y-0' : 'translate-y-full'}
       `}
       style={{ 
         maxHeight: '90vh',
-        overflow: 'hidden'
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        scrollbarWidth: 'none', /* Firefox */
+        msOverflowStyle: 'none' /* IE and Edge */
       }}>
-        <div className="p-4 md:p-6 overflow-y-auto" style={{ maxHeight: '90vh' }}>
+        {/* Custom CSS to hide scrollbar for Chrome, Safari and Opera */}
+        <style jsx>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
+
+        <div className="w-full">
           {/* Header with Logo */}
           <header className="flex flex-col sm:flex-row items-start gap-4 mb-6">
             <div className="flex-shrink-0 mx-auto sm:mx-0">
-              <div className="bg-red-50 rounded-md flex items-center justify-center p-1 w-16 h-16 sm:w-[75px] sm:h-[75px]">
+              <div className="bg-red-50 rounded-md flex items-center justify-center w-16 h-16 sm:w-[75px] sm:h-[75px]">
                 <img 
                   src="Group.png" 
                   alt="Peach Cars Logo" 
-                  className="h-full w-auto object-contain rounded-[6px]"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             </div>
@@ -167,19 +177,19 @@ export default function PeachCarsShowcase() {
           {/* Content */}
           <div className="prose max-w-none mt-6 sm:mt-8 px-2 sm:px-4">
             <p className="text-[13px] sm:text-[13px] font-medium mb-4 sm:mb-6">
-              <span className="font-bold text-sm sm:text-[14px]">TL;DR:</span> I led the design and testing for Peach Cars, creating a user-friendly marketplace that <br /> simplifies buying and selling used cars in Kenya. By focusing on trust, intuitive search, and a <br /> seamless listing process, we improved user engagement, increased listings, and boosted business <br /> growth.
+              <span className="font-medium text-sm sm:text-[13px]">TL;DR:</span> I led the design and testing for Peach Cars, creating a user-friendly marketplace that <br className="hidden sm:block" /> simplifies buying and selling used cars in Kenya. By focusing on trust, intuitive search, and a <br className="hidden sm:block" /> seamless listing process, we improved user engagement, increased listings, and boosted business <br className="hidden sm:block" /> growth.
             </p>
 
             <h2 className="font-bold text-lg sm:text-xl text-gray-700 mt-6 sm:mt-8 mb-3 sm:mb-4">Peach Cars Website – UX Case Study</h2>
             
             <h3 className="font-bold text-sm sm:text-[14px] text-gray-700 mb-2">Introduction</h3>
             <p className="mb-4 text-[13px] sm:text-[13px] text-gray-700 font-medium">
-              Peach Cars is a Kenyan online marketplace that simplifies buying and selling used cars. My role as <br /> the UX/UI Designer involved leading research, design, and testing to create a user-friendly and <br /> trustworthy platform.
+              Peach Cars is a Kenyan online marketplace that simplifies buying and selling used cars. My role as <br className="hidden sm:block" /> the UX/UI Designer involved leading research, design, and testing to create a user-friendly and <br className="hidden sm:block" /> trustworthy platform.
             </p>
             
             <h3 className="font-bold text-[13px] text-gray-700 mt-2 mb-2">My Role & Process</h3>
             <p className="mb-2 text-[13px] text-gray-700 font-medium">
-              I handled user research, wireframing, prototyping, usability testing, and visual design using Figma. <br /> The goal was to improve trust, simplify search, and streamline the listing process for sellers.
+              I handled user research, wireframing, prototyping, usability testing, and visual design using Figma. <br className="hidden sm:block" /> The goal was to improve trust, simplify search, and streamline the listing process for sellers.
             </p>
 
             <h3 className="font-bold text-[13px] text-gray-700 mt-3 mb-3">Research & Key Insights</h3>
@@ -191,12 +201,12 @@ export default function PeachCarsShowcase() {
               <li>Sellers found existing platforms confusing and inefficient.</li>
             </ul>
             <p className="mb-4 text-[13px] text-gray-700 font-medium">
-              This led to user personas guiding design decisions, ensuring the platform addressed these <br /> concerns.
+              This led to user personas guiding design decisions, ensuring the platform addressed these <br className="hidden sm:block" /> concerns.
             </p>
 
             <h3 className="font-bold text-[13px] text-gray-700 mb-2">Design & Usability Testing</h3>
             <p className="mb-2 text-[13px] text-gray-700 font-medium">
-              I created wireframes, prototypes, and high-fidelity UI with a clean, modern look and easy <br /> navigation.
+              I created wireframes, prototypes, and high-fidelity UI with a clean, modern look and easy <br className="hidden sm:block" /> navigation.
             </p>
             <p className="mb-2 font-bold text-[13px] text-gray-700">
               Key features included:
@@ -207,7 +217,7 @@ export default function PeachCarsShowcase() {
               <li>A guided selling process for first-time sellers</li>
             </ul>
             <p className="mb-4 text-[13px] text-gray-700 font-medium">
-              Usability testing helped refine the experience, leading to simpler filters, clearer CTA labels, and <br /> mobile optimizations.
+              Usability testing helped refine the experience, leading to simpler filters, clearer CTA labels, and <br className="hidden sm:block" /> mobile optimizations.
             </p>
 
             <h3 className="font-bold text-[13px] text-gray-700 mb-2">Challenges & Solutions</h3>
@@ -227,7 +237,7 @@ export default function PeachCarsShowcase() {
 
             <h3 className="font-bold text-[13px] text-gray-700 mb-2">Conclusion</h3>
             <p className="mb-4 text-[13px] text-gray-700 font-medium">
-              This project reinforced the power of user-centered design and iterative <br /> testing in solving real-world pain points. By focusing on trust and simplicity, <br /> Peach Cars became a more accessible and effective car marketplace.
+              This project reinforced the power of user-centered design and iterative <br className="hidden sm:block" /> testing in solving real-world pain points. By focusing on trust and simplicity, <br className="hidden sm:block" /> Peach Cars became a more accessible and effective car marketplace.
             </p>
           </div>
         </div>

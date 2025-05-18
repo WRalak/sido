@@ -56,11 +56,24 @@ export default function GapstackShowcase() {
       <div className={`
         fixed bottom-0 left-1/2 transform -translate-x-1/2
         w-full max-w-[800px] bg-white z-50 rounded-t-2xl shadow-xl
-        transition-all duration-300 ease-in-out overflow-y-auto
+        transition-all duration-300 ease-in-out py-10 px-4 sm:px-6 md:px-12 lg:px-20
         ${showDetailedSection ? 'translate-y-0' : 'translate-y-full'}
       `}
-      style={{ maxHeight: '90vh' }}>
-        <div className="p-3 md:p-6">
+      style={{ 
+        maxHeight: '90vh',
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        scrollbarWidth: 'none', /* Firefox */
+        msOverflowStyle: 'none' /* IE and Edge */
+      }}>
+        {/* Custom CSS to hide scrollbar for Chrome, Safari and Opera */}
+        <style jsx>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
+
+        <div className="w-full">
           {/* Header with Logo */}
           <header className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-4 w-full mb-4 md:mb-6">
             {/* Logo on the far left */}

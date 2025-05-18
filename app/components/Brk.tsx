@@ -9,10 +9,12 @@ export default function BRCKExperience() {
   const [showModal, setShowModal] = useState(false);
   
   const expImages = [
-    "/brkw.png",
+    
     "/br.jpg",
     "/brkk.jpg",
-    '/brk2.png'
+    
+    '/bb.jpg',
+    '/bbb.jpg',
   ];
   
   const nextImage = (totalImages: number) => {

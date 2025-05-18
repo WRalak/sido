@@ -64,12 +64,12 @@ export default function SolgatesShowcase() {
           <img 
             src="/solgates.jpg" 
             alt="Solgates Preview" 
-            className="w-[100px] md:w-[135px] h-[70px] md:h-[70px] object-cover rounded"
+            className="w-[100px] md:w-[135px] h-[70px] md:h-[70px] object-cover rounded-[8px]"
           />
         </div>
 
         <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800  whitespace-nowrap max-w-full">
+          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800 whitespace-nowrap max-w-full">
             A Second-Hand <br /> Clothing Marketp...
           </p>
           <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
@@ -90,25 +90,36 @@ export default function SolgatesShowcase() {
       {/* Detailed Section Modal */}
       <div className={`
         fixed bottom-0 left-1/2 transform -translate-x-1/2
-        w-full max-w-[735px] bg-white z-50 rounded-t-2xl shadow-xl
-        transition-all duration-300 ease-in-out
+        w-full max-w-[735px] bg-white z-50 rounded-t-2xl shadow-xl 
+        transition-all duration-300 ease-in-out py-10 px-4 sm:px-6 md:px-12 lg:px-20
         ${showDetailedSection ? 'translate-y-0' : 'translate-y-full'}
       `}
       style={{ 
         maxHeight: '90vh',
-        overflow: 'hidden' // Remove scrollbar
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        scrollbarWidth: 'none', /* Firefox */
+        msOverflowStyle: 'none' /* IE and Edge */
       }}>
-        <div className="p-3 md:p-6">
+        {/* Custom CSS to hide scrollbar for Chrome, Safari and Opera */}
+        <style jsx>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
+
+        <div className="w-full">
           {/* Header with Logo */}
           <header className="flex flex-col sm:flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
-            <div className=" self-start rounded overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
-              <img 
-                src="Layer 2.png" 
-                alt="Solgates logo" 
-                  className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] object-cover rounded" 
-                loading="lazy"
-              />
-            </div>
+                           <div className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
+  <img 
+    src="Layer 2.png" 
+    alt="Solgates logo" 
+    className="max-w-full max-h-full object-contain" 
+    loading="lazy"
+  />
+</div>
+
             <div className="flex flex-col flex-1 min-w-0">
               <h1 className="text-sm sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
                 <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform {!isMobile && <br />} built for banks & financial institutions.
@@ -124,68 +135,95 @@ export default function SolgatesShowcase() {
 
               <div className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-[10px] sm:text-[12px] md:text-[13px] font-medium text-gray-600 mt-2">
                 <div className="flex items-center gap-1 flex-nowrap">
-                  <img src="suit.png" alt="Co-founder icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
+                  <img src="suit.png" alt="Co-founder icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
                   <span>Co-founder</span>
                 </div>
                 <div className="flex items-center gap-1 flex-nowrap">
-                  <img src="search.png" alt="UX Research icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
+                  <img src="search.png" alt="UX Research icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
                   <span>UX Research</span>
                 </div>
                 <div className="flex items-center gap-1 flex-nowrap">
-                  <img src="compass.png" alt="Design icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
+                  <img src="compass.png" alt="Design icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
                   <span>Design</span>
                 </div>
                 <div className="flex items-center gap-1 flex-nowrap">
-                  <img src="check.png" alt="Testing icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
+                  <img src="check.png" alt="Testing icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
                   <span>Testing</span>
                 </div>
               </div>
             </div>
           </header>
 
-          {/* Image Carousel */}
+          {/* Image Carousel with orange-300 background on 3 sides */}
           <div className="relative mb-4 md:mb-8">
-            <div 
-              className="w-full mx-auto overflow-hidden rounded-lg bg-gray-100"
-              style={{
-                height: isMobile ? '180px' : '280px',
-                maxWidth: isMobile ? '100%' : '510px',
-                borderRadius: '6px',
-              }}
-            >
+            {/* Background frame for top, right, and left */}
+            <div className="absolute inset-0 bg-orange-300 z-0 rounded-t-[8px]" 
+                 style={{
+                   top: 0,
+                   left: 0,
+                   right: 0,
+                   bottom: 'auto',
+                   height: '36px'
+                 }} />
+            <div className="absolute inset-0 bg-orange-300 z-0 rounded-l-[8px]" 
+                 style={{
+                   top: 0,
+                   left: 0,
+                   bottom: 0,
+                   right: 'auto',
+                   width: '36px'
+                 }} />
+            <div className="absolute inset-0 bg-orange-300 z-0 rounded-r-[8px]" 
+                 style={{
+                   top: 0,
+                   right: 0,
+                   bottom: 0,
+                   left: 'auto',
+                   width: '36px'
+                 }} />
+            
+            {/* Image container */}
+            <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
               <img 
                 src={images[currentSlide].src} 
                 alt={images[currentSlide].alt}
-                className="w-full h-full object-cover"
-                style={{ objectPosition: 'top center' }}
+                className="w-full h-full object-cover rounded-[8px]"
+                style={{ 
+                  objectPosition: 'center top',
+                  marginTop: '36px',
+                  marginLeft: '36px',
+                  marginRight: '36px',
+                  width: 'calc(100% - 72px)',
+                  height: 'calc(100% - 36px)'
+                }}
                 loading="lazy"
               />
+              
+              {/* Center right transparent arrow */}
+              <div 
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
+                onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+                style={{ width: '60px', height: '60px' }}
+              >
+                <div className="bg-white/50 hover:bg-black/20 rounded-full p-2 transition-colors">
+                  <ChevronRight size={24} className="text-white" />
+                </div>
+              </div>
             </div>
             
-            <button 
-              onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-              className="absolute left-1 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white transition-colors"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft size={isMobile ? 16 : 24} />
-            </button>
-            
-            <button 
-              onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-              className="absolute right-1 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white transition-colors"
-              aria-label="Next slide"
-            >
-              <ChevronRight size={isMobile ? 16 : 24} />
-            </button>
-            
-            <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 px-2 py-1 rounded-full z-20">
               {images.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-                  className={`block w-1.5 md:w-2 h-1.5 md:h-2 rounded-full transition-colors ${currentSlide === idx ? 'bg-orange-600' : 'bg-gray-300'}`}
+                  className={`flex items-center justify-center transition-colors ${currentSlide === idx ? 'text-orange-50' : 'text-gray-300'}`}
                   aria-label={`Go to slide ${idx + 1}`}
-                />
+                >
+                  <ChevronRight 
+                    size={isMobile ? 14 : 16}
+                    className={`transform ${currentSlide === idx ? 'rotate-90' : 'rotate-0'}`}
+                  />
+                </button>
               ))}
             </div>
           </div>
@@ -194,15 +232,15 @@ export default function SolgatesShowcase() {
           <div className="prose max-w-none">
             <h2 className="font-bold text-gray-700 text-base sm:text-[20px] mt-2 mb-2 md:mb-4">Project Overview</h2>
             
-            <h3 className="text-gray-700 font-medium text-[11px] sm:text-[13px] mb-1 md:mb-2">About Solgates</h3>
-            <p className="text-gray-700 text-[11px] sm:text-[13px]">
+            <h3 className="text-gray-900 font-medium text-[14px] sm:text-[13px] mb-1 md:mb-2">About Solgates</h3>
+            <p className="text-gray-700 text-[14px] font-medium sm:text-[13px]">
               Solgates is an online marketplace that connects buyers and sellers of second-hand clothing, making {!isMobile && <br />} 
               sustainable fashion more accessible. As a co-founder, I led the design and user experience of {!isMobile && <br />} 
               the platform, ensuring an intuitive and engaging interface for users.
             </p>
             
-            <p className="mb-2 md:mb-3 text-gray-700 text-[11px] sm:text-[13px]">My role encompassed:</p>
-            <ul className="text-gray-700 text-[11px] sm:text-[13px] leading-relaxed">
+            <p className="mb-2 md:mb-3 text-gray-700 font-medium text-[14px] sm:text-[13px]">My role encompassed:</p>
+            <ul className="text-gray-700 text-[14px] font-medium sm:text-[13px] leading-relaxed">
               <li className="flex mb-1">
                 <span className="mr-2">•</span>
                 <span>
@@ -229,7 +267,7 @@ export default function SolgatesShowcase() {
               </li>
             </ul>
 
-            <p className='text-gray-700 text-[11px] sm:text-[13px] mt-3 md:mt-4'>
+            <p className='text-gray-700 text-[14px] font-medium sm:text-[13px] mt-3 md:mt-4'>
               Solgates empowers individuals to buy and sell second-hand clothing effortlessly while promoting a {!isMobile && <br />} circular economy.
             </p>
           </div>
