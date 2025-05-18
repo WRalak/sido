@@ -8,6 +8,7 @@ export default function SolgatesShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showDetailedSection, setShowDetailedSection] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,6 +30,31 @@ export default function SolgatesShowcase() {
       alt: "Second-hand Clothing Listings"
     },
   ];
+
+  // Preload images to ensure they're available for pagination
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        const imagePromises = images.map((image) => {
+          return new Promise((resolve, reject) => {
+            const img = new window.Image();
+            img.src = image.src;
+            img.onload = resolve;
+            img.onerror = reject;
+          });
+        });
+        
+        await Promise.all(imagePromises);
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error("Failed to preload images:", error);
+        // Fall back to showing images anyway
+        setImagesLoaded(true);
+      }
+    };
+    
+    preloadImages();
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -111,18 +137,18 @@ export default function SolgatesShowcase() {
         <div className="w-full">
           {/* Header with Logo */}
           <header className="flex flex-col sm:flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
-                           <div className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
-  <img 
-    src="Layer 2.png" 
-    alt="Solgates logo" 
-    className="max-w-full max-h-full object-contain" 
-    loading="lazy"
-  />
-</div>
+            <div className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
+              <img 
+                src="Layer 2.png" 
+                alt="Solgates logo" 
+                className="max-w-full max-h-full object-contain" 
+                loading="eager"
+              />
+            </div>
 
             <div className="flex flex-col flex-1 min-w-0">
               <h1 className="text-sm sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
-                <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform {!isMobile && <br />} built for banks & financial institutions.
+                <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform <br /> built for banks & financial institutions.
               </h1>
               <a 
                 href="https://www.solgates.com" 
@@ -184,39 +210,63 @@ export default function SolgatesShowcase() {
             
             {/* Image container */}
             <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
-              <img 
-                src={images[currentSlide].src} 
-                alt={images[currentSlide].alt}
-                className="w-full h-full object-cover rounded-[8px]"
-                style={{ 
-                  objectPosition: 'center top',
-                  marginTop: '36px',
-                  marginLeft: '36px',
-                  marginRight: '36px',
-                  width: 'calc(100% - 72px)',
-                  height: 'calc(100% - 36px)'
-                }}
-                loading="lazy"
-              />
+              <div className="absolute" style={{ 
+                marginTop: '36px',
+                marginLeft: '36px',
+                marginRight: '36px',
+                width: 'calc(100% - 72px)',
+                height: 'calc(100% - 36px)',
+                overflow: 'hidden',
+                borderRadius: '4px'
+              }}>
+                {/* Render all images but only show the current one */}
+                {images.map((image, index) => (
+                  <div 
+                    key={index}
+                    className="absolute top-0 left-0 w-full h-full transition-opacity duration-300"
+                    style={{ 
+                      opacity: currentSlide === index ? 1 : 0,
+                      zIndex: currentSlide === index ? 1 : 0
+                    }}
+                  >
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: 'center top' }}
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
+                ))}
+              </div>
               
               {/* Center right transparent arrow */}
               <div 
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
+                className="absolute right-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
                 onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-                style={{ width: '60px', height: '60px' }}
               >
                 <div className="bg-white/50 hover:bg-black/20 rounded-full p-2 transition-colors">
                   <ChevronRight size={24} className="text-white" />
                 </div>
               </div>
+              
+              {/* Center left transparent arrow */}
+              <div 
+                className="absolute left-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
+                onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+              >
+                <div className="bg-white/50 hover:bg-black/20 rounded-full p-2 transition-colors">
+                  <ChevronLeft size={24} className="text-white" />
+                </div>
+              </div>
             </div>
             
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 px-2 py-1 rounded-full z-20">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 px-2 py-1 rounded-full z-20 bg-white/70">
               {images.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-                  className={`flex items-center justify-center transition-colors ${currentSlide === idx ? 'text-orange-50' : 'text-gray-300'}`}
+                  className={`flex items-center justify-center transition-colors ${currentSlide === idx ? 'text-orange-600' : 'text-gray-400'}`}
                   aria-label={`Go to slide ${idx + 1}`}
                 >
                   <ChevronRight 

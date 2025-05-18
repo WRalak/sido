@@ -1,18 +1,45 @@
 'use client';
 
-import { SetStateAction, useState } from 'react';
+import { SetStateAction, useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import Image from 'next/image';
 
 export default function GapstackShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showDetailedSection, setShowDetailedSection] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const images = [
     { src: "/gap.png", alt: "Gapstack Dashboard Interface showing real-time trade finance analytics" },
     { src: "/gap1.jpg", alt: "Trade Financing Request Flow with automated approval steps" },
     { src: "/gap2.png", alt: "Compliance monitoring dashboard with risk indicators" }
   ];
+
+  // Preload images to ensure they're available for pagination
+  useEffect(() => {
+    const preloadImages = async () => {
+      try {
+        const imagePromises = images.map((image) => {
+          return new Promise((resolve, reject) => {
+            const img = new window.Image();
+            img.src = image.src;
+            img.onload = resolve;
+            img.onerror = reject;
+          });
+        });
+        
+        await Promise.all(imagePromises);
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error("Failed to preload images:", error);
+        // Fall back to showing images anyway
+        setImagesLoaded(true);
+      }
+    };
+    
+    preloadImages();
+  }, []);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -26,11 +53,13 @@ export default function GapstackShowcase() {
         onClick={() => setShowDetailedSection(true)}
       >
         <div className="flex-shrink-0">
-          <img 
-            src="/Gapstack.jpg" 
-            alt="Gapstack Preview" 
-            className="w-[100px] md:w-[135px] h-[60px] md:h-[70px] object-cover rounded-[8px]"
-          />
+          <div className="relative w-[100px] md:w-[135px] h-[60px] md:h-[70px] rounded-[8px] overflow-hidden">
+            <img 
+              src="/Gapstack.jpg" 
+              alt="Gapstack Preview" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         <div className="flex flex-col justify-center leading-snug">
@@ -78,11 +107,13 @@ export default function GapstackShowcase() {
           <header className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-4 w-full mb-4 md:mb-6">
             {/* Logo on the far left */}
             <div className="flex-shrink-0 self-start">
-              <img 
-                src="/Gapstack.jpg" 
-                alt="Gapstack logo" 
-                className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] object-cover rounded-[8px]"
-              />
+              <div className="relative w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden">
+                <img 
+                  src="/Gapstack.jpg" 
+                  alt="Gapstack logo"
+                  className="w-full h-full object-cover" 
+                />
+              </div>
             </div>
 
             {/* Text content aligned properly next to logo */}
@@ -139,27 +170,40 @@ export default function GapstackShowcase() {
                  }} />
             
             {/* Image container */}
-                <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
-  <div style={{
-    marginTop: '36px',
-    marginLeft: '36px',
-    marginRight: '36px',
-    width: 'calc(100% - 72px)',
-    height: 'calc(100% - 36px)',
-    borderRadius: '8px',
-    overflow: 'hidden'
-  }}>
-    <img 
-      src={images[currentSlide].src} 
-      alt={images[currentSlide].alt}
-      className="w-full h-full object-cover"
-      style={{ 
-        objectPosition: 'center top',
-        display: 'block'
-      }}
-    />
-  </div>
-</div>
+            <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
+              <div style={{
+                marginTop: '36px',
+                marginLeft: '36px',
+                marginRight: '36px',
+                width: 'calc(100% - 72px)',
+                height: 'calc(100% - 36px)',
+                borderRadius: '8px',
+                overflow: 'hidden',
+                position: 'relative'
+              }}>
+                {/* Render all images but only show the current one */}
+                <div className="w-full h-full relative">
+                  {images.map((image, index) => (
+                    <div 
+                      key={index}
+                      className="absolute top-0 left-0 w-full h-full transition-opacity duration-300"
+                      style={{ 
+                        opacity: currentSlide === index ? 1 : 0,
+                        zIndex: currentSlide === index ? 1 : 0
+                      }}
+                    >
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-full object-cover"
+                        style={{ objectPosition: 'center top' }}
+                        loading={index === 0 ? "eager" : "lazy"}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
             
             <button 
               onClick={(e) => { e.stopPropagation(); prevSlide(); }}
@@ -177,6 +221,7 @@ export default function GapstackShowcase() {
               <ChevronRight size={16} className="text-blue-600" />
             </button>
             
+            {/* Pagination indicators */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-white/80 px-2 py-1 rounded-full z-20">
               {images.map((_, idx) => (
                 <button
