@@ -83,7 +83,7 @@ export default function SolgatesShowcase() {
     <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-white relative">
       {/* Small Summary Section (Always visible) */}
       <div 
-        className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+        className="flex items-center gap-x-2 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
         onClick={() => setShowDetailedSection(true)}
       >
         <div className="flex-shrink-0">
@@ -94,8 +94,8 @@ export default function SolgatesShowcase() {
           />
         </div>
 
-        <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800 whitespace-nowrap max-w-full">
+        <div className="flex flex-col justify-center  overflow-hidden">
+          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800   whitespace-nowrap max-w-full">
             A Second-Hand <br /> Clothing Marketp...
           </p>
           <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
