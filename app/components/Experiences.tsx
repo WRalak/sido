@@ -11,7 +11,7 @@ import Tales from './Tales'
 
 const Experiences = () => {
   return (
-    <div className=' hidden max-w-screen-2xl sm:block lg:px-8 xl:px-60 py-4 2xl:px-60  mx-auto '>
+    <div className=' hidden max-w-screen-2xl sm:block lg:px-8 xl:px-60 py-2 2xl:px-60  mx-auto '>
       <Nedbank/>
       <Gold/>
       <Ventures/>
