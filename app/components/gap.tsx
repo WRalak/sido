@@ -139,21 +139,27 @@ export default function GapstackShowcase() {
                  }} />
             
             {/* Image container */}
-            <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
-              <img 
-                src={images[currentSlide].src} 
-                alt={images[currentSlide].alt}
-                className="w-full h-full object-cover rounded-[8px]"
-                style={{ 
-                  objectPosition: 'center top',
-                  marginTop: '36px',
-                  marginLeft: '36px',
-                  marginRight: '36px',
-                  width: 'calc(100% - 72px)',
-                  height: 'calc(100% - 36px)'
-                }}
-              />
-            </div>
+                <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
+  <div style={{
+    marginTop: '36px',
+    marginLeft: '36px',
+    marginRight: '36px',
+    width: 'calc(100% - 72px)',
+    height: 'calc(100% - 36px)',
+    borderRadius: '8px',
+    overflow: 'hidden'
+  }}>
+    <img 
+      src={images[currentSlide].src} 
+      alt={images[currentSlide].alt}
+      className="w-full h-full object-cover"
+      style={{ 
+        objectPosition: 'center top',
+        display: 'block'
+      }}
+    />
+  </div>
+</div>
             
             <button 
               onClick={(e) => { e.stopPropagation(); prevSlide(); }}
