@@ -73,10 +73,10 @@ export default function PeachCarsShowcase() {
         </div>
 
         <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-[14px] font-bold text-gray-800 whitespace-nowrap max-w-[180px]">
+          <p className="text-[14px] font-bold text-gray-800 mb-2 whitespace-nowrap max-w-[180px]">
             Peach Cars is a <br />rising startup aim...
           </p>
-          <p className="text-[13px] font-medium mt-2 text-orange-600 flex items-center gap-1">
+          <p className="text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">
             Peach Cars
             <HiArrowUpRight className="text-[13px] hover:text-blue-800" />
           </p>

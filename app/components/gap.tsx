@@ -63,10 +63,10 @@ export default function GapstackShowcase() {
         </div>
 
         <div className="flex flex-col justify-center leading-snug">
-          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800">
+          <p className="text-[14px] md:text-[13px] mb-2 font-extrabold text-gray-800">
             Supply Chain & <br /> Trade Financing Platform
           </p>
-          <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
+          <p className="text-xs md:text-[13px] font-medium mb-1 md:mb-2 text-orange-600 flex items-center gap-1">
             Gapstack
             <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
           </p>

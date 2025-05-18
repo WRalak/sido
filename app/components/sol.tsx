@@ -8,11 +8,13 @@ export default function SolgatesShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showDetailedSection, setShowDetailedSection] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
+      setIsSmallScreen(window.innerWidth < 640);
     };
 
     handleResize();
@@ -83,7 +85,7 @@ export default function SolgatesShowcase() {
     <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-white relative">
       {/* Small Summary Section (Always visible) */}
       <div 
-        className="flex items-center gap-x-2 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+        className="flex items-center gap-x-1 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
         onClick={() => setShowDetailedSection(true)}
       >
         <div className="flex-shrink-0">
@@ -94,11 +96,11 @@ export default function SolgatesShowcase() {
           />
         </div>
 
-        <div className="flex flex-col justify-center  overflow-hidden">
-          <p className="text-[14px] md:text-[13px] font-extrabold text-gray-800   whitespace-nowrap max-w-full">
-            A Second-Hand <br /> Clothing Marketp...
+        <div className="flex flex-col justify-center overflow-hidden">
+          <p className="text-[14px] md:text-[13px] mb-2 font-extrabold text-gray-800 whitespace-nowrap max-w-full">
+            A Second-Hand <br /> Clothing Marketplace
           </p>
-          <p className="text-xs md:text-[13px] font-medium mt-1 md:mt-2 text-orange-600 flex items-center gap-1">
+          <p className="text-xs md:text-[13px] font-medium mb-2 md:mb-2 text-orange-600 flex items-center gap-1">
             Solgates
             <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
           </p>
@@ -148,7 +150,9 @@ export default function SolgatesShowcase() {
 
             <div className="flex flex-col flex-1 min-w-0">
               <h1 className="text-sm sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
-                <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform <br /> built for banks & financial institutions.
+                <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform 
+                {isSmallScreen ? <br /> : " "}
+                built for banks & financial institutions.
               </h1>
               <a 
                 href="https://www.solgates.com" 
@@ -255,7 +259,7 @@ export default function SolgatesShowcase() {
                 className="absolute left-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
                 onClick={(e) => { e.stopPropagation(); prevSlide(); }}
               >
-                <div className="bg-white/50 hover:bg-black/20 rounded-full p-2 transition-colors">
+                <div className="bg-black/80 hover:bg-black/20 rounded-full p-2 transition-colors">
                   <ChevronLeft size={24} className="text-white" />
                 </div>
               </div>
@@ -284,8 +288,10 @@ export default function SolgatesShowcase() {
             
             <h3 className="text-gray-900 font-medium text-[14px] sm:text-[13px] mb-1 md:mb-2">About Solgates</h3>
             <p className="text-gray-700 text-[14px] font-medium sm:text-[13px]">
-              Solgates is an online marketplace that connects buyers and sellers of second-hand clothing, making {!isMobile && <br />} 
-              sustainable fashion more accessible. As a co-founder, I led the design and user experience of {!isMobile && <br />} 
+              Solgates is an online marketplace that connects buyers and sellers of second-hand clothing, making 
+              {isSmallScreen && <br />}
+              sustainable fashion more accessible. As a co-founder, I led the design and user experience of 
+              {isSmallScreen && <br />} 
               the platform, ensuring an intuitive and engaging interface for users.
             </p>
             
@@ -294,31 +300,46 @@ export default function SolgatesShowcase() {
               <li className="flex mb-1">
                 <span className="mr-2">•</span>
                 <span>
-                  <strong>User Research & Strategy:</strong> {!isMobile && <br />}Conducted extensive user research to understand the needs of both {!isMobile && <br />} buyers and sellers, shaping the platform's features and user flow.
+                  <strong>User Research & Strategy:</strong> {!isMobile && <br />}
+                  Conducted extensive user research to understand the needs of both 
+                  {!isMobile && <br />} 
+                  buyers and sellers, shaping the platform's features and user flow.
                 </span>
               </li>
               <li className="flex mb-1">
                 <span className="mr-2">•</span>
                 <span>
-                  <strong>UX/UI Design:</strong> {!isMobile && <br />}Designed a seamless browsing and purchasing experience, optimizing the {!isMobile && <br />} interface for ease of navigation and engagement.
+                  <strong>UX/UI Design:</strong> {!isMobile && <br />}
+                  Designed a seamless browsing and purchasing experience, optimizing the 
+                  {!isMobile && <br />} 
+                  interface for ease of navigation and engagement.
                 </span>
               </li>
               <li className="flex mb-1">
                 <span className="mr-2">•</span>
                 <span>
-                  <strong>Prototyping & Usability Testing:</strong> {!isMobile && <br />}Developed high-fidelity prototypes and conducted usability {!isMobile && <br />} testing to refine the experience based on real user feedback.
+                  <strong>Prototyping & Usability Testing:</strong> {!isMobile && <br />}
+                  Developed high-fidelity prototypes and conducted usability 
+                  {!isMobile && <br />} 
+                  testing to refine the experience based on real user feedback.
                 </span>
               </li>
               <li className="flex mb-1">
                 <span className="mr-2">•</span>
                 <span>
-                  <strong>Iterative Improvements:</strong> {!isMobile && <br />}Continuously analyzed user behavior and iterated on the design to {!isMobile && <br />} enhance performance, conversion rates, and accessibility.
+                  <strong>Iterative Improvements:</strong> {!isMobile && <br />}
+                  Continuously analyzed user behavior and iterated on the design to 
+                  {!isMobile && <br />} 
+                  enhance performance, conversion rates, and accessibility.
                 </span>
               </li>
             </ul>
 
             <p className='text-gray-700 text-[14px] font-medium sm:text-[13px] mt-3 md:mt-4'>
-              Solgates empowers individuals to buy and sell second-hand clothing effortlessly while promoting a {!isMobile && <br />} circular economy.
+              Solgates empowers individuals to buy and sell second-hand clothing effortlessly while promoting a 
+              {isSmallScreen && <br />}
+              {!isMobile && <br />} 
+              circular economy.
             </p>
           </div>
         </div>
