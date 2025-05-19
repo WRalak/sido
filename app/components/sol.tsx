@@ -249,7 +249,7 @@ export default function SolgatesShowcase() {
                 className="absolute right-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
                 onClick={(e) => { e.stopPropagation(); nextSlide(); }}
               >
-                <div className="bg-white/50 hover:bg-black/20 rounded-full p-2 transition-colors">
+                <div className="bg-black/20 hover:bg-black/20 rounded-full p-2 transition-colors">
                   <ChevronRight size={24} className="text-white" />
                 </div>
               </div>
@@ -259,7 +259,7 @@ export default function SolgatesShowcase() {
                 className="absolute left-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
                 onClick={(e) => { e.stopPropagation(); prevSlide(); }}
               >
-                <div className="bg-black/80 hover:bg-black/20 rounded-full p-2 transition-colors">
+                <div className="bg-black/20 hover:bg-black/20 rounded-full p-2 transition-colors">
                   <ChevronLeft size={24} className="text-white" />
                 </div>
               </div>
