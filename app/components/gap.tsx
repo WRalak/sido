@@ -85,7 +85,7 @@ export default function GapstackShowcase() {
       <div className={`
         fixed bottom-0 left-1/2 transform -translate-x-1/2
         w-full max-w-[800px] bg-white z-50 rounded-t-2xl shadow-xl
-        transition-all duration-300 ease-in-out py-10 px-4 sm:px-6 md:px-12 lg:px-20
+        transition-all duration-300 ease-in-out py-10 px-4 sm:px-6 md:px-12 lg:px-20 lg:py-14
         ${showDetailedSection ? 'translate-y-0' : 'translate-y-full'}
       `}
       style={{ 
