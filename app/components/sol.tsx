@@ -119,7 +119,7 @@ export default function SolgatesShowcase() {
       <div className={`
         fixed bottom-0 left-1/2 transform -translate-x-1/2
         w-full max-w-[735px] bg-white z-50 rounded-t-2xl shadow-xl 
-        transition-all duration-300 ease-in-out py-10 px-4 sm:px-6 md:px-12 lg:px-20
+        transition-all duration-300 ease-in-out py-10 px-4 sm:px-8 md:px-12 lg:px-20
         ${showDetailedSection ? 'translate-y-0' : 'translate-y-full'}
       `}
       style={{ 
@@ -151,7 +151,7 @@ export default function SolgatesShowcase() {
             <div className="flex flex-col flex-1 min-w-0">
               <h1 className="text-sm sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
                 <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform 
-                {isSmallScreen ? <br /> : " "}
+                <br />
                 built for banks & financial institutions.
               </h1>
               <a 
