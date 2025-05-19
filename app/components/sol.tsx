@@ -158,7 +158,7 @@ export default function SolgatesShowcase() {
                 href="https://www.solgates.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-600 mt-1 text-[11px] sm:text-[13px] underline hover:text-blue-800 transition-colors"
+                className="text-blue-600 mt-1 font-medium text-[13px] sm:text-[13px] underline hover:text-blue-800 transition-colors"
               >
                 www.solgates.com
               </a>
@@ -166,7 +166,7 @@ export default function SolgatesShowcase() {
               <div className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-[10px] sm:text-[12px] md:text-[13px] font-medium text-gray-600 mt-2">
                 <div className="flex items-center gap-1 flex-nowrap">
                   <img src="suit.png" alt="Co-founder icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
-                  <span>Co-founder</span>
+                  <span className='font-medium'>Co-founder</span>
                 </div>
                 <div className="flex items-center gap-1 flex-nowrap">
                   <img src="search.png" alt="UX Research icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
@@ -284,14 +284,14 @@ export default function SolgatesShowcase() {
 
           {/* Content */}
           <div className="prose max-w-none">
-            <h2 className="font-bold text-gray-700 text-base sm:text-[20px] mt-2 mb-2 md:mb-4">Project Overview</h2>
+            <h2 className="font-extrabold text-gray-700 text-[20px] sm:text-[20px] mt-2 mb-2 md:mb-4">Project Overview</h2>
             
-            <h3 className="text-gray-900 font-medium text-[14px] sm:text-[13px] mb-1 md:mb-2">About Solgates</h3>
+            <h3 className="text-gray-900 font-bold text-[14px] sm:text-[13px] mb-1 md:mb-2">About Solgates</h3>
             <p className="text-gray-700 text-[14px] font-medium sm:text-[13px]">
               Solgates is an online marketplace that connects buyers and sellers of second-hand clothing, making 
-              {isSmallScreen && <br />}
+              <br />
               sustainable fashion more accessible. As a co-founder, I led the design and user experience of 
-              {isSmallScreen && <br />} 
+              <br />
               the platform, ensuring an intuitive and engaging interface for users.
             </p>
             

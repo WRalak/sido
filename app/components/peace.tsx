@@ -132,11 +132,11 @@ export default function PeachCarsShowcase() {
                 transparent, user-friendly online marketplace.
               </h1>
 
-              <p className="text-blue-600 text-[13px] sm:text-sm mt-1 underline inline-block cursor-pointer">
+              <p className="text-blue-600 text-[13px] font-medium sm:text-sm mt-1 underline inline-block cursor-pointer">
                 www.peachcars.co.ke
               </p>
 
-              <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-6 text-xs sm:text-sm mt-2">
+              <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-6 text-[13px]  mt-2">
                 <div className="flex items-center text-gray-600">
                   <img src="search.png" alt="UX Research" className="w-3 h-3 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
                   <span className="font-medium">UX Research</span>
@@ -236,10 +236,10 @@ export default function PeachCarsShowcase() {
             <p className="text-[13px] sm:text-[13px] font-medium mb-4 sm:mb-6">
               <span className="font-medium text-sm sm:text-[13px]">TL;DR:</span> I led the design and testing for Peach Cars, creating a user-friendly marketplace that <br className="hidden sm:block" /> simplifies buying and selling used cars in Kenya. By focusing on trust, intuitive search, and a <br className="hidden sm:block" /> seamless listing process, we improved user engagement, increased listings, and boosted business <br className="hidden sm:block" /> growth.
             </p>
-
+                 <hr  className='text-gray-300'/>
             <h2 className="font-bold text-lg sm:text-xl text-gray-700 mt-6 sm:mt-8 mb-3 sm:mb-4">Peach Cars Website – UX Case Study</h2>
             
-            <h3 className="font-bold text-sm sm:text-[14px] text-gray-700 mb-2">Introduction</h3>
+            <h3 className="font-medium text-[13px]  text-gray-700 mb-2">Introduction</h3>
             <p className="mb-4 text-[13px] sm:text-[13px] text-gray-700 font-medium">
               Peach Cars is a Kenyan online marketplace that simplifies buying and selling used cars. My role as <br className="hidden sm:block" /> the UX/UI Designer involved leading research, design, and testing to create a user-friendly and <br className="hidden sm:block" /> trustworthy platform.
             </p>
@@ -249,39 +249,35 @@ export default function PeachCarsShowcase() {
               I handled user research, wireframing, prototyping, usability testing, and visual design using Figma. <br className="hidden sm:block" /> The goal was to improve trust, simplify search, and streamline the listing process for sellers.
             </p>
 
-            <h3 className="font-bold text-[13px] text-gray-700 mt-3 mb-3">Research & Key Insights</h3>
+            <h3 className="font-medium text-[13px] text-gray-900 mt-8 mb-">Research & Key Insights</h3>
             <p className="mb-2 text-[13px] text-gray-700 font-medium">
               Through interviews, surveys, and competitor analysis, I identified major pain points:
             </p>
-            <ul className="list-disc pl-5 mb-4 space-y-1 text-[13px] text-gray-700 font-medium">
+            <ul className="list-disc pl-5 mb-4 text-[13px] text-gray-700 font-medium">
               <li>Buyers lacked trust in listings and had difficulty finding the right cars.</li>
               <li>Sellers found existing platforms confusing and inefficient.</li>
             </ul>
-            <p className="mb-4 text-[13px] text-gray-700 font-medium">
-              This led to user personas guiding design decisions, ensuring the platform addressed these <br className="hidden sm:block" /> concerns.
+            <p className="mb-6 text-[13px] text-gray-700 font-medium">
+              This led to user personas guiding design decisions, ensuring the platform addressed these <br/> concerns.
             </p>
 
-            <h3 className="font-bold text-[13px] text-gray-700 mb-2">Design & Usability Testing</h3>
-            <p className="mb-2 text-[13px] text-gray-700 font-medium">
-              I created wireframes, prototypes, and high-fidelity UI with a clean, modern look and easy <br className="hidden sm:block" /> navigation.
-            </p>
-            <p className="mb-2 font-bold text-[13px] text-gray-700">
-              Key features included:
-            </p>
-            <ul className="list-disc pl-5 mb-4 space-y-1 text-[13px] text-gray-700 font-medium">
-              <li>Robust filters for precise car searches</li>
-              <li>Verified seller badges and inspection reports</li>
-              <li>A guided selling process for first-time sellers</li>
-            </ul>
-            <p className="mb-4 text-[13px] text-gray-700 font-medium">
-              Usability testing helped refine the experience, leading to simpler filters, clearer CTA labels, and <br className="hidden sm:block" /> mobile optimizations.
-            </p>
+            <h3 className="font-medium text-[13px] text-gray-700 mt-2">Design & Usability Testing</h3>
+            <ul className="list-disc pl-5 mb-4  text-[13px] text-gray-700 font-medium">
+              <li>
+                I created wireframes, prototypes, and high-fidelity UI with a clean, modern look and easy <br  /> navigation.
+              </li>
+              <li>Key features included robust filters , verified seller badges, and inspection reports, a guided <br /> selling process.</li>
+              <li>Usability testing helped refine the experience, leading to simpler filters, clearer CTA labels,<br /> and mobile optimizations.</li>
+              </ul>
+           
+           
+           
 
-            <h3 className="font-bold text-[13px] text-gray-700 mb-2">Challenges & Solutions</h3>
+            <h3 className="font-medium text-[13px] text-gray-800 mb-2">Challenges & Solutions</h3>
             <ul className="list-disc pl-5 mb-4 text-[13px] text-gray-700 font-medium space-y-1">
-              <li><strong>Establishing Trust:</strong> Added verification badges and inspection reports.</li>
-              <li><strong>Balancing Buyer & Seller Needs:</strong> Designed separate, intuitive pathways for both.</li>
-              <li><strong>Optimizing for Mobile & Low Bandwidth:</strong> Used a mobile-first approach with lightweight images.</li>
+              <li><>Establishing Trust:</> Added verification badges and inspection reports.</li>
+              <li><>Balancing Buyer & Seller Needs:</> Designed separate, intuitive pathways for both.</li>
+              <li><>Optimizing for Mobile & Low Bandwidth:</> Used a mobile-first approach with lightweight images.</li>
             </ul>
 
             <h3 className="font-bold text-[13px] text-gray-700 mb-2">Results & Impact</h3>
@@ -292,8 +288,8 @@ export default function PeachCarsShowcase() {
               <li>Business growth, contributing to increased funding and market traction.</li>
             </ul>
 
-            <h3 className="font-bold text-[13px] text-gray-700 mb-2">Conclusion</h3>
-            <p className="mb-4 text-[13px] text-gray-700 font-medium">
+            <h3 className="font-medium text-[13px] text-gray-700 mt-7 ">Conclusion</h3>
+            <p className="mt-4 text-[13px] text-gray-700 font-medium">
               This project reinforced the power of user-centered design and iterative <br className="hidden sm:block" /> testing in solving real-world pain points. By focusing on trust and simplicity, <br className="hidden sm:block" /> Peach Cars became a more accessible and effective car marketplace.
             </p>
           </div>

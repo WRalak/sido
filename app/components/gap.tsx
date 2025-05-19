@@ -66,7 +66,7 @@ export default function GapstackShowcase() {
           <p className="text-[14px] md:text-[13px] mb-2 font-extrabold text-gray-800">
             Supply Chain & <br /> Trade Financing Platform
           </p>
-          <p className="text-xs md:text-[13px] font-medium mb-1 md:mb-2 text-orange-600 flex items-center gap-1">
+          <p className="text-[13px] md:text-[13px] font-medium mb-1 md:mb-2 text-orange-600 flex items-center gap-1">
             Gapstack
             <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
           </p>
@@ -122,7 +122,7 @@ export default function GapstackShowcase() {
                 <span className="" style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack </span>
                 is a supply chain & trade financing platform <br /> built for banks & financial institutions.
               </h1>
-              <p className="text-blue-600 text-xs sm:text-sm cursor-pointer underline inline-block">
+              <p className="text-blue-600 text-sm font-medium sm:text-sm cursor-pointer underline inline-block">
                 www.gapstack.com
               </p>
 
@@ -235,14 +235,16 @@ export default function GapstackShowcase() {
           </div>
 
           {/* Content */}
-          <div className="text-gray-700 font-[Satoshi] leading-relaxed mt-4">
+          <hr className='  mt-5 text-gray-200' />
+          <div className="text-gray-700 font-[Satoshi] leading-relaxed mt-6">
             <div className="text-xs md:text-[13px] font-medium">
-              <span className="text-sm md:text-[14px] font-semibold mb-2">
+              
+              <span className="text-[13px] md:text-[14px] font-semibold mt-2">
                 TL;DR:
               </span> I designed an intuitive, scalable trade financing platform for banks, improving efficiency in <br /> the process. Conducted research, user testing, and iterative design to streamline workflows and <br /> enhance usability. Delivered a user-centric experience balancing automation, compliance, and <br /> operational needs.
             </div>
-
-            <p className="text-lg md:text-[20px] font-semibold mb-2 mt-4">
+ <hr className=' mt-5 text-gray-200' />
+            <p className="text-lg md:text-[20px] font-extrabold mb-2 mt-4">
               Project Overview
             </p>
             <div className="text-xs md:text-[13px] mb-4">
@@ -267,7 +269,7 @@ export default function GapstackShowcase() {
           </div>
           
           <div className="text-gray-700 py-4 font-[Satoshi] leading-relaxed space-y-3 md:space-y-4">
-            <h2 className="text-sm md:text-[14px] font-semibold">Research & Discovery</h2>
+            <h2 className="text-[20px]  font-extrabold">Research & Discovery</h2>
 
             <div>
               <h3 className="text-sm md:text-[14px] font-semibold mb-1">Understanding Users</h3>

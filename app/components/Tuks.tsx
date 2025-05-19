@@ -100,7 +100,7 @@ export default function TukaiShowcase() {
       href="https://www.tukai.co" 
       target="_blank" 
       rel="noopener noreferrer"
-      className="text-blue-600 mt-1 text-[11px] sm:text-[13px] underline hover:text-blue-800 transition-colors"
+      className="text-blue-600 mt-1 text-[13px] font-medium sm:text-[13px] underline hover:text-blue-600 transition-colors"
     >
       www.tukai.co
     </a>
@@ -183,14 +183,14 @@ export default function TukaiShowcase() {
           {/* Content */}
           <div className="prose max-w-none">
              <hr  className='text-gray-300 p-2'/>
-            <p className="mb-4 sm:mb-6 text-sm sm:text-[13px] font-medium text-gray-800">
+            <p className="mb-4 sm:mb-6 text-[13px] font-medium text-gray-800">
               Tukai is a platform designed to transform how people explore the outdoors, plan adventures, and <br className="hidden sm:block" /> build communities. From hiking and camping to bike riding and scenic drives, Tukai offers an <br className="hidden sm:block" /> effortless way to access adventure spots, parks, mountains, and fun destinations. It also allows users <br className="hidden sm:block" /> to join like-minded communities based on their interests, making it more than just an activity hub— <br className="hidden sm:block" />it's a <strong>social experience</strong>.
             </p>
                     <hr  className='text-gray-300 p-2'/>
             <h2 className="font-bold text-lg sm:text-xl text-gray-700 mt-6 sm:mt-8  sm:mb-1">My Role & Contributions</h2>
 
-            <strong className="font-medium text-sm sm:text-[14px] text-gray-700 ">1. Product Design – Crafting an Engaging and Intuitive Experience</strong>
-            <p className=" sm:mb-4 text-sm sm:text-[13px] text-gray-800 font-medium">
+            <strong className="font-medium text-[13px] text-gray-800 ">1. Product Design – Crafting an Engaging and Intuitive Experience</strong>
+            <p className=" sm:mb-4 text-[13px] text-gray-600 font-medium">
               I led the end-to-end design of Tukai, ensuring that users could seamlessly discover activities,<br className="hidden sm:block" /> organize their experiences, and connect with others. My focus was on:
             </p>
             <ul className="list-disc pl-5 mb-4 sm:mb-6  font-medium text-[13px] sm:text-[13px] text-gray-700">
@@ -208,9 +208,9 @@ export default function TukaiShowcase() {
               </li>
             </ul>
              <hr  className='text-gray-300 p-2'/>
-            <h3 className="font-bold text-[14px] sm:text-[14px] text-gray-700 mt-6 sm:mt-8">2. Project Management – Driving Execution and Timelines</h3>
-            <p className="text-sm sm:text-[13px] font-medium text-gray-700 ">
-              As a co-founder, I managed the roadmap, milestones, and team coordination to keep the project <br className="hidden sm:block" /> on track. My responsibilities included:
+            <h3 className="font-medium text-[13px]  text-gray-800 mt-6 sm:mt-8">2. Project Management – Driving Execution and Timelines</h3>
+            <p className=" mt-2 text-[13px] font-medium text-gray-700 ">
+              As a co-founder, I managed the <strong>roadmap, milestones, and team coordination</strong> to keep the project <br className="hidden sm:block" /> on track. My responsibilities included:
             </p>
             <ul className="list-disc pl-5 mb-4 sm:mb-6 space-y-1 text-sm sm:text-[13px] font-medium text-gray-700">
               <li>Defining short-term sprints and long-term goals to ensure steady feature development</li>

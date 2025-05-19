@@ -5,7 +5,7 @@ import Cars from './peace';
 import Tuks from './Tuks';
 
 const CaseStudies = () => {
-return ( <div className="px-3 py-6 mx-auto max-w-screen-2xl ">
+return ( <div className="px-1 py-6 mx-auto max-w-screen-2xl ">
    <div className="w-full md:px-8 lg:px-16 xl:px-20 2xl:px-0"> 
     <h2 className="text-[18px] text-gray-900 font-extrabold mb-4 xl:px-44 2xl:px-70 ">
 
