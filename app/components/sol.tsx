@@ -185,102 +185,102 @@ export default function SolgatesShowcase() {
           </header>
 
           {/* Image Carousel with orange-300 background on 3 sides */}
-          <div className="relative mb-4 md:mb-8">
-            {/* Background frame for top, right, and left */}
-            <div className="absolute inset-0 bg-orange-300 z-0 rounded-t-[8px]" 
-                 style={{
-                   top: 0,
-                   left: 0,
-                   right: 0,
-                   bottom: 'auto',
-                   height: '36px'
-                 }} />
-            <div className="absolute inset-0 bg-orange-300 z-0 rounded-l-[8px]" 
-                 style={{
-                   top: 0,
-                   left: 0,
-                   bottom: 0,
-                   right: 'auto',
-                   width: '36px'
-                 }} />
-            <div className="absolute inset-0 bg-orange-300 z-0 rounded-r-[8px]" 
-                 style={{
-                   top: 0,
-                   right: 0,
-                   bottom: 0,
-                   left: 'auto',
-                   width: '36px'
-                 }} />
-            
-            {/* Image container */}
-            <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
-              <div className="absolute" style={{ 
-                marginTop: '36px',
-                marginLeft: '36px',
-                marginRight: '36px',
-                width: 'calc(100% - 72px)',
-                height: 'calc(100% - 36px)',
-                overflow: 'hidden',
-                borderRadius: '4px'
-              }}>
-                {/* Render all images but only show the current one */}
-                {images.map((image, index) => (
-                  <div 
-                    key={index}
-                    className="absolute top-0 left-0 w-full h-full transition-opacity duration-300"
-                    style={{ 
-                      opacity: currentSlide === index ? 1 : 0,
-                      zIndex: currentSlide === index ? 1 : 0
-                    }}
-                  >
-                    <img 
-                      src={image.src} 
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                      style={{ objectPosition: 'center top' }}
-                      loading={index === 0 ? "eager" : "lazy"}
-                    />
-                  </div>
-                ))}
-              </div>
-              
-              {/* Center right transparent arrow */}
-              <div 
-                className="absolute right-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
-                onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-              >
-                <div className="bg-black/20 hover:bg-black/20 rounded-full p-2 transition-colors">
-                  <ChevronRight size={24} className="text-white" />
-                </div>
-              </div>
-              
-              {/* Center left transparent arrow */}
-              <div 
-                className="absolute left-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
-                onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-              >
-                <div className="bg-black/20 hover:bg-black/20 rounded-full p-2 transition-colors">
-                  <ChevronLeft size={24} className="text-white" />
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 px-2 py-1 rounded-full z-20 bg-white/70">
-              {images.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-                  className={`flex items-center justify-center transition-colors ${currentSlide === idx ? 'text-orange-600' : 'text-gray-400'}`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                >
-                  <ChevronRight 
-                    size={isMobile ? 14 : 16}
-                    className={`transform ${currentSlide === idx ? 'rotate-90' : 'rotate-0'}`}
-                  />
-                </button>
-              ))}
-            </div>
-          </div>
+         <div className="relative mb-4 md:mb-8">
+  {/* Background frame for top, right, and left */}
+  <div className="absolute inset-0 bg-orange-300 z-0 rounded-t-[8px]" 
+       style={{
+         top: 0,
+         left: 0,
+         right: 0,
+         bottom: 'auto',
+         height: '36px'
+       }} />
+  <div className="absolute inset-0 bg-orange-300 z-0 rounded-l-[8px]" 
+       style={{
+         top: 0,
+         left: 0,
+         bottom: 0,
+         right: 'auto',
+         width: '36px'
+       }} />
+  <div className="absolute inset-0 bg-orange-300 z-0 rounded-r-[8px]" 
+       style={{
+         top: 0,
+         right: 0,
+         bottom: 0,
+         left: 'auto',
+         width: '36px'
+       }} />
+  
+  {/* Image container */}
+  <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
+    <div className="absolute" style={{ 
+      marginTop: '30px',
+      marginLeft: '36px',
+      marginRight: '36px',
+      width: 'calc(100% - 72px)',
+      height: 'calc(100% - 36px)',
+      overflow: 'hidden',
+      borderRadius: '8px' // Changed from 4px to 8px
+    }}>
+      {/* Render all images but only show the current one */}
+      {images.map((image, index) => (
+        <div 
+          key={index}
+          className="absolute top-0 left-0 w-full h-full transition-opacity duration-300"
+          style={{ 
+            opacity: currentSlide === index ? 1 : 0,
+            zIndex: currentSlide === index ? 1 : 0
+          }}
+        >
+          <img 
+            src={image.src} 
+            alt={image.alt}
+            className="w-full h-full object-cover rounded-[9px]" // Added rounded-[8px] here
+            style={{ objectPosition: 'center top' }}
+            loading={index === 0 ? "eager" : "lazy"}
+          />
+        </div>
+      ))}
+    </div>
+    
+    {/* Center right transparent arrow */}
+    <div 
+      className="absolute right-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
+      onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+    >
+      <div className="bg-black/20 hover:bg-black/20 rounded-full p-2 transition-colors">
+        <ChevronRight size={24} className="text-white" />
+      </div>
+    </div>
+    
+    {/* Center left transparent arrow */}
+    <div 
+      className="absolute left-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
+      onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+    >
+      <div className="bg-black/20 hover:bg-black/20 rounded-full p-2 transition-colors">
+        <ChevronLeft size={24} className="text-white" />
+      </div>
+    </div>
+  </div>
+  
+  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 px-2 py-1 rounded-full z-20 bg-white/70">
+    {images.map((_, idx) => (
+      <button
+        key={idx}
+        onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
+        className={`flex items-center justify-center transition-colors ${currentSlide === idx ? 'text-orange-600' : 'text-gray-400'}`}
+        aria-label={`Go to slide ${idx + 1}`}
+      >
+        <ChevronRight 
+          size={isMobile ? 14 : 16}
+          className={`transform ${currentSlide === idx ? 'rotate-90' : 'rotate-0'}`}
+        />
+      </button>
+    ))}
+  </div>
+</div>
 
           {/* Content */}
           <div className="prose max-w-none">

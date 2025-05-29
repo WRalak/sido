@@ -142,96 +142,102 @@ export default function GapstackShowcase() {
 
           {/* Image Carousel with 36px background on 3 sides and 8px radius */}
           <div className="relative mt-4 md:mt-8 group">
-            {/* Background frame for top, right, and left */}
-            <div className="absolute inset-0 bg-sky-900 z-0 rounded-t-[8px]" 
-                 style={{
-                   top: 0,
-                   left: 0,
-                   right: 0,
-                   bottom: 'auto',
-                   height: '36px'
-                 }} />
-            <div className="absolute inset-0 bg-sky-900 z-0 rounded-l-[8px]" 
-                 style={{
-                   top: 0,
-                   left: 0,
-                   bottom: 0,
-                   right: 'auto',
-                   width: '36px'
-                 }} />
-            <div className="absolute inset-0 bg-sky-900 z-0 rounded-r-[8px]" 
-                 style={{
-                   top: 0,
-                   right: 0,
-                   bottom: 0,
-                   left: 'auto',
-                   width: '36px'
-                 }} />
-            
-            {/* Image container */}
-            <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
-              <div style={{
-                marginTop: '36px',
-                marginLeft: '36px',
-                marginRight: '36px',
-                width: 'calc(100% - 72px)',
-                height: 'calc(100% - 36px)',
-                borderRadius: '8px',
-                overflow: 'hidden',
-                position: 'relative'
-              }}>
-                {/* Render all images but only show the current one */}
-                <div className="w-full h-full relative rounded-[8px]">
-                  {images.map((image, index) => (
-                    <div 
-                      key={index}
-                      className="absolute top-0 left-0 w-full h-full transition-opacity duration-300"
-                      style={{ 
-                        opacity: currentSlide === index ? 1 : 0,
-                        zIndex: currentSlide === index ? 1 : 0
-                      }}
-                    >
-                      <img 
-                        src={image.src} 
-                        alt={image.alt}
-                        className="w-full h-full  object-cover"
-                        style={{ objectPosition: 'center top' }}
-                        loading={index === 0 ? "eager" : "lazy"}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            
-            <button 
-              onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-              className="absolute left-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity z-20"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft size={16} className="text-blue-600" />
-            </button>
-            
-            <button 
-              onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-              className="absolute right-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity z-20"
-              aria-label="Next slide"
-            >
-              <ChevronRight size={16} className="text-blue-600" />
-            </button>
-            
-            {/* Pagination indicators */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-white/80 px-2 py-1 rounded-full z-20">
-              {images.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-                  className={`block w-1.5 md:w-2 h-1.5 md:h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-blue-600 w-3 md:w-4' : 'bg-gray-300'}`}
-                  aria-label={`View slide ${idx + 1}`}
-                />
-              ))}
-            </div>
+  {/* Background frame for top, right, and left */}
+  <div className="absolute inset-0 bg-sky-900 z-0 rounded-t-[8px]" 
+       style={{
+         top: 0,
+         left: 0,
+         right: 0,
+         bottom: 'auto',
+         height: '36px'
+       }} />
+  <div className="absolute inset-0 bg-sky-900 z-0 rounded-l-[8px]" 
+       style={{
+         top: 0,
+         left: 0,
+         bottom: 0,
+         right: 'auto',
+         width: '36px'
+       }} />
+  <div className="absolute inset-0 bg-sky-900 z-0 rounded-r-[8px]" 
+       style={{
+         top: 0,
+         right: 0,
+         bottom: 0,
+         left: 'auto',
+         width: '36px'
+       }} />
+  
+  {/* Main image container */}
+  <div className="relative z-10 w-full h-[300px]">
+    {/* Inner container with proper spacing */}
+    <div className="absolute inset-0" style={{
+      top: '26px',
+      left: '36px',
+      right: '36px',
+      bottom: 0,
+    }}>
+      {/* Slider container with rounded corners */}
+      <div className="w-full h-full relative overflow-hidden rounded-[8px]">
+        {images.map((image, index) => (
+          <div 
+            key={index}
+            className="absolute inset-0 transition-opacity duration-300"
+            style={{ 
+              opacity: currentSlide === index ? 1 : 0,
+              zIndex: currentSlide === index ? 1 : 0
+            }}
+          >
+            {/* Image with proper border radius and full coverage */}
+            <img 
+              src={image.src} 
+              alt={image.alt}
+              className="absolute inset-0 w-full h-full object-cover rounded-[8px]"
+              style={{ 
+                objectPosition: 'center top',
+                // Extend image to cover the frame area
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0
+              }}
+              loading={index === 0 ? "eager" : "lazy"}
+            />
           </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  
+  {/* Navigation buttons */}
+  <button 
+    onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+    className="absolute left-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity z-20"
+    aria-label="Previous slide"
+  >
+    <ChevronLeft size={18} className="text-gray-900" />
+  </button>
+  
+  <button 
+    onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+    className="absolute right-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity z-20"
+    aria-label="Next slide"
+  >
+    <ChevronRight size={18} className="text-gray-900" />
+  </button>
+  
+  {/* Pagination indicators */}
+  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-white/80 px-2 py-1 rounded-full z-20">
+    {images.map((_, idx) => (
+      <button
+        key={idx}
+        onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
+        className={`block w-1.5 md:w-2 h-1.5 md:h-2 rounded-full transition-all ${currentSlide === idx ? 'bg-blue-600 w-3 md:w-4' : 'bg-gray-300'}`}
+        aria-label={`View slide ${idx + 1}`}
+      />
+    ))}
+  </div>
+</div>
 
           {/* Content */}
           <hr className='mt-5 text-gray-200' />

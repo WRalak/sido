@@ -55,7 +55,7 @@ export default function IMSGlobalExperience() {
       <div className="w-full max-w-3xl mx-auto mb-1 relative">
         {/* Image Display with Blue Background - Now Clickable */}
         <div 
-          className="relative mt-4 w-[586px] bg-sky-900 rounded-t-lg cursor-pointer" 
+          className="relative mt-4 w-[486px] bg-sky-900 rounded-t-lg cursor-pointer" 
           onClick={openModal}
           style={{ height: '280px' }}
         >
@@ -66,9 +66,9 @@ export default function IMSGlobalExperience() {
               width: '440px', 
               height: '248px', /* Half height to show only top portion */
               position: 'absolute', 
-              top: '36px', 
-              left: '36px',
-              right: '36px'
+              top: '35px', 
+              left: '26px',
+              right: '26px'
             }}
           >
             <div style={{ 
