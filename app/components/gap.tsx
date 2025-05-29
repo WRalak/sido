@@ -3,7 +3,6 @@
 import { SetStateAction, useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
-import Image from 'next/image';
 
 export default function GapstackShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -46,7 +45,7 @@ export default function GapstackShowcase() {
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="w-full max-w-[800px] mx-auto p-3 md:p-6 bg-white relative">
+    <div className="w-full max-w-[800px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
       {/* Small Summary Section (Always visible) */}
       <div 
         className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
@@ -76,7 +75,7 @@ export default function GapstackShowcase() {
       {/* Modal Backdrop */}
       {showDetailedSection && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+          className="fixed inset-0 bg-black/20 z-40 backdrop-blur-"
           onClick={() => setShowDetailedSection(false)}
         />
       )}
@@ -182,7 +181,7 @@ export default function GapstackShowcase() {
                 position: 'relative'
               }}>
                 {/* Render all images but only show the current one */}
-                <div className="w-full h-full relative">
+                <div className="w-full h-full relative rounded-[8px]">
                   {images.map((image, index) => (
                     <div 
                       key={index}
@@ -195,7 +194,7 @@ export default function GapstackShowcase() {
                       <img 
                         src={image.src} 
                         alt={image.alt}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full  object-cover"
                         style={{ objectPosition: 'center top' }}
                         loading={index === 0 ? "eager" : "lazy"}
                       />
@@ -235,41 +234,43 @@ export default function GapstackShowcase() {
           </div>
 
           {/* Content */}
-          <hr className='  mt-5 text-gray-200' />
+          <hr className='mt-5 text-gray-200' />
           <div className="text-gray-700 font-[Satoshi] leading-relaxed mt-6">
             <div className="text-xs md:text-[13px] font-medium">
-              
+
               <span className="text-[13px] md:text-[14px] font-semibold mt-2">
                 TL;DR:
-              </span> I designed an intuitive, scalable trade financing platform for banks, improving efficiency in <br /> the process. Conducted research, user testing, and iterative design to streamline workflows and <br /> enhance usability. Delivered a user-centric experience balancing automation, compliance, and <br /> operational needs.
+              </span> I designed an intuitive, scalable trade financing platform for banks, improving efficiency in <br />the process. Conducted research, user testing, and iterative design to streamline workflows and <br /> enhance usability. Delivered a user-centric experience balancing automation, compliance, and <br /> operational needs.
             </div>
- <hr className=' mt-5 text-gray-200' />
-            <p className="text-lg md:text-[20px] font-extrabold mb-2 mt-4">
+            
+            <hr className='mt-7 text-gray-200' />
+            
+            <p className="text-lg md:text-[20px] font-extrabold mb-2 mt-3">
               Project Overview
             </p>
-            <div className="text-xs md:text-[13px] mb-4">
+            
+            <div className="text-xs md:text-[13px] mb-6">
               <strong>About Gapstack:</strong>
-              <p className="text-xs md:text-[13px] font-medium"> Gapstack is a supply chain and trade financing platform designed to help banks and financial <br />
-              institutions streamline their trade financing processes. The platform aims to reduce manual <br /> inefficiencies, enhance automation, and provide a seamless experience for financial professionals <br /> managing trade finance operations.</p>
+              <p className="text-xs md:text-[13px] font-medium">Gapstack is a supply chain and trade financing platform designed to help banks and financial <br /> institutions streamline their trade financing processes. The platform aims to reduce manual <br /> inefficiencies, enhance automation, and provide a seamless experience for financial professionals <br /> managing trade finance operations.</p>
             </div>
 
             <p className="text-sm md:text-[14px] font-semibold mb-2">
               The Problem
             </p>
             <p className="text-xs md:text-[13px] font-medium mb-4">
-              Many banks rely on outdated, manual processes to handle trade financing, leading to inefficiencies, <br /> slow approval processes, and compliance challenges. The lack of an intuitive digital platform <br /> increases operational costs and customer dissatisfaction.
+              Many banks rely on outdated, manual processes to handle trade financing, leading to inefficiencies,<br /> slow approval processes, and compliance challenges. The lack of an intuitive digital platform <br /> increases operational costs and customer dissatisfaction.
             </p>
 
             <p className="text-sm md:text-[14px] font-semibold mb-2">
               The Goal
             </p>
-            <p className="text-xs md:text-[13px] font-medium">
+            <p className="text-xs md:text-[13px] font-medium mb-6">
               My objective was to design an intuitive, efficient, and scalable platform that enhances user <br /> experience, improves processing speed, and ensures regulatory compliance.
             </p>
           </div>
-          
+            <hr className='mt-7 text-gray-200' />
           <div className="text-gray-700 py-4 font-[Satoshi] leading-relaxed space-y-3 md:space-y-4">
-            <h2 className="text-[20px]  font-extrabold">Research & Discovery</h2>
+            <h2 className="text-[20px] font-extrabold">Research & Discovery</h2>
 
             <div>
               <h3 className="text-sm md:text-[14px] font-semibold mb-1">Understanding Users</h3>
@@ -278,13 +279,13 @@ export default function GapstackShowcase() {
               </p>
               <ul className="list-disc list-inside font-medium text-xs md:text-[13px] space-y-1">
                 <li>
-                  <strong>User Interviews:</strong> Engaged with banking professionals, trade finance specialists, and SME clients <br /> to understand pain points.
+                  <>User Interviews:</> I engaged with banking professionals, trade finance specialists, and SME clients <br /> to understand pain points.
                 </li>
                 <li>
-                  <strong>Surveys:</strong> Gathered data on current challenges in trade financing.
+                  <>Surveys:</> I gathered data on current challenges in trade financing.
                 </li>
                 <li>
-                  <strong>Stakeholder Workshops:</strong> Collaborated with financial analysts and compliance teams to align <br /> design with regulatory requirements.
+                  <>Stakeholder Workshops:</> I collaborated with financial analysts and compliance teams to align <br /> design with regulatory requirements.
                 </li>
               </ul>
             </div>
@@ -299,13 +300,91 @@ export default function GapstackShowcase() {
               </ul>
             </div>
 
-            <div>
+            <div className='mt-6'>
               <h3 className="text-sm md:text-[14px] font-semibold mb-1">Key Insights</h3>
-              <ul className="list-disc list-inside text-xs md:text-[13px] font-medium">
+              <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
                 <li>Users needed a clear dashboard to track trade financing requests.</li>
                 <li>Automation was crucial for speeding up approval processes.</li>
-                <li>Security and compliance were major concerns, requiring a balance between <br /> usability and regulatory needs.</li>
+                <li>Security and compliance were major concerns, requiring a balance between usability and <br /> regulatory needs.</li>
               </ul>
+            </div>
+                 <hr className='mt-7 text-gray-200' />
+            <div className='mt-6'>
+              <h2 className='text-[20px] font-extrabold mb-3'>Design Process</h2>
+              
+              <div className="mb-4">
+                <h3 className="text-sm md:text-[14px] font-semibold mb-1">User Flow & Wireframing</h3>
+                <p className="text-xs md:text-[13px] font-medium">Based on my research insights, I designed user flows to streamline the financing application <br /> process, ensuring an intuitive journey from request submission to approval.</p>
+              </div>
+
+              <div className="mb-4">
+                <h3 className="text-sm md:text-[14px] font-semibold mb-1">UI Design</h3>
+                <p className="text-xs md:text-[13px] font-medium mb-2">My visual design emphasized:</p>
+                <ul className="list-disc list-inside text-xs md:text-[13px] font-medium ">
+                  <li>A professional, trust-building aesthetic tailored for financial users.</li>
+                  <li>A structured information hierarchy for quick decision-making.</li>
+                  <li>Color-coded statuses and notifications for tracking financing requests easily.</li>
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <h3 className="text-sm md:text-[14px] font-semibold mb-1">Prototyping</h3>
+                <p className="text-xs md:text-[13px] font-medium">I created interactive prototypes using Figma to simulate real-world interactions. These prototypes <br /> were tested with users to refine functionality before development.</p>
+              </div>
+            </div>
+              <hr className='mt-7 text-gray-200' />
+            <div className='mt-6'>
+              <h2 className='text-[20px] font-extrabold mb-3'>Testing & Iterations</h2>
+              
+              <div className="">
+                <h3 className="text-sm md:text-[14px] font-semibold mb-1">Usability Testing</h3>
+                <p className="text-xs md:text-[13px] font-medium">I conducted multiple testing rounds with financial users to identify pain points and areas for <br /> improvement.</p>
+              </div>
+
+              <div className="">
+                <h3 className="text-sm md:text-[14px] font-semibold mb-1">Findings & Improvements</h3>
+                <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
+                  <p><>1. Simplified Navigation</> – I reduced the number of steps required for financing approvals.</p>
+                  <p><>2. Improved Form Design</> – I enhanced form layouts for easier data entry and fewer errors.</p>
+                  <p><>3. Enhanced Visual Cues</> – I introduced status indicators and progress tracking for transparency.</p>
+                </ul>
+              </div>
+            </div>
+                
+            <div className='mt-6'>
+              <h2 className='text-[13px] font-semibold mb-3'>Impact & Outcome</h2>
+              <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
+                <li><>Improved Efficiency</> – I helped reduce processing time for financing applications by 30%.</li>
+                <li><>Enhanced User Satisfaction</> – The feedback from banking professionals was overwhelmingly <br /> positive on ease of use.</li>
+                <li><>Scalability</> – I designed the platform with flexibility to accommodate future features and <br /> integrations.</li>
+              </ul>
+            </div>
+                    <hr className='mt-7 text-gray-200' />
+            <div className='mt-6'>
+              <h2 className='text-[20px] font-extrabold mb-3'>Final Screens & Key Features</h2>
+              <div className="mb-4">
+                <h3 className="text-sm md:text-[14px] font-semibold mb-1">Key UI Screens</h3>
+                <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
+                  <li><>Dashboard:</> Overview of financing requests and status tracking.</li>
+                  <li><>Application Flow:</> Step-by-step process for submitting financing requests.</li>
+                  <li><>Approval Process:</> Streamlined workflow for reviewing and approving transactions.</li>
+                  <li><>Reporting & Compliance:</> Visual insights into financing trends and regulatory compliance.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className='mt-6'>
+              <strong className='text-[14px] font-bold text-gray-700 mb-3'>Key Learnings</strong>
+              <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
+                <li>Designing for financial institutions required balancing usability with strict compliance <br /> requirements.</li>
+                <li>Simplifying workflows through automation significantly enhanced efficiency.</li>
+                <li>Iterative testing and user feedback were crucial in refining a complex platform.</li>
+              </ul>
+            </div>
+        <hr className='text-gray-300 mt-5' />
+            <div className='mt-8'>
+              <h2 className='text-[20px] font-extrabold mb-3'>Conclusion</h2>
+              <p className="text-xs md:text-[13px] font-medium">My redesign of Gapstack successfully optimized the trade financing process, improving operational <br /> efficiency for banks and financial institutions. By taking a user-centric approach, I ensured a <br /> seamless and intuitive experience while addressing key compliance concerns.</p>
             </div>
           </div>
         </div>

@@ -58,7 +58,7 @@ export default function PeachCarsShowcase() {
   }, [showDetailedSection]);
 
   return (
-    <div className="max-w-[800px] mx-auto p-4 md:p-6 bg-white font-sans relative">
+    <div className="max-w-[800px] mx-auto p-4 md:p-6 bg-[rgba(249,250,251,1)] font-sans relative">
       {/* Small Summary Section (Always visible) */}
       <div 
         className="flex items-center gap-4 mb-6 p-4 cursor-pointer"
@@ -86,7 +86,7 @@ export default function PeachCarsShowcase() {
       {/* Modal Backdrop */}
       {showDetailedSection && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+          className="fixed inset-0  z-40 backdrop-blur- bg-black/10"
           onClick={() => setShowDetailedSection(false)}
         />
       )}
@@ -239,7 +239,7 @@ export default function PeachCarsShowcase() {
                  <hr  className='text-gray-300'/>
             <h2 className="font-bold text-lg sm:text-xl text-gray-700 mt-6 sm:mt-8 mb-3 sm:mb-4">Peach Cars Website – UX Case Study</h2>
             
-            <h3 className="font-medium text-[13px]  text-gray-700 mb-2">Introduction</h3>
+            <h3 className="font-bold text-[13px]  text-gray-700 mb-2">Introduction</h3>
             <p className="mb-4 text-[13px] sm:text-[13px] text-gray-700 font-medium">
               Peach Cars is a Kenyan online marketplace that simplifies buying and selling used cars. My role as <br className="hidden sm:block" /> the UX/UI Designer involved leading research, design, and testing to create a user-friendly and <br className="hidden sm:block" /> trustworthy platform.
             </p>
@@ -249,19 +249,19 @@ export default function PeachCarsShowcase() {
               I handled user research, wireframing, prototyping, usability testing, and visual design using Figma. <br className="hidden sm:block" /> The goal was to improve trust, simplify search, and streamline the listing process for sellers.
             </p>
 
-            <h3 className="font-medium text-[13px] text-gray-900 mt-8 mb-">Research & Key Insights</h3>
-            <p className="mb-2 text-[13px] text-gray-700 font-medium">
+            <h3 className="font-bold text-[13px] text-gray-700 mt-8 mb-">Research & Key Insights</h3>
+            <p className="mb-1 text-[13px] text-gray-700 font-medium">
               Through interviews, surveys, and competitor analysis, I identified major pain points:
             </p>
-            <ul className="list-disc pl-5 mb-4 text-[13px] text-gray-700 font-medium">
+            <ul className="list-disc pl-5 mb- text-[13px] text-gray-700 font-medium">
               <li>Buyers lacked trust in listings and had difficulty finding the right cars.</li>
               <li>Sellers found existing platforms confusing and inefficient.</li>
             </ul>
-            <p className="mb-6 text-[13px] text-gray-700 font-medium">
+            <p className=" text-[13px] text-gray-700 font-medium">
               This led to user personas guiding design decisions, ensuring the platform addressed these <br/> concerns.
             </p>
 
-            <h3 className="font-medium text-[13px] text-gray-700 mt-2">Design & Usability Testing</h3>
+            <h3 className="font-medium text-[13px] text-gray-700 mt-6">Design & Usability Testing</h3>
             <ul className="list-disc pl-5 mb-4  text-[13px] text-gray-700 font-medium">
               <li>
                 I created wireframes, prototypes, and high-fidelity UI with a clean, modern look and easy <br  /> navigation.
@@ -273,7 +273,7 @@ export default function PeachCarsShowcase() {
            
            
 
-            <h3 className="font-medium text-[13px] text-gray-800 mb-2">Challenges & Solutions</h3>
+            <h3 className="font-bold text-[13px] text-gray-700 mb-2">Challenges & Solutions</h3>
             <ul className="list-disc pl-5 mb-4 text-[13px] text-gray-700 font-medium space-y-1">
               <li><>Establishing Trust:</> Added verification badges and inspection reports.</li>
               <li><>Balancing Buyer & Seller Needs:</> Designed separate, intuitive pathways for both.</li>
@@ -288,9 +288,9 @@ export default function PeachCarsShowcase() {
               <li>Business growth, contributing to increased funding and market traction.</li>
             </ul>
 
-            <h3 className="font-medium text-[13px] text-gray-700 mt-7 ">Conclusion</h3>
+            <h3 className="font-medium text-[13px] text-gray-800 mt-7 ">Conclusion</h3>
             <p className="mt-4 text-[13px] text-gray-700 font-medium">
-              This project reinforced the power of user-centered design and iterative <br className="hidden sm:block" /> testing in solving real-world pain points. By focusing on trust and simplicity, <br className="hidden sm:block" /> Peach Cars became a more accessible and effective car marketplace.
+              This project reinforced the power of user-centered design and iterative  testing in solving real-world <br /> pain points. By focusing on trust and simplicity,  Peach Cars became a more accessible and effective <br /> car marketplace.
             </p>
           </div>
         </div>

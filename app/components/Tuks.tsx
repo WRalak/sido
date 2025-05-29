@@ -17,12 +17,15 @@ export default function TukaiShowcase() {
     { src: "/tukai6.png", alt: "Trip Planning Dashboard" },
   ];
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  // Calculate total slides (showing 2 images per slide)
+  const totalSlides = Math.ceil(images.length / 2);
+
+  const nextSlide = () => setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="max-w-[735px] mx-auto p-4 sm:p-6 bg-white font-sans relative">
+    <div className="max-w-[735px] mx-auto p-4 sm:p-6 bg-[rgba(249,250,251,1)] font-sans relative">
       {/* Small Summary Section (Always visible) */}
       <div 
         className="flex items-center gap-4 mb-6 p-4 cursor-pointer"
@@ -126,26 +129,42 @@ export default function TukaiShowcase() {
   </div>
 </header>
 
-
-
           </div>
 
-          {/* Image Carousel */}
+          {/* Image Carousel - Dual View */}
           <div className="relative mb-6 sm:mb-8 overflow-hidden rounded-lg">
             <div
               className="flex transition-transform duration-300 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {images.map((img, idx) => (
-                <div 
-                  key={idx}
-                  className="flex-shrink-0 w-full aspect-[16/9] sm:h-[280px] flex items-center justify-center bg-gradient-to-b from-[#007A87] to-[#007A87]"
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="h-full w-auto object-contain"
-                  />
+              {Array.from({ length: totalSlides }).map((_, slideIdx) => (
+                <div key={slideIdx} className="flex-shrink-0 w-full flex gap-4 justify-center">
+                  {/* First image in the pair */}
+                  {images[slideIdx * 2] && (
+                    <div className="w-[300px] h-[280px] flex items-center justify-center bg-gradient-to-b from-[#007A87] to-[#007A87] rounded-lg">
+                      <img
+                        src={images[slideIdx * 2].src}
+                        alt={images[slideIdx * 2].alt}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+                  )}
+                  
+                  {/* Second image in the pair */}
+                  {images[slideIdx * 2 + 1] && (
+                    <div className="w-[300px] h-[280px] flex items-center justify-center bg-gradient-to-b from-[#007A87] to-[#007A87] rounded-lg">
+                      <img
+                        src={images[slideIdx * 2 + 1].src}
+                        alt={images[slideIdx * 2 + 1].alt}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+                  )}
+                  
+                  {/* If odd number of images, fill the space for the last slide */}
+                  {images[slideIdx * 2 + 1] === undefined && slideIdx === totalSlides - 1 && (
+                    <div className="w-[300px] h-[280px]"></div>
+                  )}
                 </div>
               ))}
             </div>
@@ -167,17 +186,7 @@ export default function TukaiShowcase() {
               <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
             </button>
 
-            {/* Pagination dots */}
-            <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2">
-              {images.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-                  className={`w-2 h-2 rounded-full transition-colors ${currentSlide === idx ? 'bg-green-600' : 'bg-gray-300'}`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
+
           </div>
 
           {/* Content */}

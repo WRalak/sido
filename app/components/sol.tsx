@@ -82,7 +82,7 @@ export default function SolgatesShowcase() {
   }, [currentSlide, showDetailedSection]);
 
   return (
-    <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-white relative">
+    <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
       {/* Small Summary Section (Always visible) */}
       <div 
         className="flex items-center gap-x-1 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
@@ -110,7 +110,7 @@ export default function SolgatesShowcase() {
       {/* Modal Backdrop */}
       {showDetailedSection && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+          className="fixed inset-0 bg-black/20 z-40 backdrop-blur-"
           onClick={() => setShowDetailedSection(false)}
         />
       )}

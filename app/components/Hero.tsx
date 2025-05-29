@@ -6,6 +6,7 @@ import { MdOutlinePhone } from 'react-icons/md';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RxArrowTopRight } from 'react-icons/rx';
+import { strong } from 'framer-motion/client';
 
 const HeroSection = () => {
   const [showFullText, setShowFullText] = useState(false);
