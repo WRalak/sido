@@ -25,10 +25,10 @@ export default function TukaiShowcase() {
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="max-w-[330px] mx-auto p-4 sm:p-6 bg-[rgba(249,250,251,1)] font-sans relative">
+    <div className="max-w-[350px] mx-auto p-4 sm:p- bg-[rgba(249,250,251,1)]  relative">
       {/* Small Summary Section (Always visible) */}
       <div 
-        className="flex items-center gap-3 mb-6 p-4 cursor-pointer"
+        className="flex items-center gap-3 mb-6 p- cursor-pointer"
         onClick={() => setShowDetailedSection(true)}
       >
         <div className="flex-shrink-0">
@@ -40,7 +40,7 @@ export default function TukaiShowcase() {
         </div>
 
         <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-[14px] md:text-[13px] mb-2 font-bold text-gray-800 whitespace-nowrap max-w-full font-Satoshi">
+          <p className="text-[14px] md:text-[13px] mb-2 font-extrabold text-gray-800 whitespace-nowrap max-w-full font-Satoshi">
             Tukai transforms how <br />people explo...
           </p>
           <p className="text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">

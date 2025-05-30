@@ -82,10 +82,10 @@ export default function SolgatesShowcase() {
   }, [currentSlide, showDetailedSection]);
 
   return (
-    <div className="w-full max-w-[360px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
+    <div className="w-full max-w-[353px] mx-auto p-3 md:p- bg-[rgba(249,250,251,1)] relative">
       {/* Small Summary Section (Always visible) */}
       <div 
-        className="flex items-center gap-x-1 md:gap-3 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+        className="flex items-center gap-x-1 md:gap-3 mb-4 md:mb- p-2 md:p-4 cursor-pointer"
         onClick={() => setShowDetailedSection(true)}
       >
         <div className="flex-shrink-0">

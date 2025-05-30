@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import Gap from './gap';
 import Sol from './sol';
 import Cars from './peace';
@@ -14,17 +14,17 @@ const CaseStudies = () => {
           </h2>
           {/* Scroller takes remaining space */}
           <div className="flex overflow-x-auto overflow-y-hidden whitespace-nowrap custom-scroll flex-grow items-center gap-0">
-            {/* Items with no spacing */}
-            <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[345px]">
+            {/* Items with flexible width */}
+            <div className="inline-flex flex-shrink-0">
               <Gap />
             </div>
-            <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[365px]">
+            <div className="inline-flex flex-shrink-0">
               <Sol />
             </div>
-            <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px]">
+            <div className="inline-flex flex-shrink-0">
               <Cars />
             </div>
-            <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px]">
+            <div className="inline-flex flex-shrink-0">
               <Tuks />
             </div>
           </div>
