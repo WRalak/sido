@@ -95,7 +95,7 @@ export default function TukaiShowcase() {
 
   {/* Content Block */}
   <div className="flex flex-col flex-1 min-w-0">
-    <h1 className="text-sm sm:text-[17px] md:text-[19px] font-bold text-gray-800 leading-snug">
+    <h1 className="text-sm sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
       <span className="">Tukai</span> transforms how people explore the outdoors,<br /> plan adventures, and build communities.
     </h1>
 
