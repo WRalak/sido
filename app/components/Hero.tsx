@@ -163,7 +163,7 @@ const HeroSection = () => {
                 Solgates
               </Link>{' '}
               and{' '}
-              <Link href="https://tukai.com" target="_blank" className="text-blue-700 border-b  border-blue-600">
+              <Link href="https://tukai.co" target="_blank" className="text-blue-700 border-b  border-blue-600">
                 Tukai
               </Link>{' '}
               – passion projects <br /> that keep me innovating.
