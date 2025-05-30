@@ -78,9 +78,9 @@ export default function BRCKExperience() {
               width: '440px', 
               height: '248px', /* Half height to show only top portion */
               position: 'absolute', 
-              top: '35px', 
-              left: '26px',
-              right: '28px'
+              top: '36px', 
+              left: '23px',
+              right: '30px'
             }}
           >
             <div style={{ 
@@ -142,8 +142,8 @@ export default function BRCKExperience() {
               <Image
                 src={expImages[currentSlide]}
                 alt={`Experience Image ${currentSlide + 1}`}
-                width={800}
-                height={450}
+                width={1200}
+                height={2000}
                 className="object-contain rounded-lg"
               />
             </div>

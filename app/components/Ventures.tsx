@@ -66,14 +66,14 @@ export default function IMSGlobalExperience() {
               width: '440px', 
               height: '248px', /* Half height to show only top portion */
               position: 'absolute', 
-              top: '35px', 
-              left: '26px',
-              right: '26px'
+              top: '37px', 
+              left: '23px',
+              right: '40px'
             }}
           >
             <div style={{ 
               width: '440px', 
-              height: '244px',
+              height: '248px',
               position: 'relative'
             }}>
               <Image
@@ -166,8 +166,8 @@ export default function IMSGlobalExperience() {
               <Image
                 src={exp.images[currentSlide]}
                 alt="Experience Image"
-                width={800}
-                height={450}
+                width={1200}
+                height={2000}
                 layout="responsive"
                 className="rounded-lg object-contain"
               />
