@@ -132,9 +132,11 @@ export default function PeachCarsShowcase() {
                 transparent, user-friendly online marketplace.
               </h1>
 
-              <p className="text-blue-600 text-[13px] font-medium sm:text-sm mt-1 underline inline-block cursor-pointer">
-                www.peachcars.co.ke
-              </p>
+                      <a href="https://www.peachcars.co.ke" target="_blank" rel="noopener noreferrer">
+  <p className="text-blue-600 text-[13px] font-medium sm:text-sm mt-1 underline inline-block cursor-pointer">
+    www.peachcars.co.ke
+  </p>
+</a>
 
               <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-6 text-[13px]  mt-2">
                 <div className="flex items-center text-gray-600">

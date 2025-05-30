@@ -121,9 +121,11 @@ export default function GapstackShowcase() {
                 <span className="" style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack </span>
                 is a supply chain & trade financing platform <br /> built for banks & financial institutions.
               </h1>
-              <p className="text-blue-600 text-sm font-medium sm:text-sm cursor-pointer underline inline-block">
-                www.gapstack.com
-              </p>
+             <a href="https://www.gapstack.com" target="_blank" rel="noopener noreferrer">
+  <p className="text-blue-600 text-sm font-medium sm:text-sm cursor-pointer underline inline-block">
+    www.gapstack.com
+  </p>
+</a>
 
               <div className="flex flex-wrap justify-center sm:justify-start gap-2 md:gap-4 mt-2 text-xs sm:text-sm text-gray-600">
                 {[
