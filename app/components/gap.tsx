@@ -45,14 +45,14 @@ export default function GapstackShowcase() {
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="w-full max-w-[800px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
+    <div className="w-full max-w-[400px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
       {/* Small Summary Section (Always visible) */}
       <div 
-        className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+        className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
         onClick={() => setShowDetailedSection(true)}
       >
         <div className="flex-shrink-0">
-          <div className="relative w-[100px] md:w-[135px] h-[60px] md:h-[70px] rounded-[8px] overflow-hidden">
+          <div className="relative w-[135px] md:w-[135px] h-[60px] md:h-[70px] rounded-[8px] overflow-hidden">
             <img 
               src="/Gapstack.jpg" 
               alt="Gapstack Preview" 

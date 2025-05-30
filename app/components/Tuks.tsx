@@ -25,10 +25,10 @@ export default function TukaiShowcase() {
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="max-w-[735px] mx-auto p-4 sm:p-6 bg-[rgba(249,250,251,1)] font-sans relative">
+    <div className="max-w-[400px] mx-auto p-4 sm:p-6 bg-[rgba(249,250,251,1)] font-sans relative">
       {/* Small Summary Section (Always visible) */}
       <div 
-        className="flex items-center gap-4 mb-6 p-4 cursor-pointer"
+        className="flex items-center gap-3 mb-6 p-4 cursor-pointer"
         onClick={() => setShowDetailedSection(true)}
       >
         <div className="flex-shrink-0">

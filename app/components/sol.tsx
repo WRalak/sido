@@ -82,17 +82,17 @@ export default function SolgatesShowcase() {
   }, [currentSlide, showDetailedSection]);
 
   return (
-    <div className="w-full max-w-[735px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
+    <div className="w-full max-w-[400px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
       {/* Small Summary Section (Always visible) */}
       <div 
-        className="flex items-center gap-x-1 md:gap-4 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
+        className="flex items-center gap-x-1 md:gap-3 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
         onClick={() => setShowDetailedSection(true)}
       >
         <div className="flex-shrink-0">
           <img 
             src="/solgates.jpg" 
             alt="Solgates Preview" 
-            className="w-[100px] md:w-[135px] h-[70px] md:h-[70px] object-cover rounded-[8px]"
+            className="w-[135px] md:w-[135px] h-[70px] md:h-[70px] object-cover rounded-[8px]"
           />
         </div>
 
