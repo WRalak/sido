@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="hidden md:flex w- md:px-8 lg:px-16 xl:px-60 2xl:px-72 max-w-screen-2xl  mx-auto flex-wrap justify-between items-center gap-4 py-10 px-6 bg-white text-[13px] text-gray-800">
+    <footer className="hidden md:flex w- md:px-8 lg:px-20 xl:px-68 2xl:px-72 max-w-screen-2xl  mx-auto flex-wrap justify-between items-center gap-4 py-15 px-6 bg-gray-50 text-[13px] text-gray-800">
       <div className="flex flex-wrap items-center gap-x-2 font-medium">
         <span>+254 716 909 815</span>
         <span className="text-blue-500 text-[10px]">|</span>
