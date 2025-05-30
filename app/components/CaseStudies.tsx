@@ -18,13 +18,13 @@ const CaseStudies = () => {
             <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] h-full">
               <Gap />
             </div>
-            <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] h-full">
+            <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[365px] h-full">
               <Sol />
             </div>
             <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] h-full">
               <Cars />
             </div>
-            <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[360px] h-full">
+            <div className="inline-flex flex-shrink-0 w-[280px] sm:w-[320px] md:w-[340px] lg:w-[370px] h-full">
               <Tuks />
             </div>
           </div>

@@ -40,8 +40,8 @@ export default function TukaiShowcase() {
         </div>
 
         <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-[14px] font-bold mb-2 text-gray-800 whitespace-nowrap max-w-[180px]">
-            Tukai transforms how <br />people explo...
+          <p className="text-[14px] md:text-[13px] mb-2 font-bold text-gray-800 whitespace-nowrap max-w-full font-Satoshi">
+            Tukai transforms how <br />people explore
           </p>
           <p className="text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">
             Tukai
