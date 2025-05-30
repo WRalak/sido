@@ -82,7 +82,7 @@ export default function SolgatesShowcase() {
   }, [currentSlide, showDetailedSection]);
 
   return (
-    <div className="w-full max-w-[400px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
+    <div className="w-full max-w-[360px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
       {/* Small Summary Section (Always visible) */}
       <div 
         className="flex items-center gap-x-1 md:gap-3 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
@@ -98,7 +98,7 @@ export default function SolgatesShowcase() {
 
         <div className="flex flex-col justify-center overflow-hidden">
           <p className="text-[14px] md:text-[13px] mb-2 font-extrabold text-gray-800 whitespace-nowrap max-w-full font-Satoshi">
-            A Second-Hand <br /> Clothing Marketplace
+            A Second-Hand <br /> Clothing Marketpl...
           </p>
           <p className="text-xs md:text-[13px] font-medium mb-2 md:mb-2 text-orange-600 flex items-center gap-1">
             Solgates

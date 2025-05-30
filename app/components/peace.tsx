@@ -58,7 +58,7 @@ export default function PeachCarsShowcase() {
   }, [showDetailedSection]);
 
   return (
-    <div className="max-w-[400px] mx-auto p-4 md:p-6 bg-[rgba(249,250,251,1)] font-sans relative">
+    <div className="max-w-[390px] mx-auto p-4 md:p-6 bg-[rgba(249,250,251,1)] font-sans relative">
       {/* Small Summary Section (Always visible) */}
       <div 
         className="flex items-center gap-3 mb-6 p-4 cursor-pointer"

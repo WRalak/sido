@@ -45,7 +45,7 @@ export default function GapstackShowcase() {
   const goToSlide = (idx: SetStateAction<number>) => setCurrentSlide(idx);
 
   return (
-    <div className="w-full max-w-[400px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
+    <div className="w-full max-w-[310px] mx-auto p-3 md:p-6 bg-[rgba(249,250,251,1)] relative">
       {/* Small Summary Section (Always visible) */}
       <div 
         className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6 p-2 md:p-4 cursor-pointer"
@@ -63,7 +63,7 @@ export default function GapstackShowcase() {
 
         <div className="flex flex-col justify-center leading-snug">
           <p className="text-[14px] md:text-[13px] mb-2 font-extrabold text-gray-800">
-            Supply Chain & <br /> Trade Financing Platform
+            Supply Chain & <br /> Trade Financing Plat...
           </p>
           <p className="text-[13px] md:text-[13px] font-medium mb-1 md:mb-2 text-orange-600 flex items-center gap-1">
             Gapstack
