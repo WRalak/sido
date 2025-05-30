@@ -67,7 +67,7 @@ export default function GapstackShowcase() {
           </p>
           <p className="text-[13px] md:text-[13px] font-medium mb-1 md:mb-2 text-orange-600 flex items-center gap-1">
             Gapstack
-            <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
+            <HiArrowUpRight className="text-xs md:text-[15px] hover:text-blue-800" />
           </p>
         </div>
       </div>

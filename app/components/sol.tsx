@@ -102,7 +102,7 @@ export default function SolgatesShowcase() {
           </p>
           <p className="text-xs md:text-[13px] font-medium mb-2 md:mb-2 text-orange-600 flex items-center gap-1">
             Solgates
-            <HiArrowUpRight className="text-xs md:text-[13px] hover:text-blue-800" />
+            <HiArrowUpRight className="text-xs md:text-[15px] hover:text-blue-800" />
           </p>
         </div>
       </div>

@@ -45,7 +45,7 @@ export default function TukaiShowcase() {
           </p>
           <p className="text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">
             Tukai
-            <HiArrowUpRight className="text-[13px] hover:text-blue-800" />
+            <HiArrowUpRight className="text-[15px] hover:text-blue-800" />
           </p>
         </div>
       </div>
