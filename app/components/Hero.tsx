@@ -43,7 +43,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right Panel */}
-      <div className="w-full lg:w-[180px] xl:w-[200px] flex flex-col pt-8 pb-4 lg:py-8 lg:items-start lg:sticky lg:top-0 order-first lg:order-last">
+      <div className="w-full lg:w-[180px]  xl:w-[200px] flex flex-col pt-8 pb-4 lg:py-8 lg:items-start lg:sticky lg:top-0 order-first lg:order-last ">
         <div className="w-[90px] h-[90px] rounded-full mb-4 overflow-hidden relative">
           <Image src="/sid.jpg" alt="Profile" fill className="object-cover" priority sizes="90px" />
         </div>
