@@ -157,7 +157,7 @@ export default function PeachCarsShowcase() {
 
           {/* Image Carousel */}
           <div className="flex justify-center mb-8">
-            <div className="relative w-full max-w-[510px] aspect-[510/280]">
+            <div className="relative w-full max-w-[610px] aspect-[510/280]">
               {/* Clickable image container */}
               <div 
                 className="absolute inset-0"

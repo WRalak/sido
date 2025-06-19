@@ -3,6 +3,7 @@
 import { useState, useEffect, SetStateAction } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import { FaCircle } from 'react-icons/fa';
 
 export default function SolgatesShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -24,11 +25,15 @@ export default function SolgatesShowcase() {
 
   const images = [
     {
-      src: "/solgate1.jpg",
+      src: "/slg.jpg",
       alt: "Solgates Marketplace Interface"
     },
     {
-      src: "/solgate2.jpg",
+      src: "/solg.jpg",
+      alt: "Second-hand Clothing Listings"
+    },
+     {
+      src: "/solgg.jpg",
       alt: "Second-hand Clothing Listings"
     },
   ];
@@ -187,7 +192,7 @@ export default function SolgatesShowcase() {
           {/* Image Carousel with orange-300 background on 3 sides */}
          <div className="relative mb-4 md:mb-8">
   {/* Background frame for top, right, and left */}
-  <div className="absolute inset-0 bg-orange-300 z-0 rounded-t-[8px]" 
+  <div className="absolute inset-0 bg-orange-600 z-0 rounded-t-[8px]" 
        style={{
          top: 0,
          left: 0,
@@ -195,7 +200,7 @@ export default function SolgatesShowcase() {
          bottom: 'auto',
          height: '36px'
        }} />
-  <div className="absolute inset-0 bg-orange-300 z-0 rounded-l-[8px]" 
+  <div className="absolute inset-0 bg-orange-600 z-0 rounded-l-[8px]" 
        style={{
          top: 0,
          left: 0,
@@ -203,7 +208,7 @@ export default function SolgatesShowcase() {
          right: 'auto',
          width: '36px'
        }} />
-  <div className="absolute inset-0 bg-orange-300 z-0 rounded-r-[8px]" 
+  <div className="absolute inset-0 bg-orange-600 z-0 rounded-r-[8px]" 
        style={{
          top: 0,
          right: 0,
