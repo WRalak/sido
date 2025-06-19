@@ -144,7 +144,7 @@ export default function SolgatesShowcase() {
         <div className="w-full">
           {/* Header with Logo */}
           <header className="flex flex-col sm:flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
-            <div className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden border border-orange-300 flex items-center justify-center flex-shrink-0">
+            <div className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden bg-orange-600 flex items-center justify-center flex-shrink-0">
               <img 
                 src="Layer 2.png" 
                 alt="Solgates logo" 
@@ -155,7 +155,7 @@ export default function SolgatesShowcase() {
 
             <div className="flex flex-col flex-1 min-w-0">
               <h1 className="text-sm sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
-                <span className="text-orange-600">Solgates</span> a second-Hand clothing marketplace
+                <span className="text-orange-600">Solgates</span>  is a supply chain & trade financing  <br /> built for banks & financial institutions.
 
                 
               </h1>
