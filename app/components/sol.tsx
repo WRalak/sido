@@ -190,32 +190,14 @@ export default function SolgatesShowcase() {
           </header>
 
           {/* Image Carousel with orange-300 background on 3 sides */}
-         <div className="relative mb-4 md:mb-8">
+ <div className="relative mb-4 md:mb-8">
   {/* Background frame for top, right, and left */}
   <div className="absolute inset-0 bg-orange-600 z-0 rounded-t-[8px]" 
-       style={{
-         top: 0,
-         left: 0,
-         right: 0,
-         bottom: 'auto',
-         height: '36px'
-       }} />
+       style={{ top: 0, left: 0, right: 0, bottom: 'auto', height: '36px' }} />
   <div className="absolute inset-0 bg-orange-600 z-0 rounded-l-[8px]" 
-       style={{
-         top: 0,
-         left: 0,
-         bottom: 0,
-         right: 'auto',
-         width: '36px'
-       }} />
+       style={{ top: 0, left: 0, bottom: 0, right: 'auto', width: '36px' }} />
   <div className="absolute inset-0 bg-orange-600 z-0 rounded-r-[8px]" 
-       style={{
-         top: 0,
-         right: 0,
-         bottom: 0,
-         left: 'auto',
-         width: '36px'
-       }} />
+       style={{ top: 0, right: 0, bottom: 0, left: 'auto', width: '36px' }} />
   
   {/* Image container */}
   <div className="relative z-10 w-full h-[300px] overflow-hidden rounded-[8px]">
@@ -226,9 +208,8 @@ export default function SolgatesShowcase() {
       width: 'calc(100% - 72px)',
       height: 'calc(100% - 36px)',
       overflow: 'hidden',
-      borderRadius: '8px' // Changed from 4px to 8px
+      borderRadius: '8px'
     }}>
-      {/* Render all images but only show the current one */}
       {images.map((image, index) => (
         <div 
           key={index}
@@ -241,7 +222,7 @@ export default function SolgatesShowcase() {
           <img 
             src={image.src} 
             alt={image.alt}
-            className="w-full h-full object-cover rounded-[9px]" // Added rounded-[8px] here
+            className="w-full h-full object-cover rounded-[8px]"
             style={{ objectPosition: 'center top' }}
             loading={index === 0 ? "eager" : "lazy"}
           />
@@ -249,7 +230,7 @@ export default function SolgatesShowcase() {
       ))}
     </div>
     
-    {/* Center right transparent arrow */}
+    {/* Right arrow */}
     <div 
       className="absolute right-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
       onClick={(e) => { e.stopPropagation(); nextSlide(); }}
@@ -259,7 +240,7 @@ export default function SolgatesShowcase() {
       </div>
     </div>
     
-    {/* Center left transparent arrow */}
+    {/* Left arrow */}
     <div 
       className="absolute left-12 top-1/2 transform -translate-y-1/2 z-30 flex items-center justify-center cursor-pointer"
       onClick={(e) => { e.stopPropagation(); prevSlide(); }}
@@ -269,23 +250,24 @@ export default function SolgatesShowcase() {
       </div>
     </div>
   </div>
-  
+
+  {/* Updated Pagination Dots */}
   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 px-2 py-1 rounded-full z-20 bg-white/70">
     {images.map((_, idx) => (
       <button
         key={idx}
         onClick={(e) => { e.stopPropagation(); goToSlide(idx); }}
-        className={`flex items-center justify-center transition-colors ${currentSlide === idx ? 'text-orange-600' : 'text-gray-400'}`}
-        aria-label={`Go to slide ${idx + 1}`}
-      >
-        <ChevronRight 
-          size={isMobile ? 14 : 16}
-          className={`transform ${currentSlide === idx ? 'rotate-90' : 'rotate-0'}`}
-        />
-      </button>
+        className={`block h-1.5 md:h-2 rounded-full transition-all duration-300 ${
+          currentSlide === idx
+            ? 'w-3 md:w-4 bg-orange-600'
+            : 'w-1.5 md:w-2 bg-gray-300'
+        }`}
+        aria-label={`View slide ${idx + 1}`}
+      />
     ))}
   </div>
 </div>
+
 
           {/* Content */}
           <div className="prose max-w-none">
