@@ -156,82 +156,96 @@ export default function PeachCarsShowcase() {
           </header>
 
           {/* Image Carousel */}
-          <div className="flex justify-center mb-8">
-            <div className="relative w-full max-w-[610px] aspect-[510/280]">
-              {/* Clickable image container */}
-              <div 
-                className="absolute inset-0"
-                style={{ 
-                  top: '9%', 
-                  left: '6%', 
-                  width: '88%', 
-                  height: '92%' 
-                }}
-              >
-                {/* Render all images but only show the current one */}
-                {images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    className={`w-full h-full object-cover rounded-[8px] transition-opacity duration-300 ${
-                      index === currentSlide ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'
-                    }`}
-                    style={{ objectPosition: 'top center' }}
-                  />
-                ))}
-              </div>
-              
-              {/* Responsive blue frame */}
-              <div className="absolute top-0 left-0 w-full bg-[rgba(38,110,165,1)] rounded-[6px] h-[9%]" />
-              <div className="absolute top-0 left-0 h-full bg-[rgba(38,110,165,1)] w-[6%] rounded-l-[6px]" />
-              <div className="absolute top-0 right-0 h-full bg-[rgba(38,110,165,1)] w-[6%] rounded-r-[6px]" />
-              
-              {/* Navigation buttons */}
-              <button
-                onClick={(e) => { 
-                  e.stopPropagation();
-                  prevSlide();
-                  setIsAutoPlaying(false);
-                  setTimeout(() => setIsAutoPlaying(true), 5000);
-                }}
-                className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white z-10"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
-              </button>
-              
-              <button
-                onClick={(e) => { 
-                  e.stopPropagation();
-                  nextSlide();
-                  setIsAutoPlaying(false);
-                  setTimeout(() => setIsAutoPlaying(true), 5000);
-                }}
-                className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-1 sm:p-2 hover:bg-white z-10"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
-              </button>
-              
-              {/* Pagination dots */}
-              <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1 sm:space-x-2 z-10">
-                {images.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={(e) => { 
-                      e.stopPropagation();
-                      goToSlide(idx);
-                    }}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      currentSlide === idx ? 'bg-pink-600' : 'bg-red-100'
-                    }`}
-                    aria-label={`Go to slide ${idx + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
+         <div className="flex justify-center mb-8">
+  <div className="relative w-full max-w-[610px] aspect-[510/280] group">
+    
+    {/* Blue frame – top, left, right */}
+    <div 
+      className="absolute bg-[rgba(38,110,165,1)] z-0 rounded-t-[8px]" 
+      style={{ top: 0, left: 0, right: 0, height: '36px' }} 
+    />
+    <div 
+      className="absolute bg-[rgba(38,110,165,1)] z-0 rounded-l-[8px]" 
+      style={{ top: 0, left: 0, bottom: 0, width: '36px' }} 
+    />
+    <div 
+      className="absolute bg-[rgba(38,110,165,1)] z-0 rounded-r-[8px]" 
+      style={{ top: 0, right: 0, bottom: 0, width: '36px' }} 
+    />
+
+    {/* Image container inside frame */}
+    <div 
+      className="absolute inset-0 z-10 overflow-hidden rounded-[8px]"
+      style={{ top: '26px', left: '36px', right: '36px', bottom: 0 }}
+    >
+      <div className="w-full h-full relative overflow-hidden rounded-[8px]">
+        {images.map((image, index) => (
+          <div 
+            key={index}
+            className="absolute inset-0 transition-opacity duration-300"
+            style={{ 
+              opacity: currentSlide === index ? 1 : 0,
+              zIndex: currentSlide === index ? 1 : 0
+            }}
+          >
+            <img 
+              src={image.src} 
+              alt={image.alt}
+              className="absolute inset-0 w-full h-full object-cover rounded-[8px]"
+              style={{ objectPosition: 'top center' }}
+              loading={index === 0 ? "eager" : "lazy"}
+            />
           </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Navigation buttons */}
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        prevSlide();
+        setIsAutoPlaying(false);
+        setTimeout(() => setIsAutoPlaying(true), 5000);
+      }}
+      className="absolute left-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 shadow-md opacity-70 z-20"
+      aria-label="Previous slide"
+    >
+      <ChevronLeft size={18} className="text-gray-900" />
+    </button>
+
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        nextSlide();
+        setIsAutoPlaying(false);
+        setTimeout(() => setIsAutoPlaying(true), 5000);
+      }}
+      className="absolute right-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 shadow-md opacity-70 z-20"
+      aria-label="Next slide"
+    >
+      <ChevronRight size={18} className="text-gray-900" />
+    </button>
+
+    {/* Pagination dots */}
+    <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1 sm:space-x-2 z-20 bg-white/80 px-2 py-1 rounded-full">
+      {images.map((_, idx) => (
+        <button
+          key={idx}
+          onClick={(e) => {
+            e.stopPropagation();
+            goToSlide(idx);
+          }}
+          className={`w-2 h-2 rounded-full transition-all ${
+            currentSlide === idx ? 'bg-pink-600 w-3 sm:w-4' : 'bg-gray-300'
+          }`}
+          aria-label={`View slide ${idx + 1}`}
+        />
+      ))}
+    </div>
+  </div>
+</div>
+
 
           {/* Content - remaining content unchanged */}
           <div className="prose max-w-none mt-6 sm:mt-8 px-2 sm:px-4">

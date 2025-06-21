@@ -212,21 +212,22 @@ export default function GapstackShowcase() {
   </div>
   
   {/* Navigation buttons */}
-  <button 
-    onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-    className="absolute left-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity z-20"
-    aria-label="Previous slide"
-  >
-    <ChevronLeft size={18} className="text-gray-900" />
-  </button>
-  
-  <button 
-    onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-    className="absolute right-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 hover:bg-gray-100 shadow-md opacity-70 sm:opacity-0 group-hover:opacity-100 transition-opacity z-20"
-    aria-label="Next slide"
-  >
-    <ChevronRight size={18} className="text-gray-900" />
-  </button>
+ <button 
+  onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+  className="absolute left-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 shadow-md opacity-70 z-20"
+  aria-label="Previous slide"
+>
+  <ChevronLeft size={18} className="text-gray-900" />
+</button>
+
+<button 
+  onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+  className="absolute right-[54px] top-1/2 transform -translate-y-1/2 bg-white rounded-full p-1 sm:p-2 shadow-md opacity-70 z-20"
+  aria-label="Next slide"
+>
+  <ChevronRight size={18} className="text-gray-900" />
+</button>
+
   
   {/* Pagination indicators */}
   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-white/80 px-2 py-1 rounded-full z-20">
