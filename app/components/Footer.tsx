@@ -10,7 +10,7 @@ const Footer = () => {
         <span>georgeralak@gmail.com</span>
         <span className="text-blue-500 text-[10px]">|</span>
         <a
-          href="https://www.linkedin.com/in/george-s-ralak"
+          href="https://www.linkedin.com/in/george-s-ralak-28051552/"
           target="_blank"
           rel="noopener noreferrer"
           className="border-b border-gray-800  transition-colors"
