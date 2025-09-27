@@ -47,7 +47,7 @@ const HeroSection = () => {
         <div className="w-[90px] h-[90px] rounded-full mb-4 overflow-hidden relative">
           <Image src="/sid.jpg" alt="Profile" fill className="object-cover" priority sizes="90px" />
         </div>
-        <h6 className="text-[13px] font-medium text-gray-950 lg:text-left whitespace-nowrap mb-4">
+        <h6 className="text-xs font-medium text-gray-950 lg:text-left whitespace-nowrap mb-4">
           Creator, Minimalist & Entrepreneur
         </h6>
         <div className="w-full">
@@ -61,7 +61,7 @@ const HeroSection = () => {
     <a 
       key={index} 
       href={item.url} 
-      className="flex items-center text-[13px] font-medium group"
+      className="flex items-center text-xs font-medium group"
       target="_blank" 
       rel="noopener noreferrer"
     >
@@ -78,15 +78,15 @@ const HeroSection = () => {
       </div>
 
       {/* Left Panel */}
-      <div className="flex-1 lg:max-w-[700px] xl:max-w-[800px] py-4 lg:py-8 lg:pr-8 order-first lg:order-first">
-        <p className="font-black text-[24px] leading-[32px] tracking-normal  text-base text-gray-800">
+      <div className="flex-1 lg:max-w-[720px] xl:max-w-[820px] py-4 lg:py-8 lg:pr-8 order-first lg:order-first">
+        <p className="font-black text-[24.5px] leading-[32px] tracking-normal  text-base text-gray-800">
           I'm a Kenyan Product Designer with a <br />
           passion for minimalism and impactful <br /> aesthetics. I'm currently a Senior Product <br /> Designer at{' '}
           <span className="text-green-800">NedBank</span>, previously at <br />
           <span className="text-blue-500">Goldman Sachs</span>.
         </p>
 
-        <div className="mt-4 text-[14px] leading-[21px] text-gray-800">
+        <div className="mt-4 text-[13px] leading-[21px] text-gray-800">
           <p className="mb-2 font-medium">
             I'm a <strong>Product Designer</strong> specializing in mobile, desktop, and web applications, with a <br />
             strong focus on <strong>usability, simplicity, and seamless user experiences.</strong>
@@ -157,7 +157,7 @@ const HeroSection = () => {
               </span>
             </p>
 
-            <p className="text-gray-800 font-medium mt-3 mr-4 text-[14px] leading-relaxed sm:mr-0 sm:text-[14px]">
+            <p className="text-gray-800 font-medium mt-3 mr-4 text-[13px] leading-relaxed sm:mr-0">
               When I'm not working on these, I'm building{' '}
               <Link href="https://solgates.com" target="_blank" className="text-blue-700 border-b border-blue-600">
                 Solgates

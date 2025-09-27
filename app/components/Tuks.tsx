@@ -221,15 +221,15 @@ export default function TukaiShowcase() {
             <p className=" mt-2 text-[13px] font-medium text-gray-700 ">
               As a co-founder, I managed the <strong>roadmap, milestones, and team coordination</strong> to keep the project <br className="hidden sm:block" /> on track. My responsibilities included:
             </p>
-            <ul className="list-disc pl-5 mb-4 sm:mb-6 space-y-1 text-sm sm:text-[13px] font-medium text-gray-700">
+            <ul className="list-disc pl-5 mb-4 sm:mb-6 space-y-1 text-[13px] font-medium text-gray-700">
               <li>Defining short-term sprints and long-term goals to ensure steady feature development</li>
               <li>Collaborating with developers, content creators, and community managers to align objectives</li>
               <li>Prioritizing feature releases based on user feedback and business strategy</li>
               <li>Overseeing the integration of key functionalities like activity discovery, booking, and community <br /> engagement</li>
             </ul>
                    <hr  className='text-gray-300 p-2'/>
-            <h2 className="font-bold text-sm sm:text-[14px] text-gray-800 mt-6 sm:mt-8 mb-2 sm:mb-4">Key Features & Impact</h2>
-            <ul className="list-disc pl-5 mb-2 text-sm sm:text-[13px] font-medium text-gray-800">
+            <h2 className="font-bold text-[14px] text-gray-800 mt-6 sm:mt-8 mb-2 sm:mb-4">Key Features & Impact</h2>
+            <ul className="list-disc pl-5 mb-2  sm:text-[13px] font-medium text-gray-800">
               <li>Created an intuitive adventure discovery system with personalized recommendations</li>
               <li>Built community features that increased user retention by 40%</li>
               <li>Developed a trip planning toolkit that reduced planning time by 60%</li>
@@ -237,7 +237,7 @@ export default function TukaiShowcase() {
             </ul>
               <hr  className='text-gray-300 p-2 mt-4'/>
             <h2 className="font-bold text-sm sm:text-[14px] text-gray-800 mt-6 sm:mt-8 mb-2 sm:mb-4">Conclusion</h2>
-            <p className="mb-4 font-medium text-sm sm:text-[13px] text-gray-700">
+            <p className="mb-4 font-medium text-[13px] text-gray-700">
               Tukai represents a holistic approach to outdoor adventure planning, combining discovery <br className="hidden sm:block" /> tools with community features to create a unique ecosystem. As co-founder and design lead,<br className="hidden sm:block" /> I helped shape both the product vision and execution, resulting in a platform that <br className="hidden sm:block" /> makes outdoor exploration more accessible and social. The project reinforced the importance of balancing <br className="hidden sm:block" /> user needs with technical feasibility and business goals in early-stage startups.
             </p>
           </div>

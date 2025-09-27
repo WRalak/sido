@@ -62,12 +62,12 @@ export default function GapstackShowcase() {
         </div>
 
         <div className="flex flex-col justify-center leading-snug">
-          <p className="text-[14px] md:text-[13px] mb-2 font-extrabold text-gray-800">
+          <p className="text-[14px] mb-2 font-extrabold text-gray-800">
             Supply Chain & <br /> Trade Financing Plat...
           </p>
-          <p className="text-[13px] md:text-[13px] font-medium mb-1 md:mb-2 text-orange-600 flex items-center gap-1">
+          <p className="text-[13px]  font-medium mb-1 md:mb-2 text-orange-600 flex items-center gap-1">
             Gapstack
-            <HiArrowUpRight className="text-xs md:text-[15px] hover:text-blue-800" />
+            <HiArrowUpRight className="text-[15px] hover:text-blue-800" />
           </p>
         </div>
       </div>
@@ -117,7 +117,7 @@ export default function GapstackShowcase() {
 
             {/* Text content aligned properly next to logo */}
             <div className="flex-1 text-center sm:text-left mt-2 sm:mt-0">
-              <h1 className="text-base sm:text-lg md:text-xl font-extrabold text-gray-800">
+              <h1 className="text-base text-lg md:text-xl font-extrabold text-gray-800">
                 <span className="" style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack </span>
                 is a supply chain & trade financing platform <br /> built for banks & financial institutions.
               </h1>
@@ -247,7 +247,7 @@ export default function GapstackShowcase() {
           <div className="text-gray-700 font-[Satoshi] leading-relaxed mt-6">
             <div className="text-xs md:text-[13px] font-medium">
 
-              <span className="text-[13px] md:text-[14px] font-semibold mt-2">
+              <span className="text-[13px]  font-semibold mt-2">
                 TL;DR:
               </span> I designed an intuitive, scalable trade financing platform for banks, improving efficiency in <br />the process. Conducted research, user testing, and iterative design to streamline workflows and <br /> enhance usability. Delivered a user-centric experience balancing automation, compliance, and <br /> operational needs.
             </div>
@@ -258,22 +258,22 @@ export default function GapstackShowcase() {
               Project Overview
             </p>
             
-            <div className="text-xs md:text-[13px] mb-6">
+            <div className="text-[13px] mb-6">
               <strong>About Gapstack:</strong>
-              <p className="text-xs md:text-[13px] font-medium">Gapstack is a supply chain and trade financing platform designed to help banks and financial <br /> institutions streamline their trade financing processes. The platform aims to reduce manual <br /> inefficiencies, enhance automation, and provide a seamless experience for financial professionals <br /> managing trade finance operations.</p>
+              <p className="text-[13px] font-medium">Gapstack is a supply chain and trade financing platform designed to help banks and financial <br /> institutions streamline their trade financing processes. The platform aims to reduce manual <br /> inefficiencies, enhance automation, and provide a seamless experience for financial professionals <br /> managing trade finance operations.</p>
             </div>
 
-            <p className="text-sm md:text-[14px] font-semibold mb-2">
+            <p className="text-[14px] font-semibold mb-2">
               The Problem
             </p>
-            <p className="text-xs md:text-[13px] font-medium mb-4">
+            <p className="text-xs  font-medium mb-4">
               Many banks rely on outdated, manual processes to handle trade financing, leading to inefficiencies,<br /> slow approval processes, and compliance challenges. The lack of an intuitive digital platform <br /> increases operational costs and customer dissatisfaction.
             </p>
 
             <p className="text-sm md:text-[14px] font-semibold mb-2">
               The Goal
             </p>
-            <p className="text-xs md:text-[13px] font-medium mb-6">
+            <p className="text-[13px] font-medium mb-6">
               My objective was to design an intuitive, efficient, and scalable platform that enhances user <br /> experience, improves processing speed, and ensures regulatory compliance.
             </p>
           </div>
@@ -282,11 +282,11 @@ export default function GapstackShowcase() {
             <h2 className="text-[20px] font-extrabold">Research & Discovery</h2>
 
             <div>
-              <h3 className="text-sm md:text-[14px] font-semibold mb-1">Understanding Users</h3>
-              <p className="text-xs md:text-[13px] font-medium">
+              <h3 className="text-sm  font-semibold mb-1">Understanding Users</h3>
+              <p className="text-[13px] font-medium">
                 To design a user-centered solution, I conducted extensive research, including:
               </p>
-              <ul className="list-disc list-inside font-medium text-xs md:text-[13px] space-y-1">
+              <ul className="list-disc list-inside font-medium text-[13px] space-y-1">
                 <li>
                   <>User Interviews:</> I engaged with banking professionals, trade finance specialists, and SME clients <br /> to understand pain points.
                 </li>
@@ -301,7 +301,7 @@ export default function GapstackShowcase() {
 
             <div>
               <h3 className="text-sm md:text-[14px] font-semibold mb-1">Competitive Analysis</h3>
-              <p className="text-xs md:text-[13px] font-medium">Through my study of existing trade finance solutions, I identified key gaps:</p>
+              <p className="text-[13px] font-medium">Through my study of existing trade finance solutions, I identified key gaps:</p>
               <ul className="list-disc font-medium list-inside text-xs md:text-[13px] space-y-1">
                 <li>Complex interfaces that required extensive training.</li>
                 <li>Lack of automation in approval workflows.</li>
@@ -310,8 +310,8 @@ export default function GapstackShowcase() {
             </div>
 
             <div className='mt-6'>
-              <h3 className="text-sm md:text-[14px] font-semibold mb-1">Key Insights</h3>
-              <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
+              <h3 className="text-[14px] font-semibold mb-1">Key Insights</h3>
+              <ul className="list-disc list-inside text-[13px] font-medium space-y-1">
                 <li>Users needed a clear dashboard to track trade financing requests.</li>
                 <li>Automation was crucial for speeding up approval processes.</li>
                 <li>Security and compliance were major concerns, requiring a balance between usability and <br /> regulatory needs.</li>
@@ -322,14 +322,14 @@ export default function GapstackShowcase() {
               <h2 className='text-[20px] font-extrabold mb-3'>Design Process</h2>
               
               <div className="mb-4">
-                <h3 className="text-sm md:text-[14px] font-semibold mb-1">User Flow & Wireframing</h3>
-                <p className="text-xs md:text-[13px] font-medium">Based on my research insights, I designed user flows to streamline the financing application <br /> process, ensuring an intuitive journey from request submission to approval.</p>
+                <h3 className="text-[14px] font-semibold mb-1">User Flow & Wireframing</h3>
+                <p className="text-[13px] font-medium">Based on my research insights, I designed user flows to streamline the financing application <br /> process, ensuring an intuitive journey from request submission to approval.</p>
               </div>
 
               <div className="mb-4">
-                <h3 className="text-sm md:text-[14px] font-semibold mb-1">UI Design</h3>
-                <p className="text-xs md:text-[13px] font-medium mb-2">My visual design emphasized:</p>
-                <ul className="list-disc list-inside text-xs md:text-[13px] font-medium ">
+                <h3 className="text-[14px] font-semibold mb-1">UI Design</h3>
+                <p className="text-[13px] font-medium mb-2">My visual design emphasized:</p>
+                <ul className="list-disc list-inside text-[13px] font-medium ">
                   <li>A professional, trust-building aesthetic tailored for financial users.</li>
                   <li>A structured information hierarchy for quick decision-making.</li>
                   <li>Color-coded statuses and notifications for tracking financing requests easily.</li>
@@ -337,8 +337,8 @@ export default function GapstackShowcase() {
               </div>
 
               <div className="mb-4">
-                <h3 className="text-sm md:text-[14px] font-semibold mb-1">Prototyping</h3>
-                <p className="text-xs md:text-[13px] font-medium">I created interactive prototypes using Figma to simulate real-world interactions. These prototypes <br /> were tested with users to refine functionality before development.</p>
+                <h3 className="text-[14px] font-semibold mb-1">Prototyping</h3>
+                <p className="text-[13px] font-medium">I created interactive prototypes using Figma to simulate real-world interactions. These prototypes <br /> were tested with users to refine functionality before development.</p>
               </div>
             </div>
               <hr className='mt-7 text-gray-200' />
@@ -346,13 +346,13 @@ export default function GapstackShowcase() {
               <h2 className='text-[20px] font-extrabold mb-3'>Testing & Iterations</h2>
               
               <div className="">
-                <h3 className="text-sm md:text-[14px] font-semibold mb-1">Usability Testing</h3>
-                <p className="text-xs md:text-[13px] font-medium">I conducted multiple testing rounds with financial users to identify pain points and areas for <br /> improvement.</p>
+                <h3 className="text-[14px] font-semibold mb-1">Usability Testing</h3>
+                <p className="text-[13px] font-medium">I conducted multiple testing rounds with financial users to identify pain points and areas for <br /> improvement.</p>
               </div>
 
               <div className="">
                 <h3 className="text-sm md:text-[14px] font-semibold mb-1">Findings & Improvements</h3>
-                <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
+                <ul className="list-disc list-inside text-[13px] font-medium space-y-1">
                   <p><>1. Simplified Navigation</> – I reduced the number of steps required for financing approvals.</p>
                   <p><>2. Improved Form Design</> – I enhanced form layouts for easier data entry and fewer errors.</p>
                   <p><>3. Enhanced Visual Cues</> – I introduced status indicators and progress tracking for transparency.</p>
@@ -362,7 +362,7 @@ export default function GapstackShowcase() {
                 
             <div className='mt-6'>
               <h2 className='text-[13px] font-semibold mb-3'>Impact & Outcome</h2>
-              <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
+              <ul className="list-disc list-inside text-[13px] font-medium space-y-1">
                 <li><>Improved Efficiency</> – I helped reduce processing time for financing applications by 30%.</li>
                 <li><>Enhanced User Satisfaction</> – The feedback from banking professionals was overwhelmingly <br /> positive on ease of use.</li>
                 <li><>Scalability</> – I designed the platform with flexibility to accommodate future features and <br /> integrations.</li>
@@ -384,7 +384,7 @@ export default function GapstackShowcase() {
 
             <div className='mt-6'>
               <strong className='text-[14px] font-bold text-gray-700 mb-3'>Key Learnings</strong>
-              <ul className="list-disc list-inside text-xs md:text-[13px] font-medium space-y-1">
+              <ul className="list-disc list-inside text-[13px] font-medium space-y-1">
                 <li>Designing for financial institutions required balancing usability with strict compliance <br /> requirements.</li>
                 <li>Simplifying workflows through automation significantly enhanced efficiency.</li>
                 <li>Iterative testing and user feedback were crucial in refining a complex platform.</li>
@@ -393,7 +393,7 @@ export default function GapstackShowcase() {
         <hr className='text-gray-300 mt-5' />
             <div className='mt-8'>
               <h2 className='text-[20px] font-extrabold mb-3'>Conclusion</h2>
-              <p className="text-xs md:text-[13px] font-medium">My redesign of Gapstack successfully optimized the trade financing process, improving operational <br /> efficiency for banks and financial institutions. By taking a user-centric approach, I ensured a <br /> seamless and intuitive experience while addressing key compliance concerns.</p>
+              <p className="text-[13px] font-medium">My redesign of Gapstack successfully optimized the trade financing process, improving operational <br /> efficiency for banks and financial institutions. By taking a user-centric approach, I ensured a <br /> seamless and intuitive experience while addressing key compliance concerns.</p>
             </div>
           </div>
         </div>

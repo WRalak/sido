@@ -48,7 +48,7 @@ export default function GoldmanSachsExperience() {
 
         {/* Role and Description */}
         <div className="space-y-1">
-          <p className="text-gray-600 font-medium text-[14px]">
+          <p className="text-gray-600 font-medium text-[13px]">
             Role: <span className="font-medium text-gray-800">Senior Product Designer</span>
           </p>
 
@@ -77,7 +77,7 @@ export default function GoldmanSachsExperience() {
 
           {/* My Role & Impact */}
           <div>
-            <p className="text-gray-800 text-[14px] font-bold">My Role & Impact:</p>
+            <p className="text-gray-800 text-[13px] font-bold">My Role & Impact:</p>
             <ul className="list-disc pl-5 mt-2">
               <li className="text-gray-800 font-medium text-[13px]">
                 Conducted user research to understand pain points for both <strong>Bankers and Clearers,</strong><br /> improving their workflow efficiency

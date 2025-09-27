@@ -17,23 +17,23 @@ export default function GoldmanSachsExperience() {
               height={30}
               className="object-contain"
             />
-            <h2 className="text-gray-800 text-[15px] font-extrabold">Yielloh</h2>
+            <h2 className="text-gray-800 text-[14px] font-extrabold">Yielloh</h2>
             <img 
               src="/dot.png" 
               alt="dot" 
               className="w-4 h-4 rounded-full object-cover" 
             />
           </div>
-          <p className="text-gray-800  font-bold text-[15px] leading-[16px] tracking-normal ml-4">Aug 2014 - 2017</p>
+          <p className="text-gray-800  font-bold text-[14px] leading-[16px] tracking-normal ml-4">Aug 2014 - 2017</p>
         </div>
 
         {/* Role and Description */}
         <div className="space-y-1">
-          <p className="text-gray-500 text-[14px]">
+          <p className="text-gray-500 text-[13px]">
             Role: <span className="font-medium text-gray-800">Designer</span>
           </p>
 
-          <p className="text-gray-800 font-medium text-[14px]">
+          <p className="text-gray-800 font-medium text-[13px]">
             Yielloh was a <strong>mobile-only microblogging platform,</strong> and my entry point into UI/UX design. As the sole designer, I was responsible for:
           </p>
 

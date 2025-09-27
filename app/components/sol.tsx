@@ -102,12 +102,12 @@ export default function SolgatesShowcase() {
         </div>
 
         <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-[14px] md:text-[13px] mb-2 font-extrabold text-gray-800 whitespace-nowrap max-w-full font-Satoshi">
+          <p className="text-[13px] mb-2 font-extrabold text-gray-800 whitespace-nowrap max-w-full font-Satoshi">
             A Second-Hand <br /> Clothing Marketpl...
           </p>
-          <p className="text-xs md:text-[13px] font-medium mb-2 md:mb-2 text-orange-600 flex items-center gap-1">
+          <p className="text-[13px] font-medium mb-2 md:mb-2 text-orange-600 flex items-center gap-1">
             Solgates
-            <HiArrowUpRight className="text-xs md:text-[15px] hover:text-blue-800" />
+            <HiArrowUpRight className="text-[15px] hover:text-blue-800" />
           </p>
         </div>
       </div>
@@ -274,7 +274,7 @@ export default function SolgatesShowcase() {
             <h2 className="font-extrabold text-gray-700 text-[20px] sm:text-[20px] mt-2 mb-2 md:mb-4">Project Overview</h2>
             
             <h3 className="text-gray-900 font-bold text-[14px] sm:text-[13px] mb-1 md:mb-2">About Solgates</h3>
-            <p className="text-gray-700 text-[14px] font-medium sm:text-[13px]">
+            <p className="text-gray-700 text-[13px] font-medium ">
               Solgates is an online marketplace that connects buyers and sellers of second-hand clothing, making 
               <br />
               sustainable fashion more accessible. As a co-founder, I led the design and user experience of 
@@ -283,7 +283,7 @@ export default function SolgatesShowcase() {
             </p>
             
             <p className="mb-2 md:mb-3 text-gray-700 font-medium text-[14px] sm:text-[13px]">My role encompassed:</p>
-            <ul className="text-gray-700 text-[14px] font-medium sm:text-[13px] leading-relaxed">
+            <ul className="text-gray-700 text-[13px] font-medium  leading-relaxed">
               <li className="flex mb-1">
                 <span className="mr-2">•</span>
                 <span>
@@ -322,7 +322,7 @@ export default function SolgatesShowcase() {
               </li>
             </ul>
 
-            <p className='text-gray-700 text-[14px] font-medium sm:text-[13px] mt-3 md:mt-4'>
+            <p className='text-gray-700 text-[13px] font-medium  mt-3 md:mt-4'>
               Solgates empowers individuals to buy and sell second-hand clothing effortlessly while promoting a 
               {isSmallScreen && <br />}
               {!isMobile && <br />} 
