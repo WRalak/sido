@@ -238,7 +238,7 @@ export default function TukaiShowcase() {
               <hr  className='text-gray-300 p-2 mt-4'/>
             <h2 className="font-bold text-sm sm:text-[14px] text-gray-800 mt-6 sm:mt-8 mb-2 sm:mb-4">Conclusion</h2>
             <p className="mb-4 font-medium text-[13px] text-gray-700">
-              Tukai represents a holistic approach to outdoor adventure planning, combining discovery <br className="hidden sm:block" /> tools with community features to create a unique ecosystem. As co-founder and design lead,<br className="hidden sm:block" /> I helped shape both the product vision and execution, resulting in a platform that <br className="hidden sm:block" /> makes outdoor exploration more accessible and social. The project reinforced the importance of balancing <br className="hidden sm:block" /> user needs with technical feasibility and business goals in early-stage startups.
+              Tukai represents a holistic approach to outdoor adventure planning, combining discovery <br  /> tools with community features to create a unique ecosystem. As co-founder and design lead,<br /> I helped shape both the product vision and execution, resulting in a platform that  makes <br /> outdoor exploration more accessible and social. The project reinforced the importance of <br /> balancing user needs with technical feasibility and business goals in early-stage startups.
             </p>
           </div>
         </div>

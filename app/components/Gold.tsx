@@ -22,7 +22,7 @@ function GradientBackground() {
 
 export default function GoldmanSachsExperience() {
   return (
-    <div className="flex py-1.5 w-[660px] md:px-12 p-6 md:p-4 relative">
+    <div className="flex py-1.5 w-[700px] md:px-12 p-6 md:p-4 relative">
       <GradientBackground />
       
       <div className="flex flex-col space-y-4 flex-grow">

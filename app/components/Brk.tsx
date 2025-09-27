@@ -30,7 +30,7 @@ export default function BRCKExperience() {
   };
 
   return (
-    <div className="flex flex-col gap-6 p-6 md:p-10 w-[660px] md:px-12">
+    <div className="flex flex-col gap-6 p-6 md:p-10 w-[700px] md:px-12">
       {/* Logo, Company Name, and Year */}
       <div className="flex items-center justify-between w-full gap-2">
         <div className="flex items-center gap-2">

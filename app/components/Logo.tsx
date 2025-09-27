@@ -14,7 +14,7 @@ const LogoSection = () => {
     { src: '/image 16.png', alt: 'Solgates' },
     { src: '/image 17.png', alt: 'Tukai' },
     { src: '/image 18.png', alt: 'Company 9' },
-    { src: '/Layer 2.png', alt: 'Company 10' },
+    { src: '/Laye.png', alt: 'Company 10' },
     { src: '/New Logo.png', alt: 'Company 11' },
   ];
 

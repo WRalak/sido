@@ -29,7 +29,7 @@ export default function IMSGlobalExperience() {
   };
 
   return (
-    <div className="flex flex-col gap-5 p-6 md:p-12 w-[660px] md:px-12">
+    <div className="flex flex-col gap-5 p-6 md:p-12 w-[700px] md:px-12">
       {/* Logo, Company Name, and Year in a single line */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">

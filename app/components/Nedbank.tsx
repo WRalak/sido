@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function NedbankExperience() {
   return (
-    <div className="flex flex-col   w-[660px] py-6 md:p-12">
+    <div className="flex flex-col   w-[700px] py-6 md:p-12">
       <div className="flex flex-col space-y- mx-auto">
         
         {/* Header: Logo, Name, Dot, and Dates */}
