@@ -77,21 +77,27 @@ const HeroSection = () => {
 
       {/* Left Panel */}
       <div className="flex-1 lg:max-w-[720px] xl:max-w-[820px] py-4 lg:py-8 lg:pr-8 order-first lg:order-first">
-        <p className="font-black text-[19px]  md:text-[24.5px] leading-[32px] tracking-normal text-base text-gray-800">
-          I'm a Kenyan Product Designer with a <br />
-          passion for minimalism and impactful <br /> aesthetics. I'm currently a Senior Product <br /> Designer at{' '}
-          <span className="text-green-800">NedBank</span>, previously at <br />
+        <p className="font-black text-[19px] sm:text-[24.5px] leading-[32px] tracking-normal text-gray-800">
+          I'm a Kenyan Product Designer with a{' '}
+          <span className="hidden sm:inline"><br /></span>
+          passion for minimalism and impactful{' '}
+          <span className="hidden sm:inline"><br /></span>
+          aesthetics. I'm currently a Senior Product{' '}
+          <span className="hidden sm:inline"><br /></span>
+          Designer at <span className="text-green-800">NedBank</span>, previously at{' '}
+          <span className="hidden sm:inline"><br /></span>
           <span className="text-blue-500">Goldman Sachs</span>.
         </p>
 
         <div className="mt-4 text-[13px] leading-[21px] text-gray-800">
           <p className="mb-2 font-medium">
-            I'm a <strong>Product Designer</strong> specializing in mobile, desktop, and web applications, with a <br />
+            I'm a <strong>Product Designer</strong> specializing in mobile, desktop, and web applications, with a{' '}
+            <span className="hidden sm:inline"><br /></span>
             strong focus on <strong>usability, simplicity, and seamless user experiences.</strong>
           </p>
           <p className="font-medium">
-            Throughout my career, I've had the opportunity to work with amazing companies,
-            <br />
+            Throughout my career, I've had the opportunity to work with amazing companies,{' '}
+            <span className="hidden sm:inline"><br /></span>
             shaping products that make a real impact:
           </p>
           <div className="mt-2 ml-2">
@@ -104,13 +110,16 @@ const HeroSection = () => {
             <div className="flex items-start">
               <span className="mr-2 text-md leading-snug">•</span>
               <p className="font-medium">
-                At <strong>BRCK</strong>, I contributed to <strong>connecting people to free WiFi</strong>, expanding digital access.
+                At <strong>BRCK</strong>, I contributed to <strong>connecting people to free WiFi</strong>, expanding digital
+                access.
               </p>
             </div>
             <div className="flex items-start">
               <span className="mr-2 text-md leading-snug">•</span>
               <p className="font-medium">
-                At <strong>LYNK</strong>, I worked on <strong>bridging blue-collar workers with potential employers</strong>,<br /> empowering livelihoods.
+                At <strong>LYNK</strong>, I worked on <strong>bridging blue-collar workers with potential employers</strong>,{' '}
+                <span className="hidden sm:inline"><br /></span>
+                empowering livelihoods.
               </p>
             </div>
           </div>
@@ -121,23 +130,19 @@ const HeroSection = () => {
           <div className="sm:hidden">
             <p className="flex items-start mb-1 ml-1 font-medium">
               <span className="mr-2 text-md flex-shrink-0">•</span>
-              <span
-                onClick={() => setShowFullText(!showFullText)}
-                className="cursor-pointer"
-              >
+              <span onClick={() => setShowFullText(!showFullText)} className="cursor-pointer">
                 {!showFullText ? (
                   <>
                     <strong>In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> stre
                     <span className="inline">
                       ...{' '}
-                      <span className="text-orange-600 text-[13px] font-medium inline">
-                        See more
-                      </span>
+                      <span className="text-orange-600 text-[13px] font-medium inline">See more</span>
                     </span>
                   </>
                 ) : (
                   <>
-                    <strong>In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> streamline <strong>mobile wallet payments</strong> for taxi fares.
+                    <strong>In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> streamline{' '}
+                    <strong>mobile wallet payments</strong> for taxi fares.
                   </>
                 )}
               </span>
@@ -149,25 +154,29 @@ const HeroSection = () => {
             <p className="flex items-start mb-1 ml-1 font-medium sm:block">
               <span className="mr-2 text-md flex-shrink-0">•</span>
               <span>
-                <strong>In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> streamline <strong>mobile wallet payments</strong> for taxi fares.
+                <strong>In South Africa</strong>, I helped <strong>IMS Global Ventures</strong> streamline{' '}
+                <strong>mobile wallet payments</strong> for taxi fares.
               </span>
             </p>
             <p className="flex mb-1 ml-1 font-medium">
               <span className="mr-2 text-md flex-shrink-0">•</span>
               <span>
-                At <strong>Goldman Sachs</strong> (Conflicts Resolution Group – New York), I helped bankers and <br />
+                At <strong>Goldman Sachs</strong> (Conflicts Resolution Group – New York), I helped bankers and{' '}
+                <span className="hidden sm:inline"><br /></span>
                 deal clearers navigate conflicts in high-stakes deals.
               </span>
             </p>
             <p className="ml-1 font-medium">
               <span className="mr-2 mt-[3px] text-md flex-shrink-0">•</span>
               <span>
-                Currently, at <strong>Nedbank (South Africa)</strong>, I'm working with the Domestic Transactions <br />
-                team, focusing on <strong>Payments, Transfers, and Collections</strong>, improving how people <br />
+                Currently, at <strong>Nedbank (South Africa)</strong>, I'm working with the Domestic Transactions{' '}
+                <span className="hidden sm:inline"><br /></span>
+                team, focusing on <strong>Payments, Transfers, and Collections</strong>, improving how people{' '}
+                <span className="hidden sm:inline"><br /></span>
                 and businesses move money.
               </span>
             </p>
-            <p className="text-gray-800 font-medium mt-3 mr-4 text-[13px] leading-relaxed ">
+            <p className="text-gray-800 font-medium mt-3 mr-4 text-[13px] leading-relaxed">
               When I'm not working on these, I'm building{' '}
               <Link href="https://solgates.com" target="_blank" className="text-blue-700 border-b border-blue-600">
                 Solgates
@@ -176,7 +185,7 @@ const HeroSection = () => {
               <Link href="https://tukai.co" target="_blank" className="text-blue-700 border-b border-blue-600">
                 Tukai
               </Link>{' '}
-              – passion projects <br /> that keep me innovating.
+              – passion projects <span className="hidden sm:inline"><br /></span> that keep me innovating.
             </p>
           </div>
         </div>
