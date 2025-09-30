@@ -101,42 +101,51 @@ export default function GapstackShowcase() {
 
         <div className="w-full">
           {/* Header with Logo */}
-          <header className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-4 w-full mb-4 md:mb-6">
-            <div className="flex-shrink-0 self-start">
-              <div className="relative w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden">
-                <img 
-                  src="/Gapstack.jpg" 
-                  alt="Gapstack logo"
-                  className="w-full h-full object-cover" 
-                />
-              </div>
-            </div>
+         <header className="flex flex-row items-start gap-3 md:gap-4 w-full mb-4 md:mb-6">
+  <div className="flex-shrink-0">
+    <div className="relative w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden">
+      <img 
+        src="/Gapstack.jpg" 
+        alt="Gapstack logo"
+        className="w-full h-full object-cover" 
+        loading="lazy"
+      />
+    </div>
+  </div>
 
-            <div className="flex-1 text-center sm:text-left mt-2 sm:mt-0">
-              <h1 className="text-[14px] sm:text-base md:text-xl font-extrabold text-gray-800">
-                <span style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack </span>
-                is a supply chain & trade financing platform <br /> built for banks & financial institutions.
-              </h1>
-              <a href="https://www.gapstack.com" target="_blank" rel="noopener noreferrer">
-                <p className="text-blue-600 text-[11px] sm:text-sm font-medium cursor-pointer underline inline-block">
-                  www.gapstack.com
-                </p>
-              </a>
+  <div className="flex flex-col flex-1 min-w-0">
+    <h1 className="text-[13px] sm:text-base md:text-xl font-extrabold text-gray-800">
+      <span style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack</span> is a supply chain & trade financing platform <br /> built for banks & financial institutions.
+    </h1>
 
-              <div className="flex flex-wrap justify-center sm:justify-start gap-2 md:gap-4 mt-2 text-[10px] sm:text-xs">
-                {[
-                  { icon: "/search.png", label: "UX Research" },
-                  { icon: "/compass.png", label: "Product Design" },
-                  { icon: "/check.png", label: "User Testing" }
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <img src={item.icon} alt={item.label} className="w-3 h-3 sm:w-4 sm:h-4 mr-1 rounded-[8px]" />
-                    <span className="font-medium text-[10px] sm:text-xs">{item.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </header>
+    <a 
+      href="https://www.gapstack.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-blue-600 text-[11px] sm:text-sm font-medium cursor-pointer underline hover:text-blue-800 transition-colors mt-1"
+      aria-label="Visit Gapstack website"
+    >
+      www.gapstack.com
+    </a>
+
+    <div className="flex flex-wrap gap-2 md:gap-4 mt-2 text-[10px] sm:text-xs font-medium text-gray-600">
+      {[
+        { icon: "/search.png", label: "UX Research" },
+        { icon: "/compass.png", label: "Product Design" },
+        { icon: "/check.png", label: "User Testing" },
+      ].map((item, idx) => (
+        <div key={idx} className="flex items-center gap-1 flex-nowrap">
+          <img 
+            src={item.icon} 
+            alt={`${item.label} icon`} 
+            className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 rounded-[8px]" 
+          />
+          <span>{item.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</header>
 
           {/* Image Carousel */}
           <div className="relative mt-4 md:mt-8 group">

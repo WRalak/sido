@@ -43,7 +43,7 @@ export default function TukaiShowcase() {
           <p className="text-[11px] sm:text-[13px] mb-2 font-extrabold text-gray-800 whitespace-nowrap max-w-full font-Satoshi">
             Tukai transforms how <br />people explo...
           </p>
-          <p className="text-[11px] sm:text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">
+          <p className="text-[13px] sm:text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">
             Tukai
             <HiArrowUpRight className="text-[13px] sm:text-[15px] hover:text-blue-800" />
           </p>
@@ -81,50 +81,50 @@ export default function TukaiShowcase() {
         <div className="w-full">
           {/* Header with Logo */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6 sm:mb-8">
-            <header className="flex flex-col sm:flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
-              <div className="overflow-hidden flex items-center justify-center flex-shrink-0">
-                <img 
-                  src="/IG Post 2.png" 
-                  alt="Tukai logo" 
-                  className="max-w-full max-h-full object-contain w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px]" 
-                  loading="lazy"
-                />
-              </div>
+            <header className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
+  <div className="overflow-hidden flex items-center justify-center flex-shrink-0">
+    <img 
+      src="/IG Post 2.png" 
+      alt="Tukai logo" 
+      className="max-w-full max-h-full object-contain w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px]" 
+      loading="lazy"
+    />
+  </div>
 
-              <div className="flex flex-col flex-1 min-w-0">
-                <h1 className="text-[13px] sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
-                  <span>Tukai</span> transforms how people explore the outdoors,<br /> plan adventures, and build communities.
-                </h1>
+  <div className="flex flex-col flex-1 min-w-0">
+    <h1 className="text-[13px] sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
+      <span className="">Tukai</span> transforms how people explore the outdoors, <br /> plan adventures, and build communities.
+    </h1>
 
-                <a 
-                  href="https://www.tukai.co" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-blue-600 mt-1 text-[11px] sm:text-[13px] font-medium underline hover:text-blue-600 transition-colors"
-                >
-                  www.tukai.co
-                </a>
+    <a 
+      href="https://www.tukai.co" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-blue-600 mt-1 text-[11px] sm:text-[13px] font-medium underline hover:text-blue-600 transition-colors"
+    >
+      www.tukai.co
+    </a>
 
-                <div className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-[9px] sm:text-[12px] md:text-[13px] font-medium text-gray-600 mt-2">
-                  {[
-                    { icon: "/suit.png", label: "Co-founder" },
-                    { icon: "/search.png", label: "UX Research" },
-                    { icon: "/calendar.png", label: "Project Management" },
-                    { icon: "/compass.png", label: "Design" },
-                    { icon: "/check.png", label: "Testing" },
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-1 flex-nowrap">
-                      <img 
-                        src={item.icon} 
-                        alt={`${item.label} icon`} 
-                        className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 rounded-[8px]" 
-                      />
-                      <span className="text-[9px] sm:text-xs">{item.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </header>
+    <div className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-[9px] sm:text-[12px] md:text-[13px] font-medium text-gray-600 mt-2">
+      {[
+        { icon: "/suit.png", label: "Co-founder" },
+        { icon: "/search.png", label: "UX Research" },
+        { icon: "/calendar.png", label: "Project Management" },
+        { icon: "/compass.png", label: "Design" },
+        { icon: "/check.png", label: "Testing" },
+      ].map((item, idx) => (
+        <div key={idx} className="flex items-center gap-1 flex-nowrap">
+          <img 
+            src={item.icon} 
+            alt={`${item.label} icon`} 
+            className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 rounded-[8px]" 
+          />
+          <span className="text-[9px] sm:text-xs">{item.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</header>
           </div>
 
           {/* Image Carousel - Dual View */}

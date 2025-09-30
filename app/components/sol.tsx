@@ -132,49 +132,50 @@ export default function SolgatesShowcase() {
 
         <div className="w-full">
           {/* Header with Logo */}
-          <header className="flex flex-col sm:flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
-            <div className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden bg-orange-600 flex items-center justify-center flex-shrink-0">
-              <img 
-                src="Layer 2.png" 
-                alt="Solgates logo" 
-                className="max-w-full max-h-full object-contain" 
-                loading="eager"
-              />
-            </div>
+         <header className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-6">
+  <div className="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] rounded-[8px] overflow-hidden bg-orange-600 flex items-center justify-center flex-shrink-0">
+    <img 
+      src="/Layer 2.png" 
+      alt="Solgates logo" 
+      className="max-w-full max-h-full object-contain" 
+      loading="eager"
+    />
+  </div>
 
-            <div className="flex flex-col flex-1 min-w-0">
-              <h1 className="text-[13px] sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
-                <span className="text-orange-600">Solgates</span> is a supply chain & trade financing <br /> built for banks & financial institutions.
-              </h1>
-              <a 
-                href="https://www.solgates.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-blue-600 mt-1 font-medium text-[11px] sm:text-[13px] underline hover:text-blue-800 transition-colors"
-              >
-                www.solgates.com
-              </a>
+  <div className="flex flex-col flex-1 min-w-0">
+    <h1 className="text-[13px] sm:text-[17px] md:text-[19px] font-extrabold text-gray-800 leading-snug">
+      <span className="text-orange-600">Solgates</span> is a supply chain & trade financing platform <br /> built for banks & financial institutions.
+    </h1>
 
-              <div className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-[9px] sm:text-[12px] md:text-[13px] font-medium text-gray-600 mt-2">
-                <div className="flex items-center gap-1 flex-nowrap">
-                  <img src="suit.png" alt="Co-founder icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
-                  <span className="font-medium">Co-founder</span>
-                </div>
-                <div className="flex items-center gap-1 flex-nowrap">
-                  <img src="search.png" alt="UX Research icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
-                  <span>UX Research</span>
-                </div>
-                <div className="flex items-center gap-1 flex-nowrap">
-                  <img src="compass.png" alt="Design icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
-                  <span>Design</span>
-                </div>
-                <div className="flex items-center gap-1 flex-nowrap">
-                  <img src="check.png" alt="Testing icon" className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0 rounded-[8px]" />
-                  <span>Testing</span>
-                </div>
-              </div>
-            </div>
-          </header>
+    <a 
+      href="https://www.solgates.com" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-blue-600 mt-1 font-medium text-[11px] sm:text-[13px] underline hover:text-blue-800 transition-colors"
+      aria-label="Visit Solgates website"
+    >
+      www.solgates.com
+    </a>
+
+    <div className="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-[9px] sm:text-[12px] md:text-[13px] font-medium text-gray-600 mt-2">
+      {[
+        { icon: "/suit.png", label: "Co-founder" },
+        { icon: "/search.png", label: "UX Research" },
+        { icon: "/compass.png", label: "Design" },
+        { icon: "/check.png", label: "Testing" },
+      ].map((item, idx) => (
+        <div key={idx} className="flex items-center gap-1 flex-nowrap">
+          <img 
+            src={item.icon} 
+            alt={`${item.label} icon`} 
+            className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 rounded-[8px]" 
+          />
+          <span>{item.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</header>
 
           {/* Image Carousel with orange-600 background on 3 sides */}
           <div className="relative mb-4 md:mb-8">

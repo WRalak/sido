@@ -71,7 +71,7 @@ export default function PeachCarsShowcase() {
           <p className="text-[1p3x] sm:text-[13px] font-bold text-gray-800 mb-2 whitespace-nowrap max-w-[180px]">
             Peach Cars is a <br />rising startup aim...
           </p>
-          <p className="text-[9px] sm:text-[12px] font-medium mb-2 text-orange-600 flex items-center gap-1">
+          <p className="text-[13px] sm:text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">
             Peach Cars
             <HiArrowUpRight className="text-[11px] sm:text-[14px] hover:text-blue-800" />
           </p>
@@ -107,47 +107,44 @@ export default function PeachCarsShowcase() {
         `}</style>
 
         <div className="w-full">
-          {/* Header with Logo */}
-          <header className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-            <div className="flex-shrink-0 mx-auto sm:mx-0">
-              <div className="bg-red-50 rounded-md flex items-center justify-center w-14 h-14 sm:w-[75px] sm:h-[75px]">
-                <img 
-                  src="Group.png" 
-                  alt="Peach Cars Logo" 
-                  className="max-w-full max-h-full object-contain"
-                />
-              </div>
-            </div>
+            <header className="flex flex-row items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+  <div className="flex-shrink-0">
+    <div className="bg-red-50 rounded-md flex items-center justify-center w-14 h-14 sm:w-[75px] sm:h-[75px]">
+      <img 
+        src="Group.png" 
+        alt="Peach Cars Logo" 
+        className="max-w-full max-h-full object-contain"
+      />
+    </div>
+  </div>
 
-            <div className="flex-1 min-w-0 text-center sm:text-left">
-              <h1 className="text-[12px] sm:text-lg font-bold text-gray-800">
-                <span className="text-[#ed3977]">Peach Cars</span> is a rising startup aiming to transform the <br />
-                used car buying experience in Kenya by providing a <br />
-                transparent, user-friendly online marketplace.
-              </h1>
+  <div className="flex-1 min-w-0">
+    <h1 className="text-[12px] sm:text-lg font-bold text-gray-800">
+      <span className="text-[#ed3977]">Peach Cars</span> is a rising startup aiming to transform the <br /> used car buying experience in Kenya by providing a <br /> transparent, user-friendly online marketplace.
+    </h1>
 
-              <a href="https://peachcars.co.ke" target="_blank" rel="noopener noreferrer">
-                <p className="text-blue-600 text-[9px] sm:text-[12px] font-medium mt-1 underline inline-block cursor-pointer">
-                  www.peachcars.co.ke
-                </p>
-              </a>
+    <a href="https://peachcars.co.ke" target="_blank" rel="noopener noreferrer" aria-label="Visit Peach Cars website">
+      <p className="text-blue-600 text-[9px] sm:text-[12px] font-medium mt-1 underline inline-block cursor-pointer">
+        www.peachcars.co.ke
+      </p>
+    </a>
 
-              <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-4 text-[8px] sm:text-[11px] mt-2">
-                <div className="flex items-center text-gray-600">
-                  <img src="search.png" alt="UX Research" className="w-2.5 h-2.5 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
-                  <span className="font-medium">UX Research</span>
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <img src="compass.png" alt="Design" className="w-2.5 h-2.5 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
-                  <span className="font-medium">Design</span>
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <img src="check.png" alt="Testing" className="w-2.5 h-2.5 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
-                  <span className="font-medium">Testing</span>
-                </div>
-              </div>
-            </div>
-          </header>
+    <div className="flex flex-wrap gap-2 sm:gap-4 text-[8px] sm:text-[11px] mt-2">
+      <div className="flex items-center text-gray-600">
+        <img src="search.png" alt="UX Research" className="w-2.5 h-2.5 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
+        <span className="font-medium">UX Research</span>
+      </div>
+      <div className="flex items-center text-gray-600">
+        <img src="compass.png" alt="Design" className="w-2.5 h-2.5 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
+        <span className="font-medium">Design</span>
+      </div>
+      <div className="flex items-center text-gray-600">
+        <img src="check.png" alt="Testing" className="w-2.5 h-2.5 sm:w-4 sm:h-4 mr-1 rounded-[6px]" />
+        <span className="font-medium">Testing</span>
+      </div>
+    </div>
+  </div>
+</header>
 
           {/* Image Carousel */}
           <div className="flex justify-center mb-6 sm:mb-8">
