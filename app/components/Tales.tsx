@@ -1,14 +1,16 @@
-import React from 'react'
+'use client';
 
-const Tales = () => {
+export default function Tales() {
   return (
-    <div className="lg:px-12 py-3 md:px-10   mb-6 lg:mb-8">
-          <h2 className=" font-extrabold text-[14px]   lg:text-[14px] mb-2">Logos do tell tales</h2>
-          <p className="font-medium text-gray-800 text-[13px]  mb-4">
-            Below are some places I have been fortunate enough to work at, either on a full-time or contract basis.
-          </p>
-        </div>
-  )
+    <div className="flex flex-col w-[660px] p-3 md:p-6 mb-6 md:mb-8">
+      <div className="flex flex-col space-y-6 mx-auto">
+        <h2 className="text-gray-800 font-extrabold text-[14px] mb-2">
+          Logos do tell tales
+        </h2>
+        <p className="text-gray-800 font-medium text-[13px] leading-tight max-w-[640px] text-justify">
+          Below are some places I have been fortunate enough to work at, either on a full-time or contract basis.
+        </p>
+      </div>
+    </div>
+  );
 }
-
-export default Tales

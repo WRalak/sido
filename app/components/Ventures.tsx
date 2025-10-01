@@ -52,7 +52,7 @@ export default function IMSGlobalExperience() {
       </div>
 
       {/* Image Slider with ">" icon for navigation */}
-      <div className="w-full max-w-3xl mx-auto mb-1 relative">
+ <div className="w-full max-w-3xl mx-auto mb-1 relative">
         {/* Image Display with Blue Background - Now Clickable */}
         <div 
           className="relative mt-4 w-[486px] bg-sky-900 rounded-t-lg cursor-pointer" 
@@ -66,7 +66,7 @@ export default function IMSGlobalExperience() {
               width: '440px', 
               height: '248px', /* Half height to show only top portion */
               position: 'absolute', 
-              top: '37px', 
+              top: '36px', 
               left: '23px',
               right: '40px'
             }}
@@ -84,41 +84,41 @@ export default function IMSGlobalExperience() {
                 className="object-cover absolute top-0 left-0"
               />
             </div>
-          </div>
+          </div>      {/* Next Button */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          nextImage(exp.images.length);
+        }}
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow"
+      >
+        <span className="text-3xl"><MdKeyboardArrowRight /></span>
+      </button>
+    </div>
+  </div>
 
-          {/* Next Button */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              nextImage(exp.images.length);
-            }}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow"
-          >
-            <span className="text-3xl"><MdKeyboardArrowRight /></span>
-          </button>
-        </div>
-      </div>
+
 
       {/* Text Content Below the Image Carousel */}
       <div className="space-y-2">
         <p className="text-gray-500 font-medium text-[13px]">Role: <span className="font-medium text-gray-800">Senior Product Designer</span></p>
         <p className='text-gray-800 font-medium text-[13px] '>As a Senior Product Designer contracted through <strong>Andela,</strong> I was tasked with designing a <br /> <strong>mobile wallet</strong> aimed at streamlining fare payments and digitizing South Africa's public <br /> transport system.</p>
         <div className="space-y-2">
-          <p className="text-gray-800 text-[13px] font-semibold">Project Overview</p>
+          <p className="text-gray-900 text-[14px] font-bold">Project Overview</p>
           <p className="text-gray-800 font-medium text-[13px]">
-            The goal was to create a <strong>seamless payment experience</strong> for commuters while improving transparency and efficiency for taxi operators. Key features included:
+            The goal was to create a <strong>seamless payment experience</strong> for commuters while improving <br /> transparency and efficiency for taxi operators. Key features included:
           </p>
 
           <ul className="list-disc list-outside pl-5 space-y-1 text-gray-800 text-[13px] font-medium">
             <li><strong>Mobile Wallet</strong> - Enabling users to easily pay for fares and other bills.</li>
-            <li><strong>Taxi Tracking System</strong> - Digitizing public transport by monitoring taxis, their saccos, owners, and conductors.</li>
-            <li><strong>Tap-to-Pay System</strong> - Using an installed device in taxis, allowing commuters to tap their phones at the start and end of a journey for automatic fare deduction based on distance traveled.</li>
+            <li><strong>Taxi Tracking System</strong> - Digitizing public transport by monitoring taxis, their saccos, <br /> owners, and conductors.</li>
+            <li><strong>Tap-to-Pay System</strong> - Using an installed device in taxis, allowing commuters to tap their <br /> phones at the start and end of a journey for automatic fare deduction based on  distance <br /> traveled.</li>
           </ul>
         </div>
 
         <div>
           <div className="space-y-1.5">
-            <p className="text-gray-800 text-[13px] font-semibold">My Approach:</p>
+            <p className="text-gray-900 text-[14px] font-bold">My Approach:</p>
             <ul className="list-disc font-medium list-inside text-gray-800 text-[13px] ">
               <li>Conducted <strong>desk research</strong> and <strong>user interviews</strong> to understand pain points and behavior.</li>
               <li>Created <strong>User Stories</strong> and structured the <strong>Information Architecture</strong> for an intuitive experience.</li>
@@ -128,7 +128,7 @@ export default function IMSGlobalExperience() {
         </div>
 
         <div className="space-y-1">
-          <p className="text-gray-800 font-semibold text-[13px]">Deliverables</p>
+          <p className="text-gray-900 font-bold text-[14px]">Deliverables</p>
           <p className='text-gray-800 font-medium text-[13px]'>The final solution included:</p>
           <ul className="list-disc list-inside font-medium text-gray-800 text-[13px] ">
             <li><strong>Mobile App </strong>- Enabling easy fare payments and tracking.</li>
@@ -137,7 +137,7 @@ export default function IMSGlobalExperience() {
           </ul>
 
           <p className="text-gray-800 font-medium text-[13px]">
-            This project not only improved convenience for commuters but also introduced transparency and efficiency to South Africa's public transport system.
+            This project not only improved convenience for commuters but also introduced transparency <br /> and efficiency to South Africa's public transport system.
           </p>
         </div>
       </div>

@@ -3,6 +3,7 @@
 import { SetStateAction, useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import Image from 'next/image';
 
 export default function PeachCarsShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -68,12 +69,12 @@ export default function PeachCarsShowcase() {
         </div>
 
         <div className="flex flex-col justify-center overflow-hidden">
-          <p className="text-[1p3x] sm:text-[13px] font-bold text-gray-800 mb-2 whitespace-nowrap max-w-[180px]">
+          <p className="text-[13px] sm:text-[13px] font-bold  md:text-[13px] mb-2 font-bold  text-gray-800 mb-2 whitespace-nowrap max-w-[180px]">
             Peach Cars is a <br />rising startup aim...
           </p>
           <p className="text-[13px] sm:text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">
             Peach Cars
-            <HiArrowUpRight className="text-[11px] sm:text-[14px] hover:text-blue-800" />
+           <Image src="/Arrows.png" alt="Arrow Up Right" width={16} height={16} className="text-orange-500 group-hover:text-blue-600 transition duration-200 2xl:w-4 2xl:h-4" />
           </p>
         </div>
       </div>

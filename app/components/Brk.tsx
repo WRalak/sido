@@ -113,9 +113,9 @@ export default function BRCKExperience() {
       
       <div className="w-full mx-auto">
         <p className="text-gray-800 font-medium text-[13px] leading-5 tracking-normal mt-2">
-          I collaborated with researchers, designers, and front-end developers, reporting to the Creative 
-          Director, to design mobile apps, internal systems, websites, and brand collateral. Beyond 
-          design, I tested implementations and worked closely with developers to ensure a polished final 
+          I collaborated with researchers, designers, and front-end developers, reporting to the Creative <br />
+          Director, to design mobile apps, internal systems, websites, and brand collateral. Beyond <br />
+          design, I tested implementations and worked closely with developers to ensure a polished final <br />
           product.
         </p>
       </div>

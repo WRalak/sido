@@ -3,6 +3,7 @@
 import { SetStateAction, useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import Image from 'next/image';
 
 export default function GapstackShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -66,7 +67,7 @@ export default function GapstackShowcase() {
           </p>
           <p className="text-[11px] md:text-[13px] font-medium mb-1 md:mb-2 text-orange-600 flex items-center gap-1">
             Gapstack
-            <HiArrowUpRight className="text-[13px] md:text-[15px] hover:text-blue-800" />
+           <Image src="/Arrows.png" alt="Arrow Up Right" width={16} height={16} className="text-orange-500 group-hover:text-blue-600 transition duration-200 2xl:w-4 2xl:h-4" />
           </p>
         </div>
       </div>
@@ -114,7 +115,7 @@ export default function GapstackShowcase() {
   </div>
 
   <div className="flex flex-col flex-1 min-w-0">
-    <h1 className="text-[13px] sm:text-base md:text-xl font-extrabold text-gray-800">
+    <h1 className="text-[13px]  md:text-xl font-extrabold text-gray-800">
       <span style={{ color: 'rgba(124, 96, 255, 1)' }}>Gapstack</span> is a supply chain & trade financing platform <br /> built for banks & financial institutions.
     </h1>
 

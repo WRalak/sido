@@ -4,6 +4,8 @@ import { useState, useEffect, SetStateAction } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
 import { FaCircle } from 'react-icons/fa';
+import Image from 'next/image';
+
 
 export default function SolgatesShowcase() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -97,7 +99,7 @@ export default function SolgatesShowcase() {
           </p>
           <p className="text-[11px] md:text-[13px] font-medium mb-2 md:mb-2 text-orange-600 flex items-center gap-1">
             Solgates
-            <HiArrowUpRight className="text-[13px] md:text-[15px] hover:text-blue-800" />
+            <Image src="/Arrows.png" alt="Arrow Up Right" width={16} height={16} className="text-orange-500 group-hover:text-blue-600 transition duration-200 2xl:w-4 2xl:h-4" />
           </p>
         </div>
       </div>

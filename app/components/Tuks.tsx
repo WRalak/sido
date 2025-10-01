@@ -1,6 +1,7 @@
 'use client';
 
 import { SetStateAction, useState } from 'react';
+import Image from 'next/image';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { HiArrowUpRight } from 'react-icons/hi2';
 
@@ -45,7 +46,7 @@ export default function TukaiShowcase() {
           </p>
           <p className="text-[13px] sm:text-[13px] font-medium mb-2 text-orange-600 flex items-center gap-1">
             Tukai
-            <HiArrowUpRight className="text-[13px] sm:text-[15px] hover:text-blue-800" />
+          <Image src="/Arrows.png" alt="Arrow Up Right" width={16} height={16} className="text-orange-500 group-hover:text-blue-600 transition duration-200 2xl:w-4 2xl:h-4" />
           </p>
         </div>
       </div>
